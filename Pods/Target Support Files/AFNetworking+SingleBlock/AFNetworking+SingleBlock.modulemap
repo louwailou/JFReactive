@@ -1,0 +1,6 @@
+framework module AFNetworking_SingleBlock {
+  umbrella header "AFNetworking+SingleBlock-umbrella.h"
+
+  export *
+  module * { export * }
+}

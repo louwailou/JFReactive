@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1267374637EF8F7242610F9D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5BDB4FD82850319A6B7E80 /* Pods.framework */; };
+		A42CB4D61C2A8FCC004E8641 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A42CB4D51C2A8FCC004E8641 /* NullSafe.m */; };
+		A42CB4D91C2ED6B2004E8641 /* JFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A42CB4D81C2ED6B2004E8641 /* JFModel.m */; };
 		A43D2DD21C1A7EB2009CF246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D2DD11C1A7EB2009CF246 /* main.m */; };
 		A43D2DD51C1A7EB2009CF246 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D2DD41C1A7EB2009CF246 /* AppDelegate.m */; };
 		A43D2DD81C1A7EB2009CF246 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D2DD71C1A7EB2009CF246 /* ViewController.m */; };
@@ -35,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A5BDB4FD82850319A6B7E80 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63E6EF786C064C8E047EF042 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A42CB4D51C2A8FCC004E8641 /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
+		A42CB4D71C2ED6B2004E8641 /* JFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFModel.h; sourceTree = "<group>"; };
+		A42CB4D81C2ED6B2004E8641 /* JFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFModel.m; sourceTree = "<group>"; };
 		A43D2DCD1C1A7EB2009CF246 /* JFReactive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFReactive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43D2DD11C1A7EB2009CF246 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A43D2DD31C1A7EB2009CF246 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +59,7 @@
 		A43D2DF11C1A7EB2009CF246 /* JFReactiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFReactiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43D2DF51C1A7EB2009CF246 /* JFReactiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFReactiveUITests.m; sourceTree = "<group>"; };
 		A43D2DF71C1A7EB2009CF246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D9F187A0CD9B163B4273AF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1267374637EF8F7242610F9D /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +88,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DCBE5BF142BA4C4CB0A9C78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63E6EF786C064C8E047EF042 /* Pods.debug.xcconfig */,
+				F9D9F187A0CD9B163B4273AF /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		427DCECF726971A5177533FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A5BDB4FD82850319A6B7E80 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A43D2DC41C1A7EB2009CF246 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +112,8 @@
 				A43D2DE91C1A7EB2009CF246 /* JFReactiveTests */,
 				A43D2DF41C1A7EB2009CF246 /* JFReactiveUITests */,
 				A43D2DCE1C1A7EB2009CF246 /* Products */,
+				1DCBE5BF142BA4C4CB0A9C78 /* Pods */,
+				427DCECF726971A5177533FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +130,7 @@
 		A43D2DCF1C1A7EB2009CF246 /* JFReactive */ = {
 			isa = PBXGroup;
 			children = (
+				A42CB4D51C2A8FCC004E8641 /* NullSafe.m */,
 				A43D2DD31C1A7EB2009CF246 /* AppDelegate.h */,
 				A43D2DD41C1A7EB2009CF246 /* AppDelegate.m */,
 				A43D2DD61C1A7EB2009CF246 /* ViewController.h */,
@@ -110,6 +140,8 @@
 				A43D2DDE1C1A7EB2009CF246 /* LaunchScreen.storyboard */,
 				A43D2DE11C1A7EB2009CF246 /* Info.plist */,
 				A43D2DD01C1A7EB2009CF246 /* Supporting Files */,
+				A42CB4D71C2ED6B2004E8641 /* JFModel.h */,
+				A42CB4D81C2ED6B2004E8641 /* JFModel.m */,
 			);
 			path = JFReactive;
 			sourceTree = "<group>";
@@ -147,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A43D2DFA1C1A7EB2009CF246 /* Build configuration list for PBXNativeTarget "JFReactive" */;
 			buildPhases = (
+				2DEBA537824CA6E2DEE95554 /* Check Pods Manifest.lock */,
 				A43D2DC91C1A7EB2009CF246 /* Sources */,
 				A43D2DCA1C1A7EB2009CF246 /* Frameworks */,
 				A43D2DCB1C1A7EB2009CF246 /* Resources */,
+				436B0DFBB20818F0CE19AF0F /* Embed Pods Frameworks */,
+				4B50CC8B43A26A03B81B10BA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +300,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2DEBA537824CA6E2DEE95554 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		436B0DFBB20818F0CE19AF0F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B50CC8B43A26A03B81B10BA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A43D2DC91C1A7EB2009CF246 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -272,7 +355,9 @@
 			files = (
 				A43D2DD81C1A7EB2009CF246 /* ViewController.m in Sources */,
 				A43D2DD51C1A7EB2009CF246 /* AppDelegate.m in Sources */,
+				A42CB4D91C2ED6B2004E8641 /* JFModel.m in Sources */,
 				A43D2DD21C1A7EB2009CF246 /* main.m in Sources */,
+				A42CB4D61C2A8FCC004E8641 /* NullSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,9 +496,11 @@
 		};
 		A43D2DFB1C1A7EB2009CF246 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63E6EF786C064C8E047EF042 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JFReactive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SJF.JFReactive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,9 +509,11 @@
 		};
 		A43D2DFC1C1A7EB2009CF246 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9D9F187A0CD9B163B4273AF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JFReactive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SJF.JFReactive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +587,7 @@
 				A43D2DFC1C1A7EB2009CF246 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A43D2DFD1C1A7EB2009CF246 /* Build configuration list for PBXNativeTarget "JFReactiveTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +596,7 @@
 				A43D2DFF1C1A7EB2009CF246 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A43D2E001C1A7EB2009CF246 /* Build configuration list for PBXNativeTarget "JFReactiveUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +605,7 @@
 				A43D2E021C1A7EB2009CF246 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

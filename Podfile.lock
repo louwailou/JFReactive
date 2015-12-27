@@ -1,0 +1,48 @@
+PODS:
+  - AFNetworking (2.6.2):
+    - AFNetworking/NSURLConnection (= 2.6.2)
+    - AFNetworking/NSURLSession (= 2.6.2)
+    - AFNetworking/Reachability (= 2.6.2)
+    - AFNetworking/Security (= 2.6.2)
+    - AFNetworking/Serialization (= 2.6.2)
+    - AFNetworking/UIKit (= 2.6.2)
+  - AFNetworking+SingleBlock (0.0.1):
+    - AFNetworking (~> 2.0)
+  - AFNetworking/NSURLConnection (2.6.2):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.2):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.2)
+  - AFNetworking/Security (2.6.2)
+  - AFNetworking/Serialization (2.6.2)
+  - AFNetworking/UIKit (2.6.2):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - ReactiveCocoa (4.0.4-alpha-1):
+    - ReactiveCocoa/UI (= 4.0.4-alpha-1)
+    - Result (~> 0.6-beta.1)
+  - ReactiveCocoa/Core (4.0.4-alpha-1):
+    - ReactiveCocoa/no-arc
+    - Result (~> 0.6-beta.1)
+  - ReactiveCocoa/no-arc (4.0.4-alpha-1):
+    - Result (~> 0.6-beta.1)
+  - ReactiveCocoa/UI (4.0.4-alpha-1):
+    - ReactiveCocoa/Core
+    - Result (~> 0.6-beta.1)
+  - Result (0.6.0-beta.6)
+
+DEPENDENCIES:
+  - AFNetworking+SingleBlock (~> 0.0.1)
+  - ReactiveCocoa (~> 4.0.4-alpha-1)
+
+SPEC CHECKSUMS:
+  AFNetworking: 7f317038a9710cabfa43ec56396b307b45df72ab
+  AFNetworking+SingleBlock: e736a3faeb61df7ec272c505ec4aa5de73e2b3ae
+  ReactiveCocoa: 618a2fc13d4ed80e380aa6fa56547cef43c7341d
+  Result: dc390d0b58f9ec43fcd536f1ebdd130803cc6cbc
+
+COCOAPODS: 0.39.0

@@ -16,6 +16,7 @@
 //#import "RACSubscriber.h"
 @interface ViewController ()
 @property (nonatomic,strong)RACCommand * command;
+@property (nonatomic,strong)RACCommand * loginCommand;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *labelForName;
 @property (nonatomic,strong)JFModel * model;
@@ -1318,12 +1319,218 @@
     }];
      */
 }
-- (void)subScribeSingle{
+-(void)biding{
+    //
+    //
+    RACSignal * singal = [RACSignal
+                          combineLatest:@[ RACObserve(self, self.model.age), RACObserve(self, self.model.name) ]
+                          reduce:^(NSString *password, NSString *passwordConfirm) {
+                              return @([passwordConfirm isEqualToString:password]);
+                          }];
+    [singal subscribeNext:^(id x) {
+        NSLog(@"xx =%@",x) ;
+    }];
     
-    [self multiSignal];
+    /* //  如果是直接RAC()的话 自动进行了subscribeNext:
+    RAC(self, self.textField.enabled) =[RACSignal
+                                        combineLatest:@[ RACObserve(self, self.model.age), RACObserve(self, self.model.name) ]
+                                        reduce:^(NSString *password, NSString *passwordConfirm) {
+                                            return @([passwordConfirm isEqualToString:password]);
+                                        }];
+     */
+
+}
+
+- (void)simulateLogin{
+ 
+    // Hooks up a "Log in" button to log in over the network.
+    //
+    // This block will be run whenever the login command is executed, starting
+    // the login process.
+//    self.loginCommand = [[RACCommand alloc] initWithSignalBlock:^(id sender) {
+//        // The hypothetical -logIn method returns a signal that sends a value when
+//        // the network request finishes.
+//        return [client logIn];
+//    }];
+    
+    self.loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:@"1000"];
+            [subscriber sendCompleted];
+            return nil;
+        }];
+    }];
+    // -executionSignals returns a signal that includes the signals returned from
+    // the above block, one for each time the command is executed.
+    [self.loginCommand.executionSignals subscribeNext:^(RACSignal *loginSignal) {
+        // Log a message whenever we log in successfully.
+        [loginSignal subscribeNext:^(id x) {
+            NSLog(@"xxx  %@",x);
+        }];
+        [loginSignal subscribeCompleted:^{
+            NSLog(@"Logged in successfully!");
+        }];
+    }];
+    // Executes the login command when the button is pressed. 按钮点击触发
+    self.shareBtn.rac_command = self.loginCommand;
+}
+-(void)subcribeComplted{
+   RACSignal *siga = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"1000"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    RACSignal *sigb = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"20000"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    [[RACSignal
+      merge:@[ siga, sigb ]]
+     subscribeCompleted:^{
+         NSLog(@"They're both done!");
+     }];
+    // //
+    // +merge: takes an array of signals and returns a new RACSignal that passes
+    // through the values of all of the signals and completes when all of the
+    // signals complete.
+    //
+    // -subscribeCompleted: will execute the block when the signal completes.
+    // 先执行第一个signal 然后第二个 接着 log they‘re both done
+    
+}
+- (RACSignal*)loginSignal{
+    RACSignal *siga = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@[@"1000"]];
+        NSLog(@"__%s",__func__);
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    return siga;
+}
+-(RACSignal*)loadCachedMessagesForUser:(NSString*)user{
+    RACSignal *siga = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@[@"11111"]];
+        NSLog(@"__%s",__func__);
+
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    return siga;
+}
+-(RACSignal*)fetchMessagesAfterMessage:(NSString*)arr{
+    RACSignal *siga = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@[@"1",@"2"]];
+        NSLog(@"__%s",__func__);
+
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    return siga;
+}
+-(void)asychronize{
+   // Signals能够顺序地执行异步操作,而不是嵌套block回调.这个和futures and promises很相似:
+   
+    // Logs in the user, then loads any cached messages, then fetches the remaining
+    // messages from the server. After that's all done, logs a message to the
+    // console.
+    //
+    // The hypothetical -logInUser methods returns a signal that completes after
+    // logging in.
+    //
+    // -flattenMap: will execute its block whenever the signal sends a value, and
+    // returns a new RACSignal that merges all of the signals returned from the block
+    // into a single signal.
+    [[[[self
+        loginSignal]
+       flattenMap:^(NSString *user) {
+           // Return a signal that loads cached messages for the user.
+           return [self loadCachedMessagesForUser:user];
+       }]
+      flattenMap:^(NSArray *messages) {
+          // Return a signal that fetches any remaining messages.
+          return [self fetchMessagesAfterMessage:messages.lastObject];
+      }]
+     subscribeNext:^(NSArray *newMessages) {
+         NSLog(@"New messages: %@", newMessages);
+     } completed:^{
+         NSLog(@"Fetched all messages.");
+     }];
+    /*
+     New messages: (
+     1,
+     2
+     )
+     2015-12-29 20:56:37.356 JFReactive[16147:3742041] Fetched all messages.
+     
+     */
+}
+-(void)racBinding{
+    // Creates a one-way binding so that self.imageView.image will be set as the user's
+    // avatar as soon as it's downloaded.
+    //
+    // The hypothetical -fetchUserWithUsername: method returns a signal which sends
+    // the user.
+    //
+    // -deliverOn: creates new signals that will do their work on other queues. In
+    // this example, it's used to move work to a background queue and then back to the main thread.
+    //
+    // -map: calls its block with each user that's fetched and returns a new
+    // RACSignal that sends values returned from the block.
+    
+    /*
+    RAC(self.imageView, image) = [[[[self
+                                     fetchUserWithUsername:@"joshaber"]
+                                    deliverOn:[RACScheduler scheduler]]
+                                   map:^(User *user) {
+                                       // Download the avatar (this is done on a background queue).
+                                       return [[NSImage alloc] initWithContentsOfURL:user.avatarURL];
+                                   }]
+     
+     */
+                                  // Now the assignment will be done on the main thread.
+}
+#pragma mark 当下一个对服务器网络请求需要构建在前一个完成时,
+-(void)loginThen{
+
+    [[[[self loginSignal]
+       then:^{
+          
+           return [self fetchMessagesAfterMessage:@"d"];
+       }]
+      flattenMap:^(NSArray *messages) {
+         
+          return [self loadCachedMessagesForUser:messages.lastObject];
+      }]
+     subscribeError:^(NSError *error) {
+         NSLog(@"error....");
+     } completed:^{
+         NSLog(@"Fetched all messages.");
+     }];
+    
+    /*
+     2015-12-29 21:24:03.463 JFReactive[16399:3754666] ____29-[ViewController loginSignal]_block_invoke
+     2015-12-29 21:24:03.463 JFReactive[16399:3754666] ____44-[ViewController loadCachedMessagesForUser:]_block_invoke
+     2015-12-29 21:24:03.463 JFReactive[16399:3754666] ____44-[ViewController fetchMessagesAfterMessage:]_block_invoke
+     2015-12-29 21:24:03.463 JFReactive[16399:3754666] Fetched all messages.
+     */
+    
+    /*
+     
+     */
+    
+    /*
+     
+     */
+    
+}
+- (void)subScribeSingle{
+    [self loginThen];
 }
 - (IBAction)shareAction:(id)sender {
-   
+    NSLog(@"shareActoin ...");
+   self.model.name = @"ssss";
+    self.model.age = @100;
 }
 
 @end

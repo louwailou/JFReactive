@@ -44,13 +44,18 @@
         NSLog(@"is equal..............");
     }
       self.model = [[JFModel alloc] init];
+   
     
-    [RACObserve(self.textField, text) subscribeNext:^(id x) {
-        self.model.name = x;
-        NSLog(@"self.model.name =%@",self.model.name);
-        NSLog(@"%@",x);// 订阅多次也是触发一次，与上述相比 无副作用，但是需要外部触发，自身没办法触发,即 在其他地方调用 self.textfield.text = @"ddddd"
+   // RAC(self.textField,text) = self.textField.rac_textSignal;
+    [self.textField.rac_textSignal subscribeNext:^(id x) {
+        NSLog(@"%@",x);
     }];
     
+//    [RACObserve(self.textField, text) subscribeNext:^(id x) {
+//        
+//        NSLog(@"%@",x);// 订阅多次也是触发一次，与上述相比 无副作用，但是需要外部触发，自身没办法触发,即 在其他地方调用 self.textfield.text = @"ddddd"
+//    }];
+//    
   
     [[RACObserve(self, model.name) map:^id(id value) {
         NSLog(@"value =%@",value);
@@ -58,33 +63,13 @@
     }]subscribeNext:^(id x) {
         NSLog(@"xxxxxx =%@",x);
     }];
+    
+    
     // 1 需要subscribe 订阅
     // 2 无论是(self.model, name) 还是(self ,model.name) 均需要在另外的方法中去修改name的值才会触发
     // 3 (self,model)是不会触发的
     
-
-    // 2.KVO
-    // 把监听redV的center属性改变转换成信号，只要值改变就会发送信号
-    // observer:可以传入nil
-
-    [RACObserve(self.textField, frame) subscribeNext:^(id x) {
-        NSLog(@"frame =%@",x);
-    }];
     
-    
-    
-    /*
-     
-     2015-12-23 10:26:55.450 JFReactive[43048:2159463] 输出:
-     2015-12-23 10:26:57.190 JFReactive[43048:2159463] 输出:
-     2015-12-23 10:26:57.451 JFReactive[43048:2159463] 输出:d
-     2015-12-23 10:26:57.641 JFReactive[43048:2159463] 输出:dd
-     2015-12-23 10:26:57.832 JFReactive[43048:2159463] 输出:ddd
-     2015-12-23 10:26:58.760 JFReactive[43048:2159463] 输出:dddd
-     2015-12-23 10:26:58.971 JFReactive[43048:2159463] 输出:ddddd
-     2015-12-23 10:26:59.273 JFReactive[43048:2159463] 输出:dddddd
-     2015-12-23 10:27:01.232 JFReactive[43048:2159463] 输出:ddddddd
-     */
     
 //
     // Do any additional setup after loading the view, typically from a nib.
@@ -1401,8 +1386,9 @@
 }
 - (RACSignal*)loginSignal{
     RACSignal *siga = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        [subscriber sendNext:@[@"1000"]];
         NSLog(@"__%s",__func__);
+        [subscriber sendNext:@[@"1000"]];
+        NSLog(@"inc=voke ok %s ",__func__);
         [subscriber sendCompleted];
         return nil;
     }];
@@ -1410,8 +1396,9 @@
 }
 -(RACSignal*)loadCachedMessagesForUser:(NSString*)user{
     RACSignal *siga = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        [subscriber sendNext:@[@"11111"]];
         NSLog(@"__%s",__func__);
+        [subscriber sendNext:@[@"11111"]];
+         NSLog(@"inc=voke ok %s ",__func__);
 
         [subscriber sendCompleted];
         return nil;
@@ -1420,9 +1407,10 @@
 }
 -(RACSignal*)fetchMessagesAfterMessage:(NSString*)arr{
     RACSignal *siga = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        [subscriber sendNext:@[@"1",@"2"]];
         NSLog(@"__%s",__func__);
-
+        [subscriber sendNext:@[@"1",@"2"]];
+        
+         NSLog(@"inc=voke ok %s ",__func__);
         [subscriber sendCompleted];
         return nil;
     }];
@@ -1492,40 +1480,51 @@
 }
 #pragma mark 当下一个对服务器网络请求需要构建在前一个完成时,
 -(void)loginThen{
-
-    [[[[self loginSignal]
+/*
+    [[[[self loginSignal]// 1
        then:^{
-          
-           return [self fetchMessagesAfterMessage:@"d"];
+           NSLog(@"then....");
+           return [self fetchMessagesAfterMessage:@"d"]; //
        }]
       flattenMap:^(NSArray *messages) {
-         
-          return [self loadCachedMessagesForUser:messages.lastObject];
+          NSLog(@"messages =%@",messages);
+          return [self loadCachedMessagesForUser:messages.lastObject];//
       }]
      subscribeError:^(NSError *error) {
          NSLog(@"error....");
      } completed:^{
          NSLog(@"Fetched all messages.");
      }];
-    
+    */
     /*
-     2015-12-29 21:24:03.463 JFReactive[16399:3754666] ____29-[ViewController loginSignal]_block_invoke
-     2015-12-29 21:24:03.463 JFReactive[16399:3754666] ____44-[ViewController loadCachedMessagesForUser:]_block_invoke
-     2015-12-29 21:24:03.463 JFReactive[16399:3754666] ____44-[ViewController fetchMessagesAfterMessage:]_block_invoke
-     2015-12-29 21:24:03.463 JFReactive[16399:3754666] Fetched all messages.
+     2015-12-30 10:57:43.426 JFReactive[17235:3803028] ____29-[ViewController loginSignal]_block_invoke
+     2015-12-30 10:57:43.427 JFReactive[17235:3803028] inc=voke ok __29-[ViewController loginSignal]_block_invoke
+     2015-12-30 10:57:43.427 JFReactive[17235:3803028] then....
+     2015-12-30 10:57:43.427 JFReactive[17235:3803028] ____44-[ViewController fetchMessagesAfterMessage:]_block_invoke
+     2015-12-30 10:57:43.428 JFReactive[17235:3803028] messages =(
+     1,
+     2
+     )
+     2015-12-30 10:57:43.428 JFReactive[17235:3803028] ____44-[ViewController loadCachedMessagesForUser:]_block_invoke
+     2015-12-30 10:57:43.428 JFReactive[17235:3803028] inc=voke ok __44-[ViewController loadCachedMessagesForUser:]_block_invoke
+    这个为哈还调用呢？
+     2015-12-30 10:57:43.428 JFReactive[17235:3803028] inc=voke ok __44-[ViewController fetchMessagesAfterMessage:]_block_invoke
+     
+     
+     2015-12-30 10:57:43.428 JFReactive[17235:3803028] Fetched all messages.
      */
     
     /*
      
      */
+    [[self loginSignal]subscribeCompleted:^{
+        NSLog(@"completed...");
+    }];
     
-    /*
-     
-     */
     
 }
 - (void)subScribeSingle{
-    [self loginThen];
+   self.textField.text = @"dd";
 }
 - (IBAction)shareAction:(id)sender {
     NSLog(@"shareActoin ...");

@@ -45,7 +45,7 @@
     }
       self.model = [[JFModel alloc] init];
    
-    
+    //ggg
    // RAC(self.textField,text) = self.textField.rac_textSignal;
     [self.textField.rac_textSignal subscribeNext:^(id x) {
         NSLog(@"%@",x);
@@ -93,6 +93,8 @@
             
         }];
     }];
+    
+    
     // 3.订阅信号,才会激活信号.
     [signal subscribeNext:^(id x) {
         // block调用时刻：每当有信号发出数据，就会调用block.
@@ -138,7 +140,7 @@
      2015-12-26 18:56:26.751 JFReactive[61732:2934337] 第二个订阅者100
      2015-12-26 18:56:26.751 JFReactive[61732:2934337] 第一个订阅者100
      2015-12-26 18:56:26.751 JFReactive[61732:2934337] 第二个订阅者100
-     
+     subject 既可以订阅下一步 也可以自己发送信息，signal只能订阅下一步，不能自身发送信息
      */
     
 }
@@ -146,7 +148,6 @@
 - (void)subjectImpDelegate{
     
     /*
-     
      // 需求:
      // 1.给当前控制器添加一个按钮，modal到另一个控制器界面
      // 2.另一个控制器view中有个按钮，点击按钮，通知当前控制器
@@ -221,21 +222,31 @@
     [replaySubject sendNext:@2];
     
     // 3.订阅信号
-    [replaySubject subscribeNext:^(id x) {
+    [replaySubject subscribeNext:^(id x) {// 创建第一个subscriber
         
         NSLog(@"第一个订阅者接收到的数据%@",x);
     }];
     
     // 订阅信号
-    [replaySubject subscribeNext:^(id x) {
+    [replaySubject subscribeNext:^(id x) {// 创建第二个subscriber
         
         NSLog(@"第二个订阅者接收到的数据%@",x);
     }];
+    
+    
+    [replaySubject sendCompleted];//
     /*
+      如果sendNext发生在 subscribeNext之前就打印如下
      2015-12-26 17:29:07.467 JFReactive[60987:2909146] 第一个订阅者接收到的数据1
      2015-12-26 17:29:07.467 JFReactive[60987:2909146] 第一个订阅者接收到的数据2
      2015-12-26 17:29:07.468 JFReactive[60987:2909146] 第二个订阅者接收到的数据1
      2015-12-26 17:29:07.468 JFReactive[60987:2909146] 第二个订阅者接收到的数据2
+     
+     如果是发生在之后
+     2016-01-04 16:46:28.693 JFReactive[32869:4260996] 第一个订阅者接收到的数据1
+     2016-01-04 16:46:28.693 JFReactive[32869:4260996] 第二个订阅者接收到的数据1
+     2016-01-04 16:46:28.694 JFReactive[32869:4260996] 第一个订阅者接收到的数据2
+     2016-01-04 16:46:28.696 JFReactive[32869:4260996] 第二个订阅者接收到的数据2
      */
     
 }
@@ -250,7 +261,7 @@
     [numbers.rac_sequence.signal subscribeNext:^(id x) {
         
         NSLog(@"thread = %@",[NSThread currentThread]);
-         NSLog(@"main thread = %@",[NSThread mainThread]);
+        NSLog(@"main thread = %@",[NSThread mainThread]);
         NSLog(@"%@",x);
     }];
     
@@ -321,7 +332,7 @@
 //    }] array];
     
 }
-#pragma mark command
+#pragma mark command 
 - (void)comomand{
     // 一、RACCommand使用步骤:
     // 1.创建命令 initWithSignalBlock:(RACSignal * (^)(id input))signalBlock
@@ -376,10 +387,10 @@
     
     [command.executionSignals subscribeNext:^(id x) {
         
-         NSLog(@"subscribe signal  %@",x);
+         NSLog(@"subscribe signal  %@",x);//返回signal
         [x subscribeNext:^(id x) {
             
-            NSLog(@"singnal's next  %@",x);
+            NSLog(@"singnal's next  %@",x);//返回signal的数据
         }];
         
     }];
@@ -388,13 +399,14 @@
     // switchToLatest:用于signal of signals，获取signal of signals发出的最新信号,也就是可以直接拿到RACCommand中的信号
     [command.executionSignals.switchToLatest subscribeNext:^(id x) {
         
-        NSLog(@"switchToLast subnext: %@",x);
+        NSLog(@"switchToLast subnext: %@",x);//signal的数据
     }];
     
     // 4.监听命令是否执行完毕,默认会先触发 正在执行 x= yes，可以直接跳过，skip表示跳过第一次信号。
     [[command.executing skip:1] subscribeNext:^(id x) {
+        // skip 跳过外部的信号的执行处理，只处理command内部信号，所以只执行了2次 1 ，0
         
-        NSLog(@"excuting xx = %@",x);
+        NSLog(@"excuting skip  xx = %@",x);
         if ([x boolValue] == YES) {
             // 正在执行
             NSLog(@"正在执行");
@@ -406,7 +418,7 @@
         
     }];
     [command.executing subscribeNext:^(id x) {
-        NSLog(@"excuting next :%@",x);
+        NSLog(@"excuting next :%@",x);// 输出 0 1 0  三次
     }];
     
     // 5.执行命令
@@ -429,19 +441,17 @@
      */
 }
 
-#pragma mark RACMulticastConnection 解决signal中每订阅subscribeNext 就触发一次block 的问题
+#pragma mark RACMulticastConnection 解决signal中每订阅subscribeNext 就触发一次信号内部subscriber的发送问题
 -(void)multicast{
     // // 需求：假设在一个信号中发送请求，每次订阅一次都会发送请求，这样就会导致多次请求---- 发送请求调用多次。
     // 解决：使用RACMulticastConnection就能解决.
 
     RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        
-        
         NSLog(@"发送请求");
         [subscriber sendNext:@"200"];
         return nil;
     }];
-//    // 2.订阅信号
+    // 2.订阅信号
 //    [signal subscribeNext:^(id x) {
 //        
 //        NSLog(@"接收数据");
@@ -454,6 +464,13 @@
 //        
 //    }];
     
+    /*
+     2016-01-04 18:13:59.609 JFReactive[33508:4292401] 发送请求
+     2016-01-04 18:13:59.609 JFReactive[33508:4292401] 接收数据
+     2016-01-04 18:13:59.611 JFReactive[33508:4292401] 发送请求
+     2016-01-04 18:13:59.611 JFReactive[33508:4292401] 接收数据
+     */
+  
     
     // 使用muticastConnection 替代 解决 了多个订阅，发多次请求的问题
     RACMulticastConnection *connect = [signal publish];
@@ -474,10 +491,15 @@
     
     // 4.连接,激活信号
     [connect connect];
+    /*
+     2016-01-04 18:15:07.287 JFReactive[33616:4293575] 发送请求
+     2016-01-04 18:15:07.287 JFReactive[33616:4293575] 订阅者一信号
+     2016-01-04 18:15:07.287 JFReactive[33616:4293575] 订阅者二信号
+     */
 
 }
 #pragma mark 多个信号统一处理 只有两个信号均发送成功才可以，发送error 都不会触发selector
-- (void)multiSignal{
+- (void)multiSignalWithSelector{
     // 6.处理多个请求，都返回结果的时候，统一做处理.
     RACSignal *request1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
@@ -1528,8 +1550,7 @@
 }
 - (IBAction)shareAction:(id)sender {
     NSLog(@"shareActoin ...");
-   self.model.name = @"ssss";
-    self.model.age = @100;
+    [self multicast];
 }
 
 @end

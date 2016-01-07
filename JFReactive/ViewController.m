@@ -36,20 +36,13 @@
     [btn setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:btn];
     
-    NSString * st = [NSString stringWithFormat:@"ddd"];
-    NSString * st2 = [NSString stringWithFormat:@"ddd"];
-    if ([st isEqualToString:st2]) {
-        NSLog(@"%p",&st);
-        NSLog(@"%p",&st2);
-        NSLog(@"is equal..............");
-    }
       self.model = [[JFModel alloc] init];
    
-    //ggg
-   // RAC(self.textField,text) = self.textField.rac_textSignal;
-    [self.textField.rac_textSignal subscribeNext:^(id x) {
-        NSLog(@"%@",x);
-    }];
+   
+   
+//    [self.textField.rac_textSignal subscribeNext:^(id x) {
+//        NSLog(@"%@",x);
+//    }];
     
 //    [RACObserve(self.textField, text) subscribeNext:^(id x) {
 //        
@@ -57,13 +50,14 @@
 //    }];
 //    
   
+    /*
     [[RACObserve(self, model.name) map:^id(id value) {
         NSLog(@"value =%@",value);
         return value ? @YES : @NO;
     }]subscribeNext:^(id x) {
         NSLog(@"xxxxxx =%@",x);
     }];
-    
+    */
     
     // 1 需要subscribe 订阅
     // 2 无论是(self.model, name) 还是(self ,model.name) 均需要在另外的方法中去修改name的值才会触发
@@ -76,6 +70,7 @@
 }
 
 - (void)subScirbe{
+    /*
     RACSignal * signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSLog(@"0000");
        [subscriber sendNext:@1];// 如果 注释掉subscribeNext就不会发送
@@ -106,6 +101,8 @@
         NSLog(@"2接收到数据:%@",x);
     }];
     // 上述订阅了两次就会触发两次 subscriber的block  0000 1111 2222 被调用两次  可以使用RACMulticastConnection 进行解决
+    
+    */
 //    
 //    
     RACSubject *subject = [RACSubject subject];
@@ -471,26 +468,68 @@
      2016-01-04 18:13:59.611 JFReactive[33508:4292401] 接收数据
      */
   
+   /*
+  RACSignal * a =  [signal flattenMap:^RACStream *(id value) {
+        return [RACSignal return:@"desc"];
+    }];
+   RACSignal * b = [signal flattenMap:^RACStream *(id value) {
+        return [RACSignal return:@"array"];
+    }];
     
+    RAC(self.labelForName, text) =[[a catchTo:[RACSignal return:@"Error"]]  startWith:@"Loading..."];
+    RAC(self.textField, text) = [[b catchTo:[RACSignal return:@"Error"]] startWith:@"Loading..."];
+   */
+    
+    /*
+     flattenMap  伪代码
+     - (instancetype)flattenMap_:(RACStream * (^)(id value))block {
+     {
+     return [RACSignal createSignal:^RACDisposable *(id subscriber) {
+     return [self subscribeNext:^(id x) {
+     RACSignal *signal = (RACSignal *)block(x);
+     [signal subscribeNext:^(id x) {
+     [subscriber sendNext:x];
+     } error:^(NSError *error) {
+     [subscriber sendError:error];
+     } completed:^{
+     [subscriber sendCompleted];
+     }];
+     } error:^(NSError *error) {
+     [subscriber sendError:error];
+     } completed:^{
+     [subscriber sendCompleted];
+     }];
+     }];
+     }
+     
+     */
+//    [[RACSignal merge:@[a, b]] subscribeError:^(NSError *error) {
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:error.domain delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//        [alertView show];
+//    }];
+    //******这里有一个很重要的概念，就是任何的信号转换即是对原有的信号进行订阅从而产生新的信号****////
+
     // 使用muticastConnection 替代 解决 了多个订阅，发多次请求的问题
     RACMulticastConnection *connect = [signal publish];
     
     // 3.订阅信号，
     // 注意：订阅信号，也不能激活信号，只是保存订阅者到数组，必须通过连接,当调用连接，就会一次性调用所有订阅者的sendNext:
+     //
+    
     [connect.signal subscribeNext:^(id x) {
         
-        NSLog(@"订阅者一信号");
+        NSLog(@"订阅者一信号 %@",x);
         
     }];
     
     [connect.signal subscribeNext:^(id x) {
         
-        NSLog(@"订阅者二信号");
+        NSLog(@"订阅者二信号 %@",x);
         
     }];
     
     // 4.连接,激活信号
-    [connect connect];
+   [connect connect];// 如果先subscribe 然后连接 不会发送subscribeNext中的信息，仅仅打印出 发送请求
     /*
      2016-01-04 18:15:07.287 JFReactive[33616:4293575] 发送请求
      2016-01-04 18:15:07.287 JFReactive[33616:4293575] 订阅者一信号
@@ -531,7 +570,12 @@
 
 #pragma mark bing 文本改变自动触发，不用 sendNext
 - (void)bind{
-    
+    /*
+     Lazily binds a block to the values in the receiver.
+     This should only be used if you need to terminate the bind early, or close over some state. -flattenMap: is more appropriate for all other cases.
+     block - A block returning a RACStreamBindBlock. This block will be invoked each time the bound stream is re-evaluated. This block must not be nil or return nil.
+     Returns a new stream which represents the combined result of all lazy applications of `block`
+     */
     [[_textField.rac_textSignal bind:^RACStreamBindBlock{
         
         // 什么时候调用:
@@ -554,16 +598,23 @@
         
     }];
     /*
-     2015-12-23 10:52:13.825 JFReactive[43788:2172838] RacStream RetunBlock
-     2015-12-23 10:52:13.825 JFReactive[43788:2172838] 输出XXX 输出:ghh
-     2015-12-23 10:54:23.266 JFReactive[43788:2172838] RacStream RetunBlock
-     2015-12-23 10:54:23.266 JFReactive[43788:2172838] 输出XXX 输出:ghhv
-     2015-12-23 10:54:23.718 JFReactive[43788:2172838] RacStream RetunBlock
-     2015-12-23 10:54:23.718 JFReactive[43788:2172838] 输出XXX 输出:hhhhhhhjk
-
+     2016-01-04 18:35:54.731 JFReactive[33880:4304232] revoke streamBindBlock
+     2016-01-04 18:35:54.731 JFReactive[33880:4304232] RacStream RetunBlock
+     2016-01-04 18:35:54.731 JFReactive[33880:4304232] 输出XXX 输出:
+     2016-01-04 18:36:02.587 JFReactive[33880:4304232] RacStream RetunBlock
+     2016-01-04 18:36:02.587 JFReactive[33880:4304232] 输出XXX 输出:
+     
+     2016-01-04 18:36:04.420 JFReactive[33880:4304232] f
+     2016-01-04 18:36:04.421 JFReactive[33880:4304232] RacStream RetunBlock
+     2016-01-04 18:36:04.421 JFReactive[33880:4304232] 输出XXX 输出:f
+     
+     2016-01-04 18:36:05.736 JFReactive[33880:4304232] ff
+     2016-01-04 18:36:05.736 JFReactive[33880:4304232] RacStream RetunBlock
+     2016-01-04 18:36:05.737 JFReactive[33880:4304232] 输出XXX 输出:ff
      */
 }
 #pragma mark flattenMap 文本改变自动触发，不用 sendNext
+#pragma mark 这里有一个很重要的概念，就是任何的信号转换即是对原有的信号进行订阅从而产生新的信号
 - (void)flattenMap{
     // 监听文本框的内容改变，把结构重新映射成一个新值.绑定后 值的改变都会触发subscribe
     // flattenMap作用:把源信号的内容映射成一个新的信号，信号可以是任意类型
@@ -814,7 +865,7 @@
         return nil;
     }];
     
-    // 把两个信号组合成一个信号,跟zip一样，没什么区别
+
 #pragma mark   combineLatest需要每个signal至少都有过一次sendNext-->触发过一次
     RACSignal *combineSignal = [signalA combineLatestWith:signalB];
     
@@ -915,6 +966,7 @@
     [signal sendNext:@1];
     
     [signal sendNext:@2];
+    [signal sendCompleted];
 }
 - (void)takeLastSignal{
     RACSubject *signal = [RACSubject subject];
@@ -1381,7 +1433,7 @@
     // Executes the login command when the button is pressed. 按钮点击触发
     self.shareBtn.rac_command = self.loginCommand;
 }
--(void)subcribeComplted{
+-(void)subcribeCompleted{
    RACSignal *siga = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@"1000"];
         [subscriber sendCompleted];
@@ -1436,6 +1488,7 @@
         [subscriber sendCompleted];
         return nil;
     }];
+    
     return siga;
 }
 -(void)asychronize{
@@ -1545,12 +1598,134 @@
     
     
 }
+-(void)testSubscriber{
+    // signal 只要是subscribe就是热信号了，只是没有接受输出而已
+    RACSignal *siga = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"__%s",__func__);
+        [subscriber sendNext:@[@"1",@"2"]];
+        
+        NSLog(@"inc=voke ok %s ",__func__);
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    RACSubject *subject = [RACSubject subject];
+    [siga subscribe:subject];
+    /*
+     2016-01-05 16:27:35.231 JFReactive[37914:4473663] ____32-[ViewController testSubscriber]_block_invoke
+     2016-01-05 16:27:35.231 JFReactive[37914:4473663] inc=voke ok __32-[ViewController testSubscriber]_block_invoke
+     */
+}
+-(void)testSubject{
+    RACSignal *coldSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"Cold signal be subscribed.");
+        [[RACScheduler mainThreadScheduler] afterDelay:1.5 schedule:^{
+            [subscriber sendNext:@"A"];
+        }];
+        
+        [[RACScheduler mainThreadScheduler] afterDelay:3 schedule:^{
+            [subscriber sendNext:@"B"];
+        }];
+        
+        [[RACScheduler mainThreadScheduler] afterDelay:5 schedule:^{
+            [subscriber sendCompleted];
+        }];
+        
+        return nil;
+    }];
+    
+    RACSubject *subject = [RACSubject subject];
+    NSLog(@"Subject created.");
+    
+    [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
+        [coldSignal subscribe:subject];
+    }];
+    
+    [subject subscribeNext:^(id x) {
+        NSLog(@"Subscriber 1 recieve value:%@.", x);
+    }];
+    
+    [[RACScheduler mainThreadScheduler] afterDelay:4 schedule:^{
+        [subject subscribeNext:^(id x) {
+            NSLog(@"Subscriber 2 recieve value:%@.", x);
+        }];
+    }];
+     
+}
+
+#pragma mark 冷信号被订阅 就会变成热信号 其余的工作让subject 来干
+-(void)coldSignalSubscribeSubject{
+    RACSignal *coldSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"Cold signal be subscribed.");
+        [[RACScheduler mainThreadScheduler] afterDelay:1.5 schedule:^{
+            [subscriber sendNext:@"A"];
+        }];
+        
+        [[RACScheduler mainThreadScheduler] afterDelay:3 schedule:^{
+            [subscriber sendNext:@"B"];
+        }];
+        
+        [[RACScheduler mainThreadScheduler] afterDelay:5 schedule:^{
+            [subscriber sendCompleted];
+        }];
+        
+        return nil;
+    }];
+    
+    RACSubject *subject = [RACSubject subject];
+    NSLog(@"Subject created.");
+    
+    [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
+        [coldSignal subscribe:subject];
+    }];
+    
+    [subject subscribeNext:^(id x) {
+        NSLog(@"Subscriber 1 recieve value:%@.", x);
+    }];
+    
+    [[RACScheduler mainThreadScheduler] afterDelay:4 schedule:^{
+        [subject subscribeNext:^(id x) {
+            NSLog(@"Subscriber 2 recieve value:%@.", x);
+        }];
+    }];
+    
+    /*
+     
+     2016-01-07 17:27:06.058 JFReactive[55103:5109602] Subject created.
+     2016-01-07 17:27:08.256 JFReactive[55103:5109602] Cold signal be subscribed.
+     2016-01-07 17:27:09.756 JFReactive[55103:5109602] Subscriber 1 recieve value:A.
+     2016-01-07 17:27:11.545 JFReactive[55103:5109602] Subscriber 1 recieve value:B.
+     2016-01-07 17:27:11.545 JFReactive[55103:5109602] Subscriber 2 recieve value:B.
+     */
+}
+
+#pragma mark RAC(a,b) 宏的使用  给RAC()绑定一个信号后 会自动触发 signal 的didSubsribeBlock 不必subscribeNext:
+-(void)RACMicro{
+    RACSignal * signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+      
+        [subscriber sendNext:@"dddd"];// 如果 注释掉subscribeNext就不会发送
+        [subscriber sendCompleted];
+      
+        return [RACDisposable disposableWithBlock:^{
+            
+        }];
+    }];
+    //表示的意义是将一个对象的一个属性和一个signal绑定，signal每产生一个value（id类型），都会自动执行：
+    RAC(self.labelForName,text) = signal;// 绑定之后会触发signal 的subscribeNext:
+    /*
+     参考：宏RAC_()    [[RACSubscriptingAssignmentTrampoline alloc] initWithTarget:(TARGET) nilValue:(NILVALUE)][@keypath(TARGET, KEYPATH)]
+     See -[RACSignal setKeyPath:onObject:nilValue:] for more information about the
+     /// binding's semantics.
+     */
+    
+}
 - (void)subScribeSingle{
-   self.textField.text = @"dd";
+    [self coldSignalSubscribeSubject];
+    
 }
 - (IBAction)shareAction:(id)sender {
-    NSLog(@"shareActoin ...");
-    [self multicast];
+    
+
+    
 }
 
 @end

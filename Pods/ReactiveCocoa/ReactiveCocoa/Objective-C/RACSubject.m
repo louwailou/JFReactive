@@ -89,9 +89,13 @@
 #pragma mark RACSubscriber
 
 - (void)sendNext:(id)value {
+    NSLog(@"begin");
 	[self enumerateSubscribersUsingBlock:^(id<RACSubscriber> subscriber) {
-		[subscriber sendNext:value];
+        NSLog(@"subscribers = %@",subscriber);
+        
+        [subscriber sendNext:value];
 	}];
+    NSLog(@"end");
 }
 
 - (void)sendError:(NSError *)error {

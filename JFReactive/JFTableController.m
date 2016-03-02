@@ -13,21 +13,18 @@
 @implementation JFTableController
 - (void)viewDidLoad{
     [super viewDidLoad];
-   
+    NSArray * names = @[@"JFGraphicContrller",@"CollectionViewController"];
+    NSArray * descriptions = @[@"动画显示图形绘制过程",@"CollectionCircle swift 实现"];
     
     self.listArray = [[NSMutableArray alloc] initWithCapacity:0];
     // 基本动画和layer的使用
-    JFBaseModel *model = [[JFBaseModel alloc]init];
-    model.name = @"JFGraphicContrller";
-    model.vcDescription = @"动画显示图形绘制过程";
-    [self.listArray addObject:model];
     
-    
-    //所有使用stroryBoard 都需要设置identifier
-     model = [[JFBaseModel alloc]init];
-    model.name = @"CollectionViewController";
-    model.vcDescription = @"CollectionCircle";
-    [self.listArray addObject:model];
+    for(int i =0 ; i<[names count];i++){
+        JFBaseModel *model = [[JFBaseModel alloc]init];
+        model.name = names[i];
+        model.vcDescription = descriptions[i];
+        [self.listArray addObject:model];
+    }
     [self.tableView reloadData];
 }
 

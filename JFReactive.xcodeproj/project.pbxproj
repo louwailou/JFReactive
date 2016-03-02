@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1267374637EF8F7242610F9D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5BDB4FD82850319A6B7E80 /* Pods.framework */; };
+		A412D1ED1C76B72300AD9CD0 /* JFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A412D1EC1C76B72300AD9CD0 /* JFViewController.m */; };
 		A42CB4D61C2A8FCC004E8641 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A42CB4D51C2A8FCC004E8641 /* NullSafe.m */; };
 		A42CB4D91C2ED6B2004E8641 /* JFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A42CB4D81C2ED6B2004E8641 /* JFModel.m */; };
 		A43D2DD21C1A7EB2009CF246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D2DD11C1A7EB2009CF246 /* main.m */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		2A5BDB4FD82850319A6B7E80 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E6EF786C064C8E047EF042 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A412D1EB1C76B72300AD9CD0 /* JFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFViewController.h; sourceTree = "<group>"; };
+		A412D1EC1C76B72300AD9CD0 /* JFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFViewController.m; sourceTree = "<group>"; };
 		A42CB4D51C2A8FCC004E8641 /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
 		A42CB4D71C2ED6B2004E8641 /* JFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFModel.h; sourceTree = "<group>"; };
 		A42CB4D81C2ED6B2004E8641 /* JFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFModel.m; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				A42CB4D51C2A8FCC004E8641 /* NullSafe.m */,
 				A43D2DD31C1A7EB2009CF246 /* AppDelegate.h */,
 				A43D2DD41C1A7EB2009CF246 /* AppDelegate.m */,
+				A412D1EB1C76B72300AD9CD0 /* JFViewController.h */,
+				A412D1EC1C76B72300AD9CD0 /* JFViewController.m */,
 				A43D2DD61C1A7EB2009CF246 /* ViewController.h */,
 				A43D2DD71C1A7EB2009CF246 /* ViewController.m */,
 				A43D2DD91C1A7EB2009CF246 /* Main.storyboard */,
@@ -357,6 +362,7 @@
 				A43D2DD51C1A7EB2009CF246 /* AppDelegate.m in Sources */,
 				A42CB4D91C2ED6B2004E8641 /* JFModel.m in Sources */,
 				A43D2DD21C1A7EB2009CF246 /* main.m in Sources */,
+				A412D1ED1C76B72300AD9CD0 /* JFViewController.m in Sources */,
 				A42CB4D61C2A8FCC004E8641 /* NullSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

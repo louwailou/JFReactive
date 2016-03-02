@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelForName;
 @property (nonatomic,strong)JFModel * model;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic,strong)RACSignal *signal;
+@property (weak, nonatomic) IBOutlet UITextField *otherField;
 @end
 
 @implementation ViewController
@@ -28,9 +30,74 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    UIImageView * aview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+//    [aview setImage:[UIImage imageNamed:@"2"]];
+  
+    UIButton * aview = [UIButton buttonWithType:UIButtonTypeCustom];
+    [aview setBackgroundColor:[UIColor redColor]];
+    [aview setBackgroundImage:[UIImage imageNamed:@"2"] forState:UIControlStateNormal];
+    [aview setFrame:CGRectMake(0, 0, 100, 100)];
+    [self.view addSubview:aview];
+   
+    [aview setTransform:CGAffineTransformMakeScale(1, -1)];
+    aview.transform = CGAffineTransformTranslate(aview.transform, 0, -100);
+    NSLog(@"frame = %@",NSStringFromCGRect(aview.frame));
+    NSLog(@"bound = %@",NSStringFromCGRect(aview.bounds));
+    NSLog(@"position =%@",NSStringFromCGPoint(aview.layer.position));
+    NSLog(@"anchorPoint =%@",NSStringFromCGPoint(aview.layer.anchorPoint));
+    
+    
+//    
+//    CALayer * layer = [CALayer layer];
+//    [layer setFrame:CGRectMake(0, 0, 100, 100)];
+//    layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"2"].CGImage);
+//    [layer setBackgroundColor:[UIColor redColor].CGColor];
+//    [layer setAffineTransform: CGAffineTransformMakeScale(1, -1)];
+//    layer.affineTransform = CGAffineTransformTranslate(layer.affineTransform, 0, -100);
+//    [self.view.layer addSublayer:layer];
+//    NSLog(@"frame = %@",NSStringFromCGRect(layer.frame));
+//     NSLog(@"bound = %@",NSStringFromCGRect(layer.bounds));
+//    NSLog(@"position =%@",NSStringFromCGPoint(layer.position));
+//    NSLog(@"anchorPoint =%@",NSStringFromCGPoint(layer.anchorPoint));
+   /*
+    
+    frame.origin.x = position.x - anchorPoint.x * bounds.size.width；
+    
+    frame.origin.y = position.y - anchorPoint.y * bounds.size.height；
+    
+
+    2016-01-16 18:16:14.203 JFReactive[57750:8076076] frame = {{0, 0}, {100, 100}}
+    2016-01-16 18:16:14.203 JFReactive[57750:8076076] position ={50, 50}
+    2016-01-16 18:16:14.204 JFReactive[57750:8076076] anchorPoint ={0.5, 0.5}
+    修改anchorPisition 不会影响position  所以anchorPoint 和position无关系
+    
+    
+    
+    
+    id obj1 = [NSArray alloc];
+    id obj2 = [NSArray alloc];
+    id obj3 = [NSMutableArray alloc];
+    id obj4 = [NSMutableArray alloc];
+    2016-01-15 17:21:18.752 JFReactive[47516:7787044] p 1 =0x7f874350dab0
+    2016-01-15 17:21:18.753 JFReactive[47516:7787044] p 1 =0x7f874350dab0
+    2016-01-15 17:21:18.753 JFReactive[47516:7787044] p 1 =0x7f87435102e0
+    2016-01-15 17:21:34.130 JFReactive[47516:7787044] p 1 =0x7f87435102e0
+    (lldb)
+    id obj1 = [[NSArray alloc]init];
+    id obj2 = [[NSArray alloc]init];
+    id obj3 = [[NSMutableArray alloc]init];
+    id obj4 = [[NSMutableArray alloc]init];
+    2016-01-15 17:31:12.509 JFReactive[47792:7792982] p 1 =0x7feda3f02bd0
+    2016-01-15 17:31:12.510 JFReactive[47792:7792982] p 1 =0x7feda3f02bd0
+    2016-01-15 17:31:12.510 JFReactive[47792:7792982] p 1 =0x7feda3c0ed20
+    2016-01-15 17:31:12.510 JFReactive[47792:7792982] p 1 =0x7feda3c25c80
+    2016-01-15 17:31:12.510 JFReactive[47792:7792982] view will appear
+    
+    */
+    
    // [self.textField setText:value];
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setFrame:CGRectMake(200, 200, 80, 44)];
+    [btn setFrame:CGRectMake(200, 130, 80, 44)];
     [btn addTarget:self action:@selector(subScribeSingle) forControlEvents:UIControlEventTouchUpInside];
     [btn setTitle:@"cilick me" forState:UIControlStateNormal];
     [btn setBackgroundColor:[UIColor redColor]];
@@ -50,23 +117,21 @@
 //    }];
 //    
   
-    /*
-    [[RACObserve(self, model.name) map:^id(id value) {
+    RACSignal * signal = [RACObserve(self, model.name) map:^id(id value) {
         NSLog(@"value =%@",value);
         return value ? @YES : @NO;
-    }]subscribeNext:^(id x) {
+    }];
+    
+    [signal subscribeNext:^(id x) {
         NSLog(@"xxxxxx =%@",x);
     }];
-    */
+    
+    
     
     // 1 需要subscribe 订阅
     // 2 无论是(self.model, name) 还是(self ,model.name) 均需要在另外的方法中去修改name的值才会触发
     // 3 (self,model)是不会触发的
     
-    
-    
-//
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)subScirbe{
@@ -109,17 +174,17 @@
     
     // 2.订阅信号
     [subject subscribeNext:^(id x) {
-        // block调用时刻：当信号发出新值，就会调用.
+    
         NSLog(@"第一个订阅者%@",x);
     }];
     [subject subscribeNext:^(id x) {
-        // block调用时刻：当信号发出新值，就会调用.
+      
         NSLog(@"第二个订阅者%@",x);
     }];
     
     // 3.发送信号
     [subject sendNext:@"100"];
-     [subject sendNext:@"100"];
+     [subject sendNext:@"200"];
     
     
     /*
@@ -249,33 +314,32 @@
 }
 - (void)sequence{
     // 1.遍历数组
-    NSArray *numbers = @[@1,@2,@3,@4];
+//    NSArray *numberSequnence = @[@1,@2,@3,@4];
+//    
+//    // 这里其实是三步
+//    // 第一步: 把数组转换成集合RACSequence numbers.rac_sequence
+//    // 第二步: 把集合RACSequence转换RACSignal信号类,numbers.rac_sequence.signal
+//    // 第三步: 订阅信号，激活信号，会自动把集合中的所有值，遍历出来。
+//    [numberSequnence.rac_sequence.signal subscribeNext:^(id x) {
+//        
+//        NSLog(@"thread = %@",[NSThread currentThread]);
+//        NSLog(@"main thread = %@",[NSThread mainThread]);
+//        NSLog(@"%@",x);
+//    }];
     
-    // 这里其实是三步
-    // 第一步: 把数组转换成集合RACSequence numbers.rac_sequence
-    // 第二步: 把集合RACSequence转换RACSignal信号类,numbers.rac_sequence.signal
-    // 第三步: 订阅信号，激活信号，会自动把集合中的所有值，遍历出来。
-    [numbers.rac_sequence.signal subscribeNext:^(id x) {
-        
-        NSLog(@"thread = %@",[NSThread currentThread]);
-        NSLog(@"main thread = %@",[NSThread mainThread]);
-        NSLog(@"%@",x);
-    }];
-    
-    
+//    
     // 2.遍历字典,遍历出来的键值对会包装成RACTuple(元组对象)
-    NSDictionary *dict = @{@"name":@"xmg",@"age":@18};
+    NSDictionary *dict = @{@"name":@"sun",@"age":@18};
     [dict.rac_sequence.signal subscribeNext:^(RACTuple *x) {
         
         // 解包元组，会把元组的值，按顺序给参数里面的变量赋值
         RACTupleUnpack(NSString *key,NSString *value) = x;
+        NSString *keys = x[0];
+        NSString *values = x[1];
         
-        // 相当于以下写法
-               NSString *keys = x[0];
-                NSString *values = x[1];
-        
-        NSLog(@"%@ %@",key,value);
-         NSLog(@"s %@ s%@",keys,values);
+        NSLog(@"%@ %@",keys,values);
+        NSLog(@"thread = %@",[NSThread currentThread]);
+        NSLog(@"main thread = %@",[NSThread mainThread]);
         
     }];
     
@@ -360,10 +424,10 @@
         NSLog(@"执行命令");
         NSLog(@"input =%@",input);
         // 创建空信号,必须返回信号
-        //        return [RACSignal empty];
+        // return [RACSignal empty];
         
         // 2.创建信号,用来传递数据
-        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        RACSignal * rSignal =[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             
             [subscriber sendNext:@"请求数据"];
             
@@ -372,6 +436,8 @@
             
             return nil;
         }];
+        NSLog(@"innerSiganl = %@",rSignal);
+        return rSignal;
         
     }];
     
@@ -387,11 +453,12 @@
          NSLog(@"subscribe signal  %@",x);//返回signal
         [x subscribeNext:^(id x) {
             
-            NSLog(@"singnal's next  %@",x);//返回signal的数据
+         NSLog(@"singnal's next  %@",x);//返回signal的数据
         }];
         
     }];
     
+
     // RAC高级用法
     // switchToLatest:用于signal of signals，获取signal of signals发出的最新信号,也就是可以直接拿到RACCommand中的信号
     [command.executionSignals.switchToLatest subscribeNext:^(id x) {
@@ -480,33 +547,8 @@
     RAC(self.textField, text) = [[b catchTo:[RACSignal return:@"Error"]] startWith:@"Loading..."];
    */
     
-    /*
-     flattenMap  伪代码
-     - (instancetype)flattenMap_:(RACStream * (^)(id value))block {
-     {
-     return [RACSignal createSignal:^RACDisposable *(id subscriber) {
-     return [self subscribeNext:^(id x) {
-     RACSignal *signal = (RACSignal *)block(x);
-     [signal subscribeNext:^(id x) {
-     [subscriber sendNext:x];
-     } error:^(NSError *error) {
-     [subscriber sendError:error];
-     } completed:^{
-     [subscriber sendCompleted];
-     }];
-     } error:^(NSError *error) {
-     [subscriber sendError:error];
-     } completed:^{
-     [subscriber sendCompleted];
-     }];
-     }];
-     }
-     
-     */
-//    [[RACSignal merge:@[a, b]] subscribeError:^(NSError *error) {
-//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:error.domain delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//        [alertView show];
-//    }];
+    
+
     //******这里有一个很重要的概念，就是任何的信号转换即是对原有的信号进行订阅从而产生新的信号****////
 
     // 使用muticastConnection 替代 解决 了多个订阅，发多次请求的问题
@@ -529,7 +571,7 @@
     }];
     
     // 4.连接,激活信号
-   [connect connect];// 如果先subscribe 然后连接 不会发送subscribeNext中的信息，仅仅打印出 发送请求
+   [connect connect];// 如果先连接 不会发送subscribeNext中的信息，仅仅打印出 发送请求
     /*
      2016-01-04 18:15:07.287 JFReactive[33616:4293575] 发送请求
      2016-01-04 18:15:07.287 JFReactive[33616:4293575] 订阅者一信号
@@ -537,35 +579,34 @@
      */
 
 }
-#pragma mark 多个信号统一处理 只有两个信号均发送成功才可以，发送error 都不会触发selector
+#pragma mark 多个信号统一处理 初始时必须两个信号均发送成功，然后任意信号发送都会触发，发送error 都不会触发selector
 - (void)multiSignalWithSelector{
     // 6.处理多个请求，都返回结果的时候，统一做处理.
     RACSignal *request1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
         // 发送请求1
-        [subscriber sendNext:@"发送请求1"];
+       [subscriber sendNext:@"发送请求1"];
         
-       // [subscriber sendError:nil];
+        //[subscriber sendError:nil];
         return nil;
     }];
     
     RACSignal *request2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         // 发送请求2
         [subscriber sendNext:@"发送请求2"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@"发送请求2"];
+        });
         return nil;
     }];
     
     // 使用注意：几个信号，参数一的方法就几个参数，每个参数对应信号发出的数据。
     [self rac_liftSelector:@selector(updateUIWithR1:r2:) withSignalsFromArray:@[request1,request2]];
-    
-
 }
 
 - (void)updateUIWithR1:(id)data r2:(id)data1
 {
     NSLog(@"更新UI%@  %@",data,data1);
-    
-   
 }
 
 #pragma mark bing 文本改变自动触发，不用 sendNext
@@ -578,23 +619,19 @@
      */
     [[_textField.rac_textSignal bind:^RACStreamBindBlock{
         
-        // 什么时候调用:
-        // block作用:表示绑定了一个信号.
-        NSLog(@"revoke streamBindBlock");
-        
         return ^RACStream *(id value, BOOL *stop){
             
-            // 什么时候调用block:当信号有新的值发出，就会来到这个block。
-            
-            // block作用:做返回值的处理
-            NSLog(@"RacStream RetunBlock");
-            // 做好处理，通过信号返回出去.
-            return [RACReturnSignal return:[NSString stringWithFormat:@"输出:%@",value]];
+            //当信号有新的值发出，就会来调用这个block。
+            NSLog(@"%d",*stop);
+            if ([value isEqualToString:@"fff"]) {
+                *stop = YES;
+            }
+            return [RACReturnSignal return:[NSString stringWithFormat:@"value:%@",value]];
         };
         
     }] subscribeNext:^(id x) {
         
-        NSLog(@"输出XXX %@",x);
+        NSLog(@"输出XXX %@",x);///当stop = yes 后不再输出
         
     }];
     /*
@@ -613,41 +650,7 @@
      2016-01-04 18:36:05.737 JFReactive[33880:4304232] 输出XXX 输出:ff
      */
 }
-#pragma mark flattenMap 文本改变自动触发，不用 sendNext
-#pragma mark 这里有一个很重要的概念，就是任何的信号转换即是对原有的信号进行订阅从而产生新的信号
-- (void)flattenMap{
-    // 监听文本框的内容改变，把结构重新映射成一个新值.绑定后 值的改变都会触发subscribe
-    // flattenMap作用:把源信号的内容映射成一个新的信号，信号可以是任意类型
-    // flattenMap使用步骤:
-    // 1.传入一个block，block类型是返回值RACStream，参数value
-    // 2.参数value就是源信号的内容，拿到源信号的内容做处理
-    // 3.包装成RACReturnSignal信号，返回出去。
 
-    [[self.textField.rac_textSignal flattenMap:^RACStream *(id value) {
-        NSLog(@"value =%@",value);
-        return [RACReturnSignal return:@[[NSString stringWithFormat:@"%@",value]]];
-        
-    }]subscribeNext:^(id x) {
-        NSLog(@"xxx = %@",x);
-    }];
-    /*
-     value 先执行   将输入的value 包装成其他的signal 返回，这里使用的是string 构造的returnSignal 还可以其他形式 如数组 字典...
-     2015-12-23 11:05:23.091 JFReactive[44079:2179592] value =jjjjj
-     2015-12-23 11:05:23.091 JFReactive[44079:2179592] xxx = jjjjj
-     2015-12-23 11:05:25.469 JFReactive[44079:2179592] value =jjjjjh
-     2015-12-23 11:05:25.469 JFReactive[44079:2179592] xxx = jjjjjh
-
-     换成数组后
-     2015-12-23 11:08:30.733 JFReactive[44164:2181092] value =dd
-     2015-12-23 11:08:30.733 JFReactive[44164:2181092] xxx = (
-     dd
-     )
-     2015-12-23 11:08:31.633 JFReactive[44164:2181092] value =ddd
-     2015-12-23 11:08:31.633 JFReactive[44164:2181092] xxx = (
-     ddd
-     )
-     */
-}
 
 #pragma mark map  将值映射为其他的类型  文本改变自动触发，不用 sendNext
 - (void)map{
@@ -674,17 +677,30 @@
         NSLog(@"%@",x);
     }];
     
+    [[self.textField.rac_textSignal flattenMap:^RACStream *(id value) {
+        NSLog(@"value =%@",value);
+        return [RACReturnSignal return:@[[NSString stringWithFormat:@"%@",value]]];
+        
+    }]subscribeNext:^(id x) {
+        NSLog(@"xxx = %@",x);
+    }];
+
     /*
     FlatternMap和Map的区别
     
     1.FlatternMap中的Block返回信号。
     2.Map中的Block返回对象。
     3.开发中，如果信号发出的值不是信号，映射一般使用Map
-    4.开发中，如果信号发出的值是信号，映射一般使用FlatternMap。
+    如果信号发出的值是信号，映射一般使用FlatternMap。
      
-     flattenMap 在map的基础上使其flatten，也就是当Signal嵌套（一个Signal的事件是另一个Signal）的时候，会将内部Signal的事件传递给外部Signal
+    flattenMap 在map的基础上使其flatten，也就是当Signal嵌套（一个Signal的事件是另一个Signal）的时候，会将内部Signal的事件传递给外部Signal
 */
 }
+
+
+
+
+
 #pragma  mark 信号中的信号
 - (void)signalOfSignal{
     // 创建信号中的信号
@@ -789,8 +805,8 @@
 - (void)merge{
     RACSignal *signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
-        [subscriber sendNext:@1];
-        
+        //[subscriber sendNext:@1];
+        [subscriber sendError:nil];// 如果是error 则不会有任何输出，signalB 也不会执行输出
         
         return nil;
     }];
@@ -864,7 +880,12 @@
         
         return nil;
     }];
-    
+    RACSignal *fileSignal = [RACSignal startEagerlyWithScheduler:[RACScheduler scheduler] block:^(id subscriber) {
+        NSMutableArray *filesInProgress = [NSMutableArray array];
+        
+        [subscriber sendNext:[filesInProgress copy]];
+        [subscriber sendCompleted];
+    }];
 
 #pragma mark   combineLatest需要每个signal至少都有过一次sendNext-->触发过一次
     RACSignal *combineSignal = [signalA combineLatestWith:signalB];
@@ -939,18 +960,21 @@
     }];
     
 }
-#pragma mark 前后文本的值有多次改变，仅仅触发最后的依次更新   ？？？distinctUntilChanged 比较数值流中当前值和上一个值，如果不同，就返回当前值，简单理解为“流”的值有变化时反馈变化的值，求异存同
+#pragma mark 前后文本的值有多次改变，仅仅触发最后的依次更新 distinctUntilChanged 比较数值流中当前值和上一个值，如果不同，就返回当前值，简单理解为“流”的值有变化时反馈变化的值，求异去同
 
 - (void)distinctUntilChanged{
-    self.textField.text = @"100";
-    self.textField.text = @"120";
-    [[_textField.rac_textSignal distinctUntilChanged] subscribeNext:^(id x) {
+
+    [[RACObserve(self.textField, text) distinctUntilChanged] subscribeNext:^(id x) {
         
         NSLog(@"%@",x);
     }];
-    //
-    self.textField.text = @"15000";
-    // 仍旧输出 120 ？？？
+    self.textField.text = @"100";
+   
+//    [[_textField.rac_textSignal distinctUntilChanged] subscribeNext:^(id x) {
+//        
+//        NSLog(@"%@",x);
+//    }];
+   
 }
 #pragma mark  限定处理信号的个数
 - (void)takeSignal{
@@ -1110,24 +1134,22 @@
     RACSignal * imagAvaibaleSignal = [RACObserve(self, self.imageView.image) map:^id(id value) {
         return  value ? @YES : @NO;
     }];
-    self.imageView.image = [UIImage imageNamed:@"img"];
+    
     [imagAvaibaleSignal subscribeNext:^(id x) {
         NSLog(@"xx =%@",x);
     }];
     //
     self.shareBtn.rac_command = [[RACCommand alloc] initWithEnabled:imagAvaibaleSignal signalBlock:^RACSignal *(id input) {
         // do share logic
-        
         NSLog(@"input =%@",input);
         return [RACSignal empty];// 必须返回一个信号，不能返回nil
     }];
     // 一个command 需要execute 才能触发执行
      //  [self.shareBtn.rac_command execute:@"100"];
     /*
-     2015-12-27 13:08:22.669 JFReactive[90007:3150988] xx =1
-     2015-12-27 13:08:25.960 JFReactive[90007:3150988] input =100
-     ///
-     */
+     2016-02-19 11:14:25.359 JFReactive[26455:2201124] xx =0
+     2016-02-19 11:14:37.216 JFReactive[26455:2201124] xx =1
+     2016-02-19 11:16:21.597 JFReactive[26455:2201124] input =<UIButton: 0x7f9d2bd6fc60; frame = (93 330; 151 30); opaque = NO; autoresize = RM+BM; layer = <CALayer: 0x7f9d2bd6bcc0>>     */
 }
 
 - (void)tapGesture{
@@ -1142,10 +1164,8 @@
 - (void)interval{
     NSArray *pins = @[@172230988, @172230947, @172230899, @172230777, @172230707];
     __block NSInteger index = 0;
-    
-    
     // take  表示接收几次
-    RACSignal * signal = [[[[RACSignal interval:0.1 onScheduler:[RACScheduler scheduler]]take:2]map:^id(id value) {
+    RACSignal * signal = [[[[RACSignal interval:0.1 onScheduler:[RACScheduler scheduler]]map:^id(id value) {
         return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             [subscriber sendNext:@(index++)];
             [subscriber sendCompleted];
@@ -1153,7 +1173,7 @@
         }] doNext:^(id x) {
             NSLog(@"do next =%@",x);
         }];
-    }]switchToLatest];
+    }]take:2]switchToLatest];
     
     [signal subscribeNext:^(id value) {
         NSLog(@"pinID:%@", value);
@@ -1163,17 +1183,12 @@
     
     
     /*
-     do next =0
-     2015-12-27 13:42:40.920 JFReactive[90704:3165939] pinID:0
-     2015-12-27 13:42:41.015 JFReactive[90704:3165939] do next =1
-     2015-12-27 13:42:41.015 JFReactive[90704:3165939] pinID:1
-     2015-12-27 13:42:41.119 JFReactive[90704:3165943] do next =2
-     2015-12-27 13:42:41.120 JFReactive[90704:3165943] pinID:2
-     2015-12-27 13:42:41.219 JFReactive[90704:3165939] do next =3
-     2015-12-27 13:42:41.219 JFReactive[90704:3165939] pinID:3
-     2015-12-27 13:42:41.318 JFReactive[90704:3165943] do next =4
-     2015-12-27 13:42:41.319 JFReactive[90704:3165943] pinID:4
-     2015-12-27 13:42:41.319 JFReactive[90704:3165943] completed
+     take 2  表示只取两次
+     2016-02-19 11:30:28.733 JFReactive[26589:2208108] do next =0
+     2016-02-19 11:30:28.733 JFReactive[26589:2208108] pinID:0
+     2016-02-19 11:30:28.833 JFReactive[26589:2208102] do next =1
+     2016-02-19 11:30:28.833 JFReactive[26589:2208102] pinID:1
+     2016-02-19 11:30:28.834 JFReactive[26589:2208102] completed
      
      */
 
@@ -1201,7 +1216,7 @@
    // self.scrollView.delegate = nil;
    // self.scrollView.delegate = self;
 }
--(void)requestTwilce{
+-(void)requestTwice{
     /*
       场景：
      token过期后自动获取新的
@@ -1237,6 +1252,8 @@
     }];
     
     self.labelForName.text = @"sending request...";
+    //Subscribes to the returned signal when an error occurs.
+    
     [[requestSignal catch:^RACSignal *(NSError *error) {// requestSignal 发送error 触发 catch{}  catch 中返回的signal 发送next 在subcribeNext接收后，再追加一次requestSignal
         self.labelForName.text = @"oops, invalid access token";
         NSLog(@"catch ....");
@@ -1250,10 +1267,7 @@
                 [subscriber sendCompleted];
             });
             return nil;
-        }] concat:requestSignal];//在发送成功后再追加一个信号 依次执行信号,
-        
-        
-        
+        }]concat:requestSignal];//在发送成功后再追加一个信号 依次执行信号,
     }] subscribeNext:^(id x) {
         NSLog(@"next =%@",x);
         if ([x isKindOfClass:[NSDictionary class]]) {
@@ -1278,6 +1292,26 @@
      2015-12-27 15:55:31.117 JFReactive[99545:3229476] subscriber sendcompleted
      */
 }
+-(void)retry{
+   __block int flag = 0;
+    
+  RACSignal *signal =  [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+      
+       if (flag == 4){
+        [subscriber sendNext:@"1"];
+        [subscriber sendCompleted];
+        }else{
+            flag ++;
+            NSLog(@"flag= %d",flag);
+            [subscriber sendError:[NSError errorWithDomain:@"myerror " code:100 userInfo:nil]];
+        }
+      return nil;
+    }];
+    [[signal retry:5]subscribeNext:^(id x) {
+        NSLog(@"xxxx =%@",x);
+    }];
+    
+}
 - (void)takeT{
     [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@"1"];
@@ -1293,7 +1327,7 @@
      2015-12-27 16:51:11.255 JFReactive[99908:3250727] only 1 and 2 will be print: 2
      */
 }
-#pragma mark 节流  如果上个next 在规定的interval 内没有返回，这是下一个next 已发送，就会放弃上个next
+#pragma mark 节流  如果上个next 在规定的interval 内没有返回，这时下一个next 已发送，就会放弃上个next
 - (void)throttle{
     
     /*
@@ -1413,6 +1447,7 @@
 //    }];
     
     self.loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        //模拟login signal
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             [subscriber sendNext:@"1000"];
             [subscriber sendCompleted];
@@ -1430,6 +1465,9 @@
             NSLog(@"Logged in successfully!");
         }];
     }];
+//    [self.loginCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
+//        NSLog(@"xx =%@",x);
+//    }];
     // Executes the login command when the button is pressed. 按钮点击触发
     self.shareBtn.rac_command = self.loginCommand;
 }
@@ -1460,9 +1498,9 @@
 }
 - (RACSignal*)loginSignal{
     RACSignal *siga = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        NSLog(@"__%s",__func__);
+        NSLog(@"loginSiganl...");
         [subscriber sendNext:@[@"1000"]];
-        NSLog(@"inc=voke ok %s ",__func__);
+        
         [subscriber sendCompleted];
         return nil;
     }];
@@ -1470,10 +1508,9 @@
 }
 -(RACSignal*)loadCachedMessagesForUser:(NSString*)user{
     RACSignal *siga = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        NSLog(@"__%s",__func__);
+       
         [subscriber sendNext:@[@"11111"]];
-         NSLog(@"inc=voke ok %s ",__func__);
-
+        
         [subscriber sendCompleted];
         return nil;
     }];
@@ -1481,10 +1518,9 @@
 }
 -(RACSignal*)fetchMessagesAfterMessage:(NSString*)arr{
     RACSignal *siga = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        NSLog(@"__%s",__func__);
+       
         [subscriber sendNext:@[@"1",@"2"]];
-        
-         NSLog(@"inc=voke ok %s ",__func__);
+       
         [subscriber sendCompleted];
         return nil;
     }];
@@ -1508,9 +1544,11 @@
         loginSignal]
        flattenMap:^(NSString *user) {
            // Return a signal that loads cached messages for the user.
+           NSLog(@"user == %@",user);
            return [self loadCachedMessagesForUser:user];
        }]
       flattenMap:^(NSArray *messages) {
+          NSLog(@"messages =%@",messages);
           // Return a signal that fetches any remaining messages.
           return [self fetchMessagesAfterMessage:messages.lastObject];
       }]
@@ -1520,12 +1558,18 @@
          NSLog(@"Fetched all messages.");
      }];
     /*
-     New messages: (
+     2016-02-22 15:13:04.233 JFReactive[30740:2526738] loginSiganl...
+     2016-02-22 15:13:04.233 JFReactive[30740:2526738] user == (
+     1000
+     )
+     2016-02-22 15:13:04.234 JFReactive[30740:2526738] messages =(
+     11111
+     )
+     2016-02-22 15:13:04.234 JFReactive[30740:2526738] New messages: (
      1,
      2
      )
-     2015-12-29 20:56:37.356 JFReactive[16147:3742041] Fetched all messages.
-     
+     2016-02-22 15:13:04.234 JFReactive[30740:2526738] Fetched all messages.
      */
 }
 -(void)racBinding{
@@ -1555,7 +1599,7 @@
 }
 #pragma mark 当下一个对服务器网络请求需要构建在前一个完成时,
 -(void)loginThen{
-/*
+
     [[[[self loginSignal]// 1
        then:^{
            NSLog(@"then....");
@@ -1570,31 +1614,17 @@
      } completed:^{
          NSLog(@"Fetched all messages.");
      }];
-    */
+ 
     /*
-     2015-12-30 10:57:43.426 JFReactive[17235:3803028] ____29-[ViewController loginSignal]_block_invoke
-     2015-12-30 10:57:43.427 JFReactive[17235:3803028] inc=voke ok __29-[ViewController loginSignal]_block_invoke
-     2015-12-30 10:57:43.427 JFReactive[17235:3803028] then....
-     2015-12-30 10:57:43.427 JFReactive[17235:3803028] ____44-[ViewController fetchMessagesAfterMessage:]_block_invoke
-     2015-12-30 10:57:43.428 JFReactive[17235:3803028] messages =(
+     2016-02-19 16:37:18.804 JFReactive[28625:2333701] then....
+     2016-02-19 16:37:18.804 JFReactive[28625:2333701] messages =(
      1,
      2
      )
-     2015-12-30 10:57:43.428 JFReactive[17235:3803028] ____44-[ViewController loadCachedMessagesForUser:]_block_invoke
-     2015-12-30 10:57:43.428 JFReactive[17235:3803028] inc=voke ok __44-[ViewController loadCachedMessagesForUser:]_block_invoke
-    这个为哈还调用呢？
-     2015-12-30 10:57:43.428 JFReactive[17235:3803028] inc=voke ok __44-[ViewController fetchMessagesAfterMessage:]_block_invoke
-     
-     
-     2015-12-30 10:57:43.428 JFReactive[17235:3803028] Fetched all messages.
+     2016-02-19 16:37:18.805 JFReactive[28625:2333701] Fetched all messages.
      */
     
-    /*
-     
-     */
-    [[self loginSignal]subscribeCompleted:^{
-        NSLog(@"completed...");
-    }];
+   
     
     
 }
@@ -1718,14 +1748,47 @@
      */
     
 }
+#pragma mark 订阅一个selector ,当selector发生后，会自动发送sendNext:   mapReplace替换原信号的值
+-(void)subscribeSelector{
+    RACSignal *presented = [[self rac_signalForSelector:@selector(shareAction:)] mapReplace:@YES];
+    [presented subscribeNext:^(id x) {
+        NSLog(@"dd %@",x);
+    }];
+}
+
+
 - (void)subScribeSingle{
-    [self coldSignalSubscribeSubject];
-    
+ 
+    self.textField.text = [self getText];
+      self.imageView.image = [UIImage imageNamed:@"img"];
 }
 - (IBAction)shareAction:(id)sender {
-    
-
-    
+   // [self distinctUntilChanged];
+   
+    [self asychronize];
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"view will appear");
+//    [[[self.shareBtn
+//       rac_signalForControlEvents:UIControlEventTouchUpInside]
+//      map:^id(id x){//改为flattenMap
+//          NSLog(@"xxx = %@",x);// button 对象
+//          return @"d";
+//      }]
+//     subscribeNext:^(id x){
+//         NSLog(@"Sign in result: %@", x);
+//     }];
+    // [self btnAvliableWhenImgOK];
 
+}
+-(NSString*)getText{
+    return self.otherField.text;
+}
+//change field action
+-(IBAction)changeField:(id)sender{
+  
+
+}
 @end
+

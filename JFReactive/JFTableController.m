@@ -22,7 +22,7 @@
     [self.listArray addObject:model];
     
     
-    //
+    //所有使用stroryBoard 都需要设置identifier
      model = [[JFBaseModel alloc]init];
     model.name = @"CollectionViewController";
     model.vcDescription = @"CollectionCircle";
@@ -52,6 +52,7 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     JFBaseCell * cell = [tableView dequeueReusableCellWithIdentifier:@"BaseCell"];
     if (!cell) {
+        // BaseCell 在stroyBoard 中的identifier 需要设置
         cell = [[JFBaseCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"BaseCell"];
     }
     JFBaseModel * model = [self.listArray objectAtIndex:indexPath.row];

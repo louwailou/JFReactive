@@ -16,6 +16,7 @@
    
     
     self.listArray = [[NSMutableArray alloc] initWithCapacity:0];
+    // 基本动画和layer的使用
     JFBaseModel *model = [[JFBaseModel alloc]init];
     model.name = @"JFGraphicContrller";
     model.vcDescription = @"动画显示图形绘制过程";

@@ -70,7 +70,8 @@
 	Class class = self.class;
 
 	return [[self bind:^{
-		return ^(id value, BOOL *stop) {
+		return ^(id value, BOOL *stop) {  // 返回一个block
+            //typedef RACStream * (^RACStreamBindBlock)(id value, BOOL *stop);
 			id stream = block(value) ?: [class empty];
 			NSCAssert([stream isKindOfClass:RACStream.class], @"Value returned from -flattenMap: is not a stream: %@", stream);
 

@@ -282,6 +282,7 @@
 	NSCParameterAssert(nextBlock != NULL);
 	
 	RACSubscriber *o = [RACSubscriber subscriberWithNext:nextBlock error:NULL completed:NULL];
+    NSLog(@"create subscribers = %@",o);
 	return [self subscribe:o];
 }
 

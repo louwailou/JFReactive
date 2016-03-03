@@ -41,6 +41,14 @@
 		A4F754331C8719A100A1666A /* 12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F754251C8719A100A1666A /* 12@2x.png */; };
 		A4F754341C8719A100A1666A /* 13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F754261C8719A100A1666A /* 13@2x.png */; };
 		A4F754351C8719A100A1666A /* 14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F754271C8719A100A1666A /* 14@2x.png */; };
+		A4F754391C87DF1B00A1666A /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754381C87DF1B00A1666A /* UIColor+Hex.m */; };
+		A4F754471C87DF8C00A1666A /* SCCornerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F7543E1C87DF8C00A1666A /* SCCornerCollectionViewCell.m */; };
+		A4F754481C87DF8C00A1666A /* SCPrimerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754401C87DF8C00A1666A /* SCPrimerCollectionViewCell.m */; };
+		A4F754491C87DF8C00A1666A /* SCCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754421C87DF8C00A1666A /* SCCornerViewController.m */; };
+		A4F7544A1C87DF8C00A1666A /* SCPrimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754441C87DF8C00A1666A /* SCPrimerViewController.m */; };
+		A4F7544B1C87DF8C00A1666A /* SCWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754461C87DF8C00A1666A /* SCWelcomeViewController.m */; };
+		A4F7544E1C87DF9F00A1666A /* SCCustomizableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F7544D1C87DF9F00A1666A /* SCCustomizableButton.m */; };
+		A4F754511C87E03F00A1666A /* StickCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754501C87E03F00A1666A /* StickCollectionViewFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +118,22 @@
 		A4F754251C8719A100A1666A /* 12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12@2x.png"; sourceTree = "<group>"; };
 		A4F754261C8719A100A1666A /* 13@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "13@2x.png"; sourceTree = "<group>"; };
 		A4F754271C8719A100A1666A /* 14@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "14@2x.png"; sourceTree = "<group>"; };
+		A4F754371C87DF1B00A1666A /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		A4F754381C87DF1B00A1666A /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		A4F7543D1C87DF8C00A1666A /* SCCornerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCornerCollectionViewCell.h; sourceTree = "<group>"; };
+		A4F7543E1C87DF8C00A1666A /* SCCornerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCornerCollectionViewCell.m; sourceTree = "<group>"; };
+		A4F7543F1C87DF8C00A1666A /* SCPrimerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPrimerCollectionViewCell.h; sourceTree = "<group>"; };
+		A4F754401C87DF8C00A1666A /* SCPrimerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPrimerCollectionViewCell.m; sourceTree = "<group>"; };
+		A4F754411C87DF8C00A1666A /* SCCornerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCornerViewController.h; sourceTree = "<group>"; };
+		A4F754421C87DF8C00A1666A /* SCCornerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCornerViewController.m; sourceTree = "<group>"; };
+		A4F754431C87DF8C00A1666A /* SCPrimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPrimerViewController.h; sourceTree = "<group>"; };
+		A4F754441C87DF8C00A1666A /* SCPrimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPrimerViewController.m; sourceTree = "<group>"; };
+		A4F754451C87DF8C00A1666A /* SCWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWelcomeViewController.h; sourceTree = "<group>"; };
+		A4F754461C87DF8C00A1666A /* SCWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWelcomeViewController.m; sourceTree = "<group>"; };
+		A4F7544C1C87DF9F00A1666A /* SCCustomizableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCustomizableButton.h; sourceTree = "<group>"; };
+		A4F7544D1C87DF9F00A1666A /* SCCustomizableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCustomizableButton.m; sourceTree = "<group>"; };
+		A4F7544F1C87E03F00A1666A /* StickCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		A4F754501C87E03F00A1666A /* StickCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		F9D9F187A0CD9B163B4273AF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +205,7 @@
 		A43D2DCF1C1A7EB2009CF246 /* JFReactive */ = {
 			isa = PBXGroup;
 			children = (
+				A4F754361C87DF1100A1666A /* Helper */,
 				A4F754191C87197E00A1666A /* images */,
 				A4F7540D1C87141600A1666A /* CircularCollection */,
 				A4F7540C1C870A5200A1666A /* Views */,
@@ -240,6 +265,7 @@
 		A4F754081C87028000A1666A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A4F7543B1C87DF7300A1666A /* PrimerCollectionController */,
 				A4F753FE1C87009500A1666A /* JFTableController.h */,
 				A4F753FF1C87009500A1666A /* JFTableController.m */,
 				A4F754091C8702AF00A1666A /* JFGraphicContrller.h */,
@@ -289,6 +315,44 @@
 				A4F754271C8719A100A1666A /* 14@2x.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		A4F754361C87DF1100A1666A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A4F754371C87DF1B00A1666A /* UIColor+Hex.h */,
+				A4F754381C87DF1B00A1666A /* UIColor+Hex.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		A4F7543B1C87DF7300A1666A /* PrimerCollectionController */ = {
+			isa = PBXGroup;
+			children = (
+				A4F7543C1C87DF8C00A1666A /* Cells */,
+				A4F754411C87DF8C00A1666A /* SCCornerViewController.h */,
+				A4F754421C87DF8C00A1666A /* SCCornerViewController.m */,
+				A4F754431C87DF8C00A1666A /* SCPrimerViewController.h */,
+				A4F754441C87DF8C00A1666A /* SCPrimerViewController.m */,
+				A4F754451C87DF8C00A1666A /* SCWelcomeViewController.h */,
+				A4F754461C87DF8C00A1666A /* SCWelcomeViewController.m */,
+			);
+			path = PrimerCollectionController;
+			sourceTree = "<group>";
+		};
+		A4F7543C1C87DF8C00A1666A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A4F7544F1C87E03F00A1666A /* StickCollectionViewFlowLayout.h */,
+				A4F754501C87E03F00A1666A /* StickCollectionViewFlowLayout.m */,
+				A4F7544C1C87DF9F00A1666A /* SCCustomizableButton.h */,
+				A4F7544D1C87DF9F00A1666A /* SCCustomizableButton.m */,
+				A4F7543D1C87DF8C00A1666A /* SCCornerCollectionViewCell.h */,
+				A4F7543E1C87DF8C00A1666A /* SCCornerCollectionViewCell.m */,
+				A4F7543F1C87DF8C00A1666A /* SCPrimerCollectionViewCell.h */,
+				A4F754401C87DF8C00A1666A /* SCPrimerCollectionViewCell.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,7 +554,10 @@
 				A4F754181C87147500A1666A /* CollectionViewController.swift in Sources */,
 				A43D2DD81C1A7EB2009CF246 /* ViewController.m in Sources */,
 				A43D2DD51C1A7EB2009CF246 /* AppDelegate.m in Sources */,
+				A4F754481C87DF8C00A1666A /* SCPrimerCollectionViewCell.m in Sources */,
 				A4F754141C87147500A1666A /* CircularCollectionViewCell.swift in Sources */,
+				A4F754511C87E03F00A1666A /* StickCollectionViewFlowLayout.m in Sources */,
+				A4F7544A1C87DF8C00A1666A /* SCPrimerViewController.m in Sources */,
 				A4F754161C87147500A1666A /* CircularCollectionViewLayout.swift in Sources */,
 				A4F754001C87009500A1666A /* JFTableController.m in Sources */,
 				A42CB4D91C2ED6B2004E8641 /* JFModel.m in Sources */,
@@ -498,7 +565,12 @@
 				A4F754031C87017C00A1666A /* JFBaseCell.m in Sources */,
 				A4F754151C87147500A1666A /* CircularCollectionViewLayoutAttributes.swift in Sources */,
 				A43D2DD21C1A7EB2009CF246 /* main.m in Sources */,
+				A4F754391C87DF1B00A1666A /* UIColor+Hex.m in Sources */,
+				A4F754491C87DF8C00A1666A /* SCCornerViewController.m in Sources */,
+				A4F7544B1C87DF8C00A1666A /* SCWelcomeViewController.m in Sources */,
 				A4F7540B1C8702AF00A1666A /* JFGraphicContrller.m in Sources */,
+				A4F7544E1C87DF9F00A1666A /* SCCustomizableButton.m in Sources */,
+				A4F754471C87DF8C00A1666A /* SCCornerCollectionViewCell.m in Sources */,
 				A42CB4D61C2A8FCC004E8641 /* NullSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

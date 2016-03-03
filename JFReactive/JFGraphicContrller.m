@@ -106,9 +106,9 @@ typedef NS_OPTIONS(NSInteger, AnimationType){
     layer2.strokeColor = [UIColor blueColor].CGColor;
     [self.displayView.layer addSublayer:layer2];
     
-    [self addAnimation:layer duration:0.2];
-    [self addAnimation:layer1 duration:0.2];
-    [self addAnimation:layer2 duration:0.2];
+    [self addAnimation:layer duration: 10];
+    [self addAnimation:layer1 duration:10];
+    [self addAnimation:layer2 duration:10];
 }
 
 #pragma mark - 单控制点曲线
@@ -148,7 +148,7 @@ typedef NS_OPTIONS(NSInteger, AnimationType){
     [self.displayView.layer addSublayer:layer2];
     [self.displayView.layer addSublayer:layer3];
     
-    [self addAnimation:layer duration:0.2];
+    [self addAnimation:layer duration:10];
 }
 
 #pragma mark - 双控制点曲线
@@ -194,7 +194,7 @@ typedef NS_OPTIONS(NSInteger, AnimationType){
     [self.displayView.layer addSublayer:layer3];
     [self.displayView.layer addSublayer:layer4];
     
-    [self addAnimation:layer duration:0.2];
+    [self addAnimation:layer duration:10];
 }
 
 #pragma mark - 曲面
@@ -564,9 +564,45 @@ typedef NS_OPTIONS(NSInteger, AnimationType){
     animation2.fromValue = @(0.5);
     animation2.toValue = @(1);
     animation2.duration = duration;
-    
+    /**
+     顺时针绘画
+     0.5 从右下角开始  0.5 -- 0
+          ——————————|
+                    |
+                    |
+     
+     
+     *
+     */
     [layer addAnimation:animation1 forKey:nil];
     [layer addAnimation:animation2 forKey:nil];
+    
+    /*
+     
+     1 keyPath = strokeStart  动画的fromValue = 0，toValue = 1
+     
+     表示从路径的0位置画到1 怎么画是按照清除开始的位置也就是清除0 一直清除到1 效果就是一条路径慢慢的消失
+     
+     
+     
+     2 keyPath = strokeStart  动画的fromValue = 1，toValue = 0
+     
+     表示从路径的1位置画到0 怎么画是按照清除开始的位置也就是1 这样开始的路径是空的（即都被清除掉了）一直清除到0 效果就是一条路径被反方向画出来
+     
+     
+     
+     3 keyPath = strokeEnd  动画的fromValue = 0，toValue = 1
+     
+     表示 这里我们分3个点说明动画的顺序  strokeEnd从结尾开始清除 首先整条路径先清除后2/3，接着清除1/3 效果就是正方向画出路径
+     
+     
+     
+     4 keyPath = strokeEnd  动画的fromValue = 1，toValue = 0
+     
+     效果就是反方向路径慢慢消失
+     
+     注释： 动画的0-1（fromValue = 0，toValue = 1） 或1-0 （fromValue = 1，toValue = 0） 表示执行的方向 和路径的范围。
+     */
 }
 
 - (void)addAnimationThreeOnLayer:(CAShapeLayer *)layer duration:(CFTimeInterval)duration

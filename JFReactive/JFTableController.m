@@ -13,7 +13,7 @@
 @implementation JFTableController
 - (void)viewDidLoad{
     [super viewDidLoad];
-    // 优化数组
+    // 优化数组。。。
     NSArray * names = @[@"JFGraphicContrller",@"CollectionViewController",@"SCCornerViewController",@"SCPrimerViewController"];
     NSArray * descriptions = @[@"动画StrokeEnd&StrokeStart",@"CollectionCircle Swift实现",@"SCCornerViewController",@"SCPrimerViewController"];
     

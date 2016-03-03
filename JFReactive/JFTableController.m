@@ -13,12 +13,11 @@
 @implementation JFTableController
 - (void)viewDidLoad{
     [super viewDidLoad];
+    // 优化数组
     NSArray * names = @[@"JFGraphicContrller",@"CollectionViewController"];
     NSArray * descriptions = @[@"动画显示图形绘制过程",@"CollectionCircle swift 实现"];
     
     self.listArray = [[NSMutableArray alloc] initWithCapacity:0];
-    // 基本动画和layer的使用
-    
     for(int i =0 ; i<[names count];i++){
         JFBaseModel *model = [[JFBaseModel alloc]init];
         model.name = names[i];

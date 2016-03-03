@@ -15,7 +15,7 @@
     [super viewDidLoad];
     // 优化数组
     NSArray * names = @[@"JFGraphicContrller",@"CollectionViewController",@"SCCornerViewController",@"SCPrimerViewController"];
-    NSArray * descriptions = @[@"动画显示图形绘制过程",@"CollectionCircle swift 实现",@"SCCornerViewController",@"SCPrimerViewController"];
+    NSArray * descriptions = @[@"动画StrokeEnd&StrokeStart",@"CollectionCircle Swift实现",@"SCCornerViewController",@"SCPrimerViewController"];
     
     self.listArray = [[NSMutableArray alloc] initWithCapacity:0];
     for(int i =0 ; i<[names count];i++){

@@ -33,6 +33,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60;
 }
+// 注意规范
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     JFBaseModel * model = [self.listArray objectAtIndex:indexPath.row];
     UIStoryboard * story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -42,8 +43,6 @@
        
     }
     [self.navigationController pushViewController:vc animated:YES];
-    
-    
     
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

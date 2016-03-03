@@ -49,6 +49,11 @@
 		A4F7544B1C87DF8C00A1666A /* SCWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754461C87DF8C00A1666A /* SCWelcomeViewController.m */; };
 		A4F7544E1C87DF9F00A1666A /* SCCustomizableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F7544D1C87DF9F00A1666A /* SCCustomizableButton.m */; };
 		A4F754511C87E03F00A1666A /* StickCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754501C87E03F00A1666A /* StickCollectionViewFlowLayout.m */; };
+		A4F754561C88594200A1666A /* JFTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754551C88594200A1666A /* JFTransitionController.m */; };
+		A4F754591C88597D00A1666A /* JFPresentController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754581C88597D00A1666A /* JFPresentController.m */; };
+		A4F7545C1C885AA000A1666A /* RotationPresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F7545B1C885AA000A1666A /* RotationPresentAnimation.m */; };
+		A4F7545F1C886CF100A1666A /* PanInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F7545E1C886CF100A1666A /* PanInteractiveTransition.m */; };
+		A4F754621C886F0700A1666A /* JFPercentageAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754611C886F0700A1666A /* JFPercentageAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +139,16 @@
 		A4F7544D1C87DF9F00A1666A /* SCCustomizableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCustomizableButton.m; sourceTree = "<group>"; };
 		A4F7544F1C87E03F00A1666A /* StickCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		A4F754501C87E03F00A1666A /* StickCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		A4F754541C88594200A1666A /* JFTransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFTransitionController.h; sourceTree = "<group>"; };
+		A4F754551C88594200A1666A /* JFTransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFTransitionController.m; sourceTree = "<group>"; };
+		A4F754571C88597D00A1666A /* JFPresentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFPresentController.h; sourceTree = "<group>"; };
+		A4F754581C88597D00A1666A /* JFPresentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFPresentController.m; sourceTree = "<group>"; };
+		A4F7545A1C885AA000A1666A /* RotationPresentAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationPresentAnimation.h; sourceTree = "<group>"; };
+		A4F7545B1C885AA000A1666A /* RotationPresentAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationPresentAnimation.m; sourceTree = "<group>"; };
+		A4F7545D1C886CF100A1666A /* PanInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanInteractiveTransition.h; sourceTree = "<group>"; };
+		A4F7545E1C886CF100A1666A /* PanInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanInteractiveTransition.m; sourceTree = "<group>"; };
+		A4F754601C886F0700A1666A /* JFPercentageAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFPercentageAnimation.h; sourceTree = "<group>"; };
+		A4F754611C886F0700A1666A /* JFPercentageAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFPercentageAnimation.m; sourceTree = "<group>"; };
 		F9D9F187A0CD9B163B4273AF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,6 +280,7 @@
 		A4F754081C87028000A1666A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A4F754531C88592300A1666A /* CustomTransitionController */,
 				A4F7543B1C87DF7300A1666A /* PrimerCollectionController */,
 				A4F753FE1C87009500A1666A /* JFTableController.h */,
 				A4F753FF1C87009500A1666A /* JFTableController.m */,
@@ -353,6 +369,23 @@
 				A4F754401C87DF8C00A1666A /* SCPrimerCollectionViewCell.m */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A4F754531C88592300A1666A /* CustomTransitionController */ = {
+			isa = PBXGroup;
+			children = (
+				A4F754541C88594200A1666A /* JFTransitionController.h */,
+				A4F754551C88594200A1666A /* JFTransitionController.m */,
+				A4F754571C88597D00A1666A /* JFPresentController.h */,
+				A4F754581C88597D00A1666A /* JFPresentController.m */,
+				A4F7545A1C885AA000A1666A /* RotationPresentAnimation.h */,
+				A4F7545B1C885AA000A1666A /* RotationPresentAnimation.m */,
+				A4F7545D1C886CF100A1666A /* PanInteractiveTransition.h */,
+				A4F7545E1C886CF100A1666A /* PanInteractiveTransition.m */,
+				A4F754601C886F0700A1666A /* JFPercentageAnimation.h */,
+				A4F754611C886F0700A1666A /* JFPercentageAnimation.m */,
+			);
+			name = CustomTransitionController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,8 +586,10 @@
 			files = (
 				A4F754181C87147500A1666A /* CollectionViewController.swift in Sources */,
 				A43D2DD81C1A7EB2009CF246 /* ViewController.m in Sources */,
+				A4F754621C886F0700A1666A /* JFPercentageAnimation.m in Sources */,
 				A43D2DD51C1A7EB2009CF246 /* AppDelegate.m in Sources */,
 				A4F754481C87DF8C00A1666A /* SCPrimerCollectionViewCell.m in Sources */,
+				A4F754591C88597D00A1666A /* JFPresentController.m in Sources */,
 				A4F754141C87147500A1666A /* CircularCollectionViewCell.swift in Sources */,
 				A4F754511C87E03F00A1666A /* StickCollectionViewFlowLayout.m in Sources */,
 				A4F7544A1C87DF8C00A1666A /* SCPrimerViewController.m in Sources */,
@@ -567,11 +602,14 @@
 				A43D2DD21C1A7EB2009CF246 /* main.m in Sources */,
 				A4F754391C87DF1B00A1666A /* UIColor+Hex.m in Sources */,
 				A4F754491C87DF8C00A1666A /* SCCornerViewController.m in Sources */,
+				A4F754561C88594200A1666A /* JFTransitionController.m in Sources */,
 				A4F7544B1C87DF8C00A1666A /* SCWelcomeViewController.m in Sources */,
 				A4F7540B1C8702AF00A1666A /* JFGraphicContrller.m in Sources */,
 				A4F7544E1C87DF9F00A1666A /* SCCustomizableButton.m in Sources */,
 				A4F754471C87DF8C00A1666A /* SCCornerCollectionViewCell.m in Sources */,
+				A4F7545C1C885AA000A1666A /* RotationPresentAnimation.m in Sources */,
 				A42CB4D61C2A8FCC004E8641 /* NullSafe.m in Sources */,
+				A4F7545F1C886CF100A1666A /* PanInteractiveTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

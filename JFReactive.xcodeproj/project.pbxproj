@@ -51,9 +51,13 @@
 		A4F754511C87E03F00A1666A /* StickCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754501C87E03F00A1666A /* StickCollectionViewFlowLayout.m */; };
 		A4F754561C88594200A1666A /* JFTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754551C88594200A1666A /* JFTransitionController.m */; };
 		A4F754591C88597D00A1666A /* JFPresentController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754581C88597D00A1666A /* JFPresentController.m */; };
-		A4F7545C1C885AA000A1666A /* RotationPresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F7545B1C885AA000A1666A /* RotationPresentAnimation.m */; };
-		A4F7545F1C886CF100A1666A /* PanInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F7545E1C886CF100A1666A /* PanInteractiveTransition.m */; };
-		A4F754621C886F0700A1666A /* JFPercentageAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754611C886F0700A1666A /* JFPercentageAnimation.m */; };
+		A4FC66BE1C8EE87000611273 /* BouncePresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FC66B91C8EE87000611273 /* BouncePresentAnimation.m */; };
+		A4FC66BF1C8EE87000611273 /* NormalDismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FC66BB1C8EE87000611273 /* NormalDismissAnimation.m */; };
+		A4FC66C01C8EE87000611273 /* SwipeUpInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FC66BD1C8EE87000611273 /* SwipeUpInteractiveTransition.m */; };
+		A4FC66C41C8EEB6B00611273 /* ScaleTranViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FC66C31C8EEB6B00611273 /* ScaleTranViewController.m */; };
+		A4FC66C91C8EEBA200611273 /* PingTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FC66C61C8EEBA200611273 /* PingTransition.m */; };
+		A4FC66CA1C8EEBA200611273 /* PingInvertTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FC66C81C8EEBA200611273 /* PingInvertTransition.m */; };
+		A4FC66CD1C8EEC0C00611273 /* ScaleTOneController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FC66CC1C8EEC0C00611273 /* ScaleTOneController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,12 +147,20 @@
 		A4F754551C88594200A1666A /* JFTransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFTransitionController.m; sourceTree = "<group>"; };
 		A4F754571C88597D00A1666A /* JFPresentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFPresentController.h; sourceTree = "<group>"; };
 		A4F754581C88597D00A1666A /* JFPresentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFPresentController.m; sourceTree = "<group>"; };
-		A4F7545A1C885AA000A1666A /* RotationPresentAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationPresentAnimation.h; sourceTree = "<group>"; };
-		A4F7545B1C885AA000A1666A /* RotationPresentAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationPresentAnimation.m; sourceTree = "<group>"; };
-		A4F7545D1C886CF100A1666A /* PanInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanInteractiveTransition.h; sourceTree = "<group>"; };
-		A4F7545E1C886CF100A1666A /* PanInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanInteractiveTransition.m; sourceTree = "<group>"; };
-		A4F754601C886F0700A1666A /* JFPercentageAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFPercentageAnimation.h; sourceTree = "<group>"; };
-		A4F754611C886F0700A1666A /* JFPercentageAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFPercentageAnimation.m; sourceTree = "<group>"; };
+		A4FC66B81C8EE87000611273 /* BouncePresentAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BouncePresentAnimation.h; sourceTree = "<group>"; };
+		A4FC66B91C8EE87000611273 /* BouncePresentAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BouncePresentAnimation.m; sourceTree = "<group>"; };
+		A4FC66BA1C8EE87000611273 /* NormalDismissAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalDismissAnimation.h; sourceTree = "<group>"; };
+		A4FC66BB1C8EE87000611273 /* NormalDismissAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalDismissAnimation.m; sourceTree = "<group>"; };
+		A4FC66BC1C8EE87000611273 /* SwipeUpInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeUpInteractiveTransition.h; sourceTree = "<group>"; };
+		A4FC66BD1C8EE87000611273 /* SwipeUpInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeUpInteractiveTransition.m; sourceTree = "<group>"; };
+		A4FC66C21C8EEB6B00611273 /* ScaleTranViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleTranViewController.h; sourceTree = "<group>"; };
+		A4FC66C31C8EEB6B00611273 /* ScaleTranViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleTranViewController.m; sourceTree = "<group>"; };
+		A4FC66C51C8EEBA200611273 /* PingTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingTransition.h; sourceTree = "<group>"; };
+		A4FC66C61C8EEBA200611273 /* PingTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingTransition.m; sourceTree = "<group>"; };
+		A4FC66C71C8EEBA200611273 /* PingInvertTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingInvertTransition.h; sourceTree = "<group>"; };
+		A4FC66C81C8EEBA200611273 /* PingInvertTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingInvertTransition.m; sourceTree = "<group>"; };
+		A4FC66CB1C8EEC0C00611273 /* ScaleTOneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleTOneController.h; sourceTree = "<group>"; };
+		A4FC66CC1C8EEC0C00611273 /* ScaleTOneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleTOneController.m; sourceTree = "<group>"; };
 		F9D9F187A0CD9B163B4273AF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -280,6 +292,7 @@
 		A4F754081C87028000A1666A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A4FC66C11C8EEB5C00611273 /* ScaleTransition */,
 				A4F754531C88592300A1666A /* CustomTransitionController */,
 				A4F7543B1C87DF7300A1666A /* PrimerCollectionController */,
 				A4F753FE1C87009500A1666A /* JFTableController.h */,
@@ -378,14 +391,29 @@
 				A4F754551C88594200A1666A /* JFTransitionController.m */,
 				A4F754571C88597D00A1666A /* JFPresentController.h */,
 				A4F754581C88597D00A1666A /* JFPresentController.m */,
-				A4F7545A1C885AA000A1666A /* RotationPresentAnimation.h */,
-				A4F7545B1C885AA000A1666A /* RotationPresentAnimation.m */,
-				A4F7545D1C886CF100A1666A /* PanInteractiveTransition.h */,
-				A4F7545E1C886CF100A1666A /* PanInteractiveTransition.m */,
-				A4F754601C886F0700A1666A /* JFPercentageAnimation.h */,
-				A4F754611C886F0700A1666A /* JFPercentageAnimation.m */,
+				A4FC66B81C8EE87000611273 /* BouncePresentAnimation.h */,
+				A4FC66B91C8EE87000611273 /* BouncePresentAnimation.m */,
+				A4FC66BA1C8EE87000611273 /* NormalDismissAnimation.h */,
+				A4FC66BB1C8EE87000611273 /* NormalDismissAnimation.m */,
+				A4FC66BC1C8EE87000611273 /* SwipeUpInteractiveTransition.h */,
+				A4FC66BD1C8EE87000611273 /* SwipeUpInteractiveTransition.m */,
 			);
 			name = CustomTransitionController;
+			sourceTree = "<group>";
+		};
+		A4FC66C11C8EEB5C00611273 /* ScaleTransition */ = {
+			isa = PBXGroup;
+			children = (
+				A4FC66C51C8EEBA200611273 /* PingTransition.h */,
+				A4FC66C61C8EEBA200611273 /* PingTransition.m */,
+				A4FC66C71C8EEBA200611273 /* PingInvertTransition.h */,
+				A4FC66C81C8EEBA200611273 /* PingInvertTransition.m */,
+				A4FC66CB1C8EEC0C00611273 /* ScaleTOneController.h */,
+				A4FC66CC1C8EEC0C00611273 /* ScaleTOneController.m */,
+				A4FC66C21C8EEB6B00611273 /* ScaleTranViewController.h */,
+				A4FC66C31C8EEB6B00611273 /* ScaleTranViewController.m */,
+			);
+			name = ScaleTransition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -584,10 +612,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FC66BE1C8EE87000611273 /* BouncePresentAnimation.m in Sources */,
 				A4F754181C87147500A1666A /* CollectionViewController.swift in Sources */,
 				A43D2DD81C1A7EB2009CF246 /* ViewController.m in Sources */,
-				A4F754621C886F0700A1666A /* JFPercentageAnimation.m in Sources */,
 				A43D2DD51C1A7EB2009CF246 /* AppDelegate.m in Sources */,
+				A4FC66BF1C8EE87000611273 /* NormalDismissAnimation.m in Sources */,
 				A4F754481C87DF8C00A1666A /* SCPrimerCollectionViewCell.m in Sources */,
 				A4F754591C88597D00A1666A /* JFPresentController.m in Sources */,
 				A4F754141C87147500A1666A /* CircularCollectionViewCell.swift in Sources */,
@@ -601,15 +630,18 @@
 				A4F754151C87147500A1666A /* CircularCollectionViewLayoutAttributes.swift in Sources */,
 				A43D2DD21C1A7EB2009CF246 /* main.m in Sources */,
 				A4F754391C87DF1B00A1666A /* UIColor+Hex.m in Sources */,
+				A4FC66C41C8EEB6B00611273 /* ScaleTranViewController.m in Sources */,
 				A4F754491C87DF8C00A1666A /* SCCornerViewController.m in Sources */,
+				A4FC66CA1C8EEBA200611273 /* PingInvertTransition.m in Sources */,
 				A4F754561C88594200A1666A /* JFTransitionController.m in Sources */,
 				A4F7544B1C87DF8C00A1666A /* SCWelcomeViewController.m in Sources */,
 				A4F7540B1C8702AF00A1666A /* JFGraphicContrller.m in Sources */,
 				A4F7544E1C87DF9F00A1666A /* SCCustomizableButton.m in Sources */,
+				A4FC66C91C8EEBA200611273 /* PingTransition.m in Sources */,
+				A4FC66CD1C8EEC0C00611273 /* ScaleTOneController.m in Sources */,
+				A4FC66C01C8EE87000611273 /* SwipeUpInteractiveTransition.m in Sources */,
 				A4F754471C87DF8C00A1666A /* SCCornerCollectionViewCell.m in Sources */,
-				A4F7545C1C885AA000A1666A /* RotationPresentAnimation.m in Sources */,
 				A42CB4D61C2A8FCC004E8641 /* NullSafe.m in Sources */,
-				A4F7545F1C886CF100A1666A /* PanInteractiveTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

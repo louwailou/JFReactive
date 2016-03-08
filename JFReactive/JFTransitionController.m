@@ -8,15 +8,17 @@
 
 #import "JFTransitionController.h"
 #import <UIKit/UIKit.h>
-#import "RotationPresentAnimation.h"
+#import "BouncePresentAnimation.h"
 #import "JFPresentController.h"
-#import "PanInteractiveTransition.h"
-#import "JFPercentageAnimation.h"
+#import "SwipeUpInteractiveTransition.h"
+#import "NormalDismissAnimation.h"
 @interface JFTransitionController()<UIViewControllerTransitioningDelegate>
 //@property (nonatomic,strong)RotationPresentAnimation * presentAnimation;
-@property (nonatomic,strong)JFPercentageAnimation * dismissAnimation;
+@property (nonatomic,strong)NormalDismissAnimation * dismissAnimation;
 @property (nonatomic,strong)JFPresentController * presentedVC;
-@property (nonatomic,strong)PanInteractiveTransition * panTransition;
+@property (nonatomic,strong)BouncePresentAnimation * presentAnimation;
+@property (nonatomic, strong) SwipeUpInteractiveTransition *transitionController;
+
 @end
 
 
@@ -30,11 +32,11 @@
     self.presentedVC = [[JFPresentController alloc] init];
     self.presentedVC.transitioningDelegate = self;
     
-    //2
-    self.panTransition = [[PanInteractiveTransition alloc] init];
-    [self.panTransition panToDismiss:self.presentedVC];
+    _presentAnimation = [BouncePresentAnimation new];
+    _dismissAnimation = [NormalDismissAnimation new];
+    _transitionController = [SwipeUpInteractiveTransition new];
     
-    self.dismissAnimation = [[JFPercentageAnimation alloc] init];
+   
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [btn setFrame:CGRectMake(100, 100, 60, 40)];
     [btn setTitle:@"present" forState:UIControlStateNormal];
@@ -42,6 +44,7 @@
     [self.view addSubview:btn];
 }
 - (void)show{
+     [self.transitionController wireToViewController:self.presentedVC];
     [self presentViewController:self.presentedVC animated:YES completion:^{
         
     }];
@@ -52,8 +55,9 @@
 }
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
     // 会崩溃 需要处理
-    //return self.presentAnimation;
-   // if(self.panTransition conformsToProtocol:<#(Protocol *)#>)
-    return (id<UIViewControllerAnimatedTransitioning>) self.panTransition;
+    return self.presentAnimation;
+}
+-(id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
+    return self.transitionController.interacting ? self.transitionController : nil;
 }
 @end

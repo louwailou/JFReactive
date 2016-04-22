@@ -559,6 +559,8 @@
     // 注意：订阅信号，也不能激活信号，只是保存订阅者到数组，必须通过连接,当调用连接，就会一次性调用所有订阅者的sendNext:
      // signal 为subject --> subscriber(也是subscriber) sendNext: 
     
+    
+    // 生成一个subscriber。并添加到subscriber数组中
     [connect.signal subscribeNext:^(id x) {
         
         NSLog(@"订阅者一信号 %@",x);
@@ -571,7 +573,11 @@
         
     }];
     
-    // 4.连接,激活信号
+    // 4.连接,激活信号 sourceSignal subscribe:subject
+    //调用sourceSignal的didSubscribe(subject)
+    // 执行createSignal的block(subject),发送信息， subject sendNext:@200
+    // 无论connect.signal subscribeNext：执行多少次，didSubscribe(subject)都是执行一次，
+    // connect.signal subscribeNext 仅仅是生成新的subscriber 添加到subscribers数组中
    [connect connect];// 如果先连接 不会发送subscribeNext中的信息，仅仅打印出 发送请求
     /*
      2016-01-04 18:15:07.287 JFReactive[33616:4293575] 发送请求

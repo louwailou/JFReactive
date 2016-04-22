@@ -13,14 +13,16 @@
 @implementation JFTableController
 - (void)viewDidLoad{
     [super viewDidLoad];
-    // 优化数组
-    NSArray * names = @[@"JFGraphicContrller",@"CollectionViewController",@"SCCornerViewController",@"SCPrimerViewController"];
-    NSArray * descriptions = @[@"动画显示图形绘制过程",@"CollectionCircle swift 实现",@"SCCornerViewController",@"SCPrimerViewController"];
+    // 优化数组。。。
+    NSArray * names = @[@"RACViewController",@"JFGraphicContrller",@"CollectionViewController",@"SCCornerViewController",@"SCPrimerViewController",@"JFTransitionController",@"ScaleTOneController"];
+    NSArray * descriptions = @[@"RAC_Practice",@"动画StrokeEnd&StrokeStart",@"CollectionCircle Swift实现",@"CollectionCorner",@"collection缩放显示",@"自定义tansitionAnimation",@"Path animation   Trasition"];
+    NSArray* fromStrotyBoard = @[@1,@1,@1,@1,@1,@0,@1];
     
     self.listArray = [[NSMutableArray alloc] initWithCapacity:0];
-    for(int i =0 ; i<[names count];i++){
+    for(int i = 0 ; i<[names count];i++){
         JFBaseModel *model = [[JFBaseModel alloc]init];
         model.name = names[i];
+        model.fromStory = [fromStrotyBoard[i] boolValue];
         model.vcDescription = descriptions[i];
         [self.listArray addObject:model];
     }
@@ -37,11 +39,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     JFBaseModel * model = [self.listArray objectAtIndex:indexPath.row];
     UIStoryboard * story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-  UIViewController * vc =  [story instantiateViewControllerWithIdentifier:model.name];
-    if (!vc) {
+    UIViewController * vc = nil;
+    if (model.fromStory) {
+       vc =  [story instantiateViewControllerWithIdentifier:model.name];
+    }else{
         vc = [[NSClassFromString(model.name) alloc] init];
-       
     }
+  
     [self.navigationController pushViewController:vc animated:YES];
     
 }

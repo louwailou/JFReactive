@@ -978,7 +978,7 @@ static RACDisposable *subscribeForever (RACSignal *signal, void (^next)(id), voi
 - (RACSignal *)replayLazily {
 	RACMulticastConnection *connection = [self multicast:[RACReplaySubject subject]];
 	return [[RACSignal
-		defer:^{
+		defer:^{// 直到改signal被订阅才会执行 connect
 			[connection connect];
 			return connection.signal;
 		}]

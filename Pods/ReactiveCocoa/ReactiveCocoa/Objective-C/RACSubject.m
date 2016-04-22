@@ -55,8 +55,9 @@
 	NSCParameterAssert(subscriber != nil);
 
 	RACCompoundDisposable *disposable = [RACCompoundDisposable compoundDisposable];
+    
 	subscriber = [[RACPassthroughSubscriber alloc] initWithSubscriber:subscriber signal:self disposable:disposable];
-
+// 传递过来的subscriber作为innerSubscriber
 	NSMutableArray *subscribers = self.subscribers;
 	@synchronized (subscribers) {
 		[subscribers addObject:subscriber];

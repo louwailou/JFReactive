@@ -11,4 +11,5 @@
 @interface JFBaseModel : NSObject
 @property (nonatomic,copy)NSString * name;
 @property (nonatomic,copy)NSString * vcDescription;
+@property (nonatomic,assign)BOOL fromStory;
 @end

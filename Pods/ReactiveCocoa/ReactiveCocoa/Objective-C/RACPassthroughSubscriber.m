@@ -58,7 +58,7 @@ static const char *cleanedSignalDescription(RACSignal *signal) {
 	self = [super init];
 	if (self == nil) return nil;
 
-	_innerSubscriber = subscriber;
+	_innerSubscriber = subscriber;// subject
 	_signal = signal;
 	_disposable = disposable;
 

@@ -65,7 +65,7 @@
 @end
 
 @implementation RACStream (Operations)
-
+//RACStream * (^RACStreamBindBlock)(id value, BOOL *stop);
 - (instancetype)flattenMap:(RACStream * (^)(id value))block {
 	Class class = self.class;
 

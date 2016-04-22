@@ -14,9 +14,9 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // 优化数组。。。
-    NSArray * names = @[@"JFGraphicContrller",@"CollectionViewController",@"SCCornerViewController",@"SCPrimerViewController",@"JFTransitionController",@"ScaleTOneController"];
-    NSArray * descriptions = @[@"动画StrokeEnd&StrokeStart",@"CollectionCircle Swift实现",@"CollectionCorner",@"collection缩放显示",@"自定义tansitionAnimation",@"BezierPath Trasition"];
-    NSArray* fromStrotyBoard = @[@1,@1,@1,@1,@0,@1];
+    NSArray * names = @[@"RACViewController",@"JFGraphicContrller",@"CollectionViewController",@"SCCornerViewController",@"SCPrimerViewController",@"JFTransitionController",@"ScaleTOneController"];
+    NSArray * descriptions = @[@"RAC_Practice",@"动画StrokeEnd&StrokeStart",@"CollectionCircle Swift实现",@"CollectionCorner",@"collection缩放显示",@"自定义tansitionAnimation",@"Path animation   Trasition"];
+    NSArray* fromStrotyBoard = @[@1,@1,@1,@1,@1,@0,@1];
     
     self.listArray = [[NSMutableArray alloc] initWithCapacity:0];
     for(int i = 0 ; i<[names count];i++){

@@ -72,7 +72,7 @@
     CAShapeLayer *maskLayer = [CAShapeLayer layer];
    //The path defining the shape to be rendered. Animatable. path定义了layer的形状
     maskLayer.path = maskFinalBP.CGPath; //将它的 path 指定为最终的 path 来避免在动画完成后会回弹
-    
+    //
     /**
      *  ***********************
      */

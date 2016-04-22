@@ -14,7 +14,7 @@
 //#import "RACSignal.h"
 //#import "RACDisposable.h"
 //#import "RACSubscriber.h"
-@interface ViewController ()
+@interface RACViewController ()
 @property (nonatomic,strong)RACCommand * command;
 @property (nonatomic,strong)RACCommand * loginCommand;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -25,7 +25,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *otherField;
 @end
 
-@implementation ViewController
+@implementation RACViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -261,7 +261,7 @@
 }
 
 #pragma mark replaySubject  重复发送之前保存的值
-- (void)replaySubject{
+- (void)Subject{
     
     // RACReplaySubject使用步骤:
     // 1.创建信号 [RACSubject subject]，跟RACSiganl不一样，创建信号时没有block。
@@ -512,6 +512,7 @@
 
     RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSLog(@"发送请求");
+        // 如果是使用subject 的话，这里的subscriber是passThroughSubscriber ，
         [subscriber sendNext:@"200"];
         return nil;
     }];
@@ -556,7 +557,7 @@
     
     // 3.订阅信号，
     // 注意：订阅信号，也不能激活信号，只是保存订阅者到数组，必须通过连接,当调用连接，就会一次性调用所有订阅者的sendNext:
-     //
+     // signal 为subject --> subscriber(也是subscriber) sendNext: 
     
     [connect.signal subscribeNext:^(id x) {
         
@@ -671,12 +672,12 @@
     // 6.订阅bindBlock的返回信号，就会拿到绑定信号的订阅者，把处理完成的信号内容发送出来。
     
     
-    [[self.textField.rac_textSignal map:^id(id value) {
-        return [NSString stringWithFormat:@"%@",value];
-    }]subscribeNext:^(id x) {
-        NSLog(@"%@",x);
-    }];
-    
+//    [[self.textField.rac_textSignal map:^id(id value) {
+//        return [NSString stringWithFormat:@"%@",value];
+//    }]subscribeNext:^(id x) {
+//        NSLog(@"%@",x);
+//    }];
+//    
     [[self.textField.rac_textSignal flattenMap:^RACStream *(id value) {
         NSLog(@"value =%@",value);
         return [RACReturnSignal return:@[[NSString stringWithFormat:@"%@",value]]];
@@ -686,6 +687,12 @@
     }];
 
     /*
+     
+     2016-03-16 16:47:19.971 JFReactive[62795:7813928] ii
+     2016-03-16 16:47:19.971 JFReactive[62795:7813928] value =ii
+     2016-03-16 16:47:19.971 JFReactive[62795:7813928] xxx = (
+     ii
+     )
     FlatternMap和Map的区别
     
     1.FlatternMap中的Block返回信号。
@@ -1686,15 +1693,15 @@
 -(void)coldSignalSubscribeSubject{
     RACSignal *coldSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSLog(@"Cold signal be subscribed.");
-        [[RACScheduler mainThreadScheduler] afterDelay:1.5 schedule:^{
+        [[RACScheduler mainThreadScheduler] afterDelay:1.5 schedule:^{// 4 这个时间是步骤3的基础上进行的
             [subscriber sendNext:@"A"];
         }];
         
-        [[RACScheduler mainThreadScheduler] afterDelay:3 schedule:^{
+        [[RACScheduler mainThreadScheduler] afterDelay:3 schedule:^{ // 6
             [subscriber sendNext:@"B"];
         }];
         
-        [[RACScheduler mainThreadScheduler] afterDelay:5 schedule:^{
+        [[RACScheduler mainThreadScheduler] afterDelay:5 schedule:^{ // 7
             [subscriber sendCompleted];
         }];
         
@@ -1702,29 +1709,32 @@
     }];
     
     RACSubject *subject = [RACSubject subject];
-    NSLog(@"Subject created.");
+    NSLog(@"Subject created."); // 1
     
-    [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
-        [coldSignal subscribe:subject];
+    [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{ // 3
+        NSLog(@" coldSignal subscribe");
+        [coldSignal subscribe:subject];//将subject作为了coldSignal的subscriber,coldSignal调用，此步调用后才会执行上面的subscriber()
     }];
     
-    [subject subscribeNext:^(id x) {
+    [subject subscribeNext:^(id x) { // 2
         NSLog(@"Subscriber 1 recieve value:%@.", x);
     }];
     
-    [[RACScheduler mainThreadScheduler] afterDelay:4 schedule:^{
+    [[RACScheduler mainThreadScheduler] afterDelay:4 schedule:^{ // 5
         [subject subscribeNext:^(id x) {
             NSLog(@"Subscriber 2 recieve value:%@.", x);
         }];
     }];
-    
     /*
-     
-     2016-01-07 17:27:06.058 JFReactive[55103:5109602] Subject created.
-     2016-01-07 17:27:08.256 JFReactive[55103:5109602] Cold signal be subscribed.
-     2016-01-07 17:27:09.756 JFReactive[55103:5109602] Subscriber 1 recieve value:A.
-     2016-01-07 17:27:11.545 JFReactive[55103:5109602] Subscriber 1 recieve value:B.
-     2016-01-07 17:27:11.545 JFReactive[55103:5109602] Subscriber 2 recieve value:B.
+     Subject created.
+     2016-04-22 14:21:54.583 JFReactive[1457:56537] create subscribers = <RACSubscriber: 0x7fe1650662c0>
+     2016-04-22 14:21:56.677 JFReactive[1457:56537] coldSignal subscribe
+     2016-04-22 14:21:56.677 JFReactive[1457:56537] Cold signal be subscribed.
+     2016-04-22 14:21:58.178 JFReactive[1457:56537] Subscriber 1 recieve value:A.
+     2016-04-22 14:21:58.584 JFReactive[1457:56537] create subscribers = <RACSubscriber: 0x7fe162dd66e0>
+     2016-04-22 14:21:59.678 JFReactive[1457:56537] Subscriber 1 recieve value:B.
+     2016-04-22 14:21:59.678 JFReactive[1457:56537] Subscriber 2 recieve value:B.
+
      */
 }
 
@@ -1764,8 +1774,8 @@
 }
 - (IBAction)shareAction:(id)sender {
    // [self distinctUntilChanged];
-   
-    [self asychronize];
+   [self coldSignalSubscribeSubject];
+    //  [self asychronize];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -1787,7 +1797,7 @@
 }
 //change field action
 -(IBAction)changeField:(id)sender{
-  
+   
 
 }
 @end

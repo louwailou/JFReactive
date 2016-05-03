@@ -24,7 +24,7 @@
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     CGRect initFrame = [transitionContext initialFrameForViewController:fromVC];
     CGRect finalFrame = CGRectOffset(initFrame, 0, screenBounds.size.height);
-    
+    NSLog(@"fromVC frame =%@",NSStringFromCGRect(initFrame));
     // 3. Add target view to the container, and move it to back.
     UIView *containerView = [transitionContext containerView];
     [containerView addSubview:toVC.view];

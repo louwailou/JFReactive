@@ -1041,24 +1041,24 @@
 }
 #pragma mark  next 调用次序 是在sendNext 发送之前调用 也就是所谓的副作用
 - (void)doNext{
-    [[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        NSLog(@"sendNextBefor");
-        [subscriber sendNext:@1];
-        NSLog(@"sendNextafer");
-        [subscriber sendCompleted]; // 不发送 不会触发doCompleted
-        NSLog(@"sendcompleted finished");
-        return nil;
-    }] doNext:^(id x) {
-        // 执行[subscriber sendNext:@1];之前会调用这个Block
-        NSLog(@"doNext %@",x);;
-    }] doCompleted:^{
-        // 执行[subscriber sendCompleted];之前会调用这个Block
-        NSLog(@"doCompleted");;
-        
-    }] subscribeNext:^(id x) {
-        
-        NSLog(@"%@",x);
-    }];
+//    [[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        NSLog(@"sendNextBefor");
+//        [subscriber sendNext:@1];
+//        NSLog(@"sendNextafer");
+//        [subscriber sendCompleted]; // 不发送 不会触发doCompleted
+//        NSLog(@"sendcompleted finished");
+//        return nil;
+//    }] doNext:^(id x) {
+//        // 执行[subscriber sendNext:@1];之前会调用这个Block
+//        NSLog(@"doNext %@",x);;
+//    }] doCompleted:^{
+//        // 执行[subscriber sendCompleted];之前会调用这个Block
+//        NSLog(@"doCompleted");;
+//        
+//    }] subscribeNext:^(id x) {
+//        
+//        NSLog(@"%@",x);
+//    }];
     
     /*
      2015-12-23 15:48:35.211 JFReactive[47589:2282095] sendNextBefor
@@ -1069,13 +1069,43 @@
      2015-12-23 15:48:35.213 JFReactive[47589:2282095] sendcompleted finished
      
      */
+
+    [[[[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"sendNextBefor");
+         NSLog(@"curretnThread1 =%@",[NSThread currentThread]);
+        [subscriber sendNext:@1];
+        NSLog(@"sendNextafer");
+        [subscriber sendCompleted]; // 不发送 不会触发doCompleted
+        NSLog(@"sendcompleted finished");
+        NSLog(@"curretnThread4 =%@",[NSThread currentThread]);
+        return nil;
+    }]map:^id(id value) {
+        NSLog(@"map 222");
+         NSLog(@"map2 curretnThread =%@",[NSThread currentThread]);
+        return @100;
+    } ]deliverOn:[RACScheduler scheduler]] map:^id(id value) {
+        NSLog(@"curretnThread2 =%@",[NSThread currentThread]);
+        return @"123";
+    }]deliverOn:[RACScheduler scheduler]]subscribeNext:^(id x) {
+        NSLog(@"curretnThread3 =%@",[NSThread currentThread]);
+    }];
+/*
+ 2016-04-26 20:29:59.616 JFReactive[10763:360103] create subscribers = <RACSubscriber: 0x7f8241d2d930>
+ 2016-04-26 20:29:59.617 JFReactive[10763:360103] sendNextBefor
+ 2016-04-26 20:29:59.617 JFReactive[10763:360103] curretnThread1 =<NSThread: 0x7f8241c03a20>{number = 1, name = main}
+ 2016-04-26 20:29:59.618 JFReactive[10763:360103] sendNextafer
+ 2016-04-26 20:29:59.619 JFReactive[10763:360103] sendcompleted finished
+ 2016-04-26 20:29:59.619 JFReactive[10763:361395] curretnThread2 =<NSThread: 0x7f8241c7d810>{number = 6, name = (null)}
+ 2016-04-26 20:29:59.620 JFReactive[10763:361395] curretnThread3 =<NSThread: 0x7f8241c7d810>{number = 6, name = (null)}
+
+ */
 }
 
 /////////************************** 时间 ************************************/////////
 
 - (void)signalTime{
-    /*
-     timeout：超时，可以让一个信号在一定的时间后，自动报错。
+    
+    // timeout：超时，可以让一个信号在一定的时间后，自动报错。
      
      RACSignal *signal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
      return nil;
@@ -1088,25 +1118,25 @@
      // 1秒后会自动调用
      NSLog(@"%@",error);
      }];
-     interval 定时：每隔一段时间发出信号
+    // interval 定时：每隔一段时间发出信号
      
      [[RACSignal interval:1 onScheduler:[RACScheduler currentScheduler]] subscribeNext:^(id x) {
      
      NSLog(@"%@",x);
      }];
-     delay 延迟发送next。
+    // delay 延迟发送next。
      
-     RACSignal *signal = [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-     
-     [subscriber sendNext:@1];
-     return nil;
-     }] delay:2] subscribeNext:^(id x) {
-     
-     NSLog(@"%@",x);
-     }];
+//     RACSignal *signal = [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//     
+//     [subscriber sendNext:@1];
+//     return nil;
+//     }] delay:2] subscribeNext:^(id x) {
+//     
+//     NSLog(@"%@",x);
+//     }];
 
      
-     */
+    
 }
 - (void)kvo{
     self.model.name = @"sdd";
@@ -1699,6 +1729,7 @@
 -(void)coldSignalSubscribeSubject{
     RACSignal *coldSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSLog(@"Cold signal be subscribed.");
+        NSLog(@"subscriber = %@",subscriber);//RACPassthroughSubscriber
         [[RACScheduler mainThreadScheduler] afterDelay:1.5 schedule:^{// 4 这个时间是步骤3的基础上进行的
             [subscriber sendNext:@"A"];
         }];
@@ -1732,16 +1763,15 @@
         }];
     }];
     /*
-     Subject created.
-     2016-04-22 14:21:54.583 JFReactive[1457:56537] create subscribers = <RACSubscriber: 0x7fe1650662c0>
-     2016-04-22 14:21:56.677 JFReactive[1457:56537] coldSignal subscribe
-     2016-04-22 14:21:56.677 JFReactive[1457:56537] Cold signal be subscribed.
-     2016-04-22 14:21:58.178 JFReactive[1457:56537] Subscriber 1 recieve value:A.
-     2016-04-22 14:21:58.584 JFReactive[1457:56537] create subscribers = <RACSubscriber: 0x7fe162dd66e0>
-     2016-04-22 14:21:59.678 JFReactive[1457:56537] Subscriber 1 recieve value:B.
-     2016-04-22 14:21:59.678 JFReactive[1457:56537] Subscriber 2 recieve value:B.
-
-     */
+     2016-04-22 22:34:34.031 JFReactive[933:25360] Subject created.
+     2016-04-22 22:34:34.032 JFReactive[933:25360] create subscribers = <RACSubscriber: 0x7f8f91f089d0>
+     2016-04-22 22:34:36.215 JFReactive[933:25360]  coldSignal subscribe
+     2016-04-22 22:34:36.216 JFReactive[933:25360] Cold signal be subscribed.
+     2016-04-22 22:34:36.216 JFReactive[933:25360] subscriber = <RACPassthroughSubscriber: 0x7f8f91c15860>
+     2016-04-22 22:34:37.771 JFReactive[933:25360] Subscriber 1 recieve value:A.
+     2016-04-22 22:34:38.324 JFReactive[933:25360] create subscribers = <RACSubscriber: 0x7f8f91cbc6d0>
+     2016-04-22 22:34:39.512 JFReactive[933:25360] Subscriber 1 recieve value:B.
+     2016-04-22 22:34:39.513 JFReactive[933:25360] Subscriber 2 recieve value:B.     */
 }
 
 #pragma mark RAC(a,b) 宏的使用  给RAC()绑定一个信号后 会自动触发 signal 的didSubsribeBlock 不必subscribeNext:
@@ -1780,7 +1810,7 @@
 }
 - (IBAction)shareAction:(id)sender {
    // [self distinctUntilChanged];
-   [self coldSignalSubscribeSubject];
+   [self doNext];
     //  [self asychronize];
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -1806,5 +1836,40 @@
    
 
 }
+-(void)signalReplay{
+    __block int num = 0;
+    RACSignal *signal = [[RACSignal createSignal:^RACDisposable *(id  subscriber) {
+        num++;
+        NSLog(@"Increment num to: %i", num);
+        [subscriber sendNext:@(num)];
+        return nil;
+    }] replay]; // 返回的信号是RACReplaySubject
+    
+    NSLog(@"Start subscriptions");
+    
+    // Subscriber 1 (S1)
+    [signal subscribeNext:^(id x) {
+        NSLog(@"S1: %@", x);
+    }];
+    
+    // Subscriber 2 (S2)
+    [signal subscribeNext:^(id x) {
+        NSLog(@"S2: %@", x);
+    }];
+    
+    // Subscriber 3 (S3)
+    [signal subscribeNext:^(id x) {
+        NSLog(@"S3: %@", x);
+    }];
+    
+    /*
+     Increment num to: 1
+     Start subscriptions
+     S1: 1
+     S2: 1
+     S3: 1
+     */
+}
+
 @end
 

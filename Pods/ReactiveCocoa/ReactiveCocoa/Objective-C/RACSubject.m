@@ -88,7 +88,7 @@
 }
 
 #pragma mark RACSubscriber
-
+//RACPassthroughSubscriber 中的innerSubscriber sendNext
 - (void)sendNext:(id)value {
    // NSLog(@"begin");
 	[self enumerateSubscribersUsingBlock:^(id<RACSubscriber> subscriber) {

@@ -18,6 +18,12 @@
 		A43D2DE01C1A7EB2009CF246 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43D2DDE1C1A7EB2009CF246 /* LaunchScreen.storyboard */; };
 		A43D2DEB1C1A7EB2009CF246 /* JFReactiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D2DEA1C1A7EB2009CF246 /* JFReactiveTests.m */; };
 		A43D2DF61C1A7EB2009CF246 /* JFReactiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D2DF51C1A7EB2009CF246 /* JFReactiveUITests.m */; };
+		A4C966751CD1FBE900EC5C8B /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C966721CD1FBB900EC5C8B /* Mantle.framework */; };
+		A4C966761CD1FBE900EC5C8B /* Mantle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4C966721CD1FBB900EC5C8B /* Mantle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4C9667D1CD1FC5B00EC5C8B /* JFMantleController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C9667C1CD1FC5B00EC5C8B /* JFMantleController.m */; };
+		A4C966801CD1FCAF00EC5C8B /* JFUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C9667F1CD1FCAF00EC5C8B /* JFUserModel.m */; };
+		A4C966831CD1FD4300EC5C8B /* GitUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C966821CD1FD4300EC5C8B /* GitUser.m */; };
+		A4C966861CD20EB400EC5C8B /* FirstInterfaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C966851CD20EB400EC5C8B /* FirstInterfaceModel.m */; };
 		A4F754001C87009500A1666A /* JFTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F753FF1C87009500A1666A /* JFTableController.m */; };
 		A4F754031C87017C00A1666A /* JFBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754021C87017C00A1666A /* JFBaseCell.m */; };
 		A4F754071C8701EA00A1666A /* JFBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754061C8701EA00A1666A /* JFBaseModel.m */; };
@@ -75,7 +81,56 @@
 			remoteGlobalIDString = A43D2DCC1C1A7EB2009CF246;
 			remoteInfo = JFReactive;
 		};
+		A4C9666D1CD1FBB900EC5C8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4C966661CD1FBB900EC5C8B /* Mantle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D042FC3C15F72B23004E8054;
+			remoteInfo = "Mantle-Mac";
+		};
+		A4C9666F1CD1FBB900EC5C8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4C966661CD1FBB900EC5C8B /* Mantle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D042FC5415F72B23004E8054;
+			remoteInfo = "Mantle-MacTests";
+		};
+		A4C966711CD1FBB900EC5C8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4C966661CD1FBB900EC5C8B /* Mantle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0E9C35719F6DB38000D427D;
+			remoteInfo = "Mantle-iOS";
+		};
+		A4C966731CD1FBB900EC5C8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4C966661CD1FBB900EC5C8B /* Mantle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0E9C36119F6DB38000D427D;
+			remoteInfo = "Mantle-iOSTests";
+		};
+		A4C966771CD1FBE900EC5C8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4C966661CD1FBB900EC5C8B /* Mantle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D0E9C35619F6DB38000D427D;
+			remoteInfo = "Mantle-iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A4C966791CD1FBE900EC5C8B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A4C966761CD1FBE900EC5C8B /* Mantle.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A5BDB4FD82850319A6B7E80 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +154,15 @@
 		A43D2DF11C1A7EB2009CF246 /* JFReactiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFReactiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43D2DF51C1A7EB2009CF246 /* JFReactiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFReactiveUITests.m; sourceTree = "<group>"; };
 		A43D2DF71C1A7EB2009CF246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4C966661CD1FBB900EC5C8B /* Mantle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mantle.xcodeproj; path = Mantle/Mantle.xcodeproj; sourceTree = "<group>"; };
+		A4C9667B1CD1FC5B00EC5C8B /* JFMantleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMantleController.h; sourceTree = "<group>"; };
+		A4C9667C1CD1FC5B00EC5C8B /* JFMantleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMantleController.m; sourceTree = "<group>"; };
+		A4C9667E1CD1FCAF00EC5C8B /* JFUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFUserModel.h; sourceTree = "<group>"; };
+		A4C9667F1CD1FCAF00EC5C8B /* JFUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFUserModel.m; sourceTree = "<group>"; };
+		A4C966811CD1FD4300EC5C8B /* GitUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitUser.h; sourceTree = "<group>"; };
+		A4C966821CD1FD4300EC5C8B /* GitUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitUser.m; sourceTree = "<group>"; };
+		A4C966841CD20EB400EC5C8B /* FirstInterfaceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstInterfaceModel.h; sourceTree = "<group>"; };
+		A4C966851CD20EB400EC5C8B /* FirstInterfaceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstInterfaceModel.m; sourceTree = "<group>"; };
 		A4F753FE1C87009500A1666A /* JFTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFTableController.h; sourceTree = "<group>"; };
 		A4F753FF1C87009500A1666A /* JFTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFTableController.m; sourceTree = "<group>"; };
 		A4F754011C87017C00A1666A /* JFBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFBaseCell.h; sourceTree = "<group>"; };
@@ -170,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1267374637EF8F7242610F9D /* Pods.framework in Frameworks */,
+				A4C966751CD1FBE900EC5C8B /* Mantle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +275,7 @@
 		A43D2DC41C1A7EB2009CF246 = {
 			isa = PBXGroup;
 			children = (
+				A4C966661CD1FBB900EC5C8B /* Mantle.xcodeproj */,
 				A43D2DCF1C1A7EB2009CF246 /* JFReactive */,
 				A43D2DE91C1A7EB2009CF246 /* JFReactiveTests */,
 				A43D2DF41C1A7EB2009CF246 /* JFReactiveUITests */,
@@ -280,6 +346,32 @@
 			path = JFReactiveUITests;
 			sourceTree = "<group>";
 		};
+		A4C966671CD1FBB900EC5C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4C9666E1CD1FBB900EC5C8B /* Mantle.framework */,
+				A4C966701CD1FBB900EC5C8B /* Mantle-MacTests.xctest */,
+				A4C966721CD1FBB900EC5C8B /* Mantle.framework */,
+				A4C966741CD1FBB900EC5C8B /* Mantle-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4C9667A1CD1FC3100EC5C8B /* MantleController */ = {
+			isa = PBXGroup;
+			children = (
+				A4C9667B1CD1FC5B00EC5C8B /* JFMantleController.h */,
+				A4C9667C1CD1FC5B00EC5C8B /* JFMantleController.m */,
+				A4C9667E1CD1FCAF00EC5C8B /* JFUserModel.h */,
+				A4C9667F1CD1FCAF00EC5C8B /* JFUserModel.m */,
+				A4C966811CD1FD4300EC5C8B /* GitUser.h */,
+				A4C966821CD1FD4300EC5C8B /* GitUser.m */,
+				A4C966841CD20EB400EC5C8B /* FirstInterfaceModel.h */,
+				A4C966851CD20EB400EC5C8B /* FirstInterfaceModel.m */,
+			);
+			name = MantleController;
+			sourceTree = "<group>";
+		};
 		A4F754041C8701D000A1666A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +384,7 @@
 		A4F754081C87028000A1666A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A4C9667A1CD1FC3100EC5C8B /* MantleController */,
 				A4FC66C11C8EEB5C00611273 /* ScaleTransition */,
 				A4F754531C88592300A1666A /* CustomTransitionController */,
 				A4F7543B1C87DF7300A1666A /* PrimerCollectionController */,
@@ -429,10 +522,12 @@
 				A43D2DCB1C1A7EB2009CF246 /* Resources */,
 				436B0DFBB20818F0CE19AF0F /* Embed Pods Frameworks */,
 				4B50CC8B43A26A03B81B10BA /* Copy Pods Resources */,
+				A4C966791CD1FBE900EC5C8B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A4C966781CD1FBE900EC5C8B /* PBXTargetDependency */,
 			);
 			name = JFReactive;
 			productName = JFReactive;
@@ -508,6 +603,12 @@
 			mainGroup = A43D2DC41C1A7EB2009CF246;
 			productRefGroup = A43D2DCE1C1A7EB2009CF246 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A4C966671CD1FBB900EC5C8B /* Products */;
+					ProjectRef = A4C966661CD1FBB900EC5C8B /* Mantle.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A43D2DCC1C1A7EB2009CF246 /* JFReactive */,
@@ -516,6 +617,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A4C9666E1CD1FBB900EC5C8B /* Mantle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Mantle.framework;
+			remoteRef = A4C9666D1CD1FBB900EC5C8B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A4C966701CD1FBB900EC5C8B /* Mantle-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Mantle-MacTests.xctest";
+			remoteRef = A4C9666F1CD1FBB900EC5C8B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A4C966721CD1FBB900EC5C8B /* Mantle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Mantle.framework;
+			remoteRef = A4C966711CD1FBB900EC5C8B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A4C966741CD1FBB900EC5C8B /* Mantle-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Mantle-iOSTests.xctest";
+			remoteRef = A4C966731CD1FBB900EC5C8B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A43D2DCB1C1A7EB2009CF246 /* Resources */ = {
@@ -618,7 +750,9 @@
 				A43D2DD51C1A7EB2009CF246 /* AppDelegate.m in Sources */,
 				A4FC66BF1C8EE87000611273 /* NormalDismissAnimation.m in Sources */,
 				A4F754481C87DF8C00A1666A /* SCPrimerCollectionViewCell.m in Sources */,
+				A4C9667D1CD1FC5B00EC5C8B /* JFMantleController.m in Sources */,
 				A4F754591C88597D00A1666A /* JFPresentController.m in Sources */,
+				A4C966801CD1FCAF00EC5C8B /* JFUserModel.m in Sources */,
 				A4F754141C87147500A1666A /* CircularCollectionViewCell.swift in Sources */,
 				A4F754511C87E03F00A1666A /* StickCollectionViewFlowLayout.m in Sources */,
 				A4F7544A1C87DF8C00A1666A /* SCPrimerViewController.m in Sources */,
@@ -633,12 +767,14 @@
 				A4FC66C41C8EEB6B00611273 /* ScaleTranViewController.m in Sources */,
 				A4F754491C87DF8C00A1666A /* SCCornerViewController.m in Sources */,
 				A4FC66CA1C8EEBA200611273 /* PingInvertTransition.m in Sources */,
+				A4C966831CD1FD4300EC5C8B /* GitUser.m in Sources */,
 				A4F754561C88594200A1666A /* JFTransitionController.m in Sources */,
 				A4F7544B1C87DF8C00A1666A /* SCWelcomeViewController.m in Sources */,
 				A4F7540B1C8702AF00A1666A /* JFGraphicContrller.m in Sources */,
 				A4F7544E1C87DF9F00A1666A /* SCCustomizableButton.m in Sources */,
 				A4FC66C91C8EEBA200611273 /* PingTransition.m in Sources */,
 				A4FC66CD1C8EEC0C00611273 /* ScaleTOneController.m in Sources */,
+				A4C966861CD20EB400EC5C8B /* FirstInterfaceModel.m in Sources */,
 				A4FC66C01C8EE87000611273 /* SwipeUpInteractiveTransition.m in Sources */,
 				A4F754471C87DF8C00A1666A /* SCCornerCollectionViewCell.m in Sources */,
 				A42CB4D61C2A8FCC004E8641 /* NullSafe.m in Sources */,
@@ -673,6 +809,11 @@
 			isa = PBXTargetDependency;
 			target = A43D2DCC1C1A7EB2009CF246 /* JFReactive */;
 			targetProxy = A43D2DF21C1A7EB2009CF246 /* PBXContainerItemProxy */;
+		};
+		A4C966781CD1FBE900EC5C8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Mantle-iOS";
+			targetProxy = A4C966771CD1FBE900EC5C8B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

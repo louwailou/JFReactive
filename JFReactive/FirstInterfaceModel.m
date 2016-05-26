@@ -106,7 +106,9 @@
     }];
     
 }
-
++ (NSValueTransformer*)datasJsonTransformer{
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[NSString class]];
+}
 
 + (NSValueTransformer *)dateJSONTransformer {
     
@@ -132,8 +134,6 @@
 + (NSValueTransformer *)sysJSONTransformer {
     
    return [MTLJSONAdapter dictionaryTransformerWithModelClass:SysModel.class];
-
-
 }
 
 //然后就会得到一个内嵌的sysModel对象。
@@ -154,9 +154,9 @@
     NSLog(@"nil value detect for key=%@", key);
     
     
-    if ([key isEqualToString:@"cod"]) {
+    if ([key isEqualToString:@"xxxTestStr"]) {
         
-        [self setValue:@"something"forKey:@"cod"];
+        [self setValue:@"something"forKey:@"xxxTestStr"];
         
     }else {
         
@@ -229,6 +229,34 @@
         
     }];
 }
+
++ (NSValueTransformer *)weather_idJSONTransformer{
+//    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id( id value ) {
+//        return [NSString stringWithFormat:@"%@",value];
+//    } reverseBlock:^id(NSString *number) {
+//        return @([number integerValue]);
+//    }];
+    
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(id value,BOOL *success, NSError*__autoreleasing *error) {
+        
+        NSNumber *num = value;
+        
+        NSString *tempStr = [NSString stringWithFormat:@"%@", num];
+        
+        return tempStr;
+        
+    } reverseBlock:^id(id value,BOOL *success, NSError *__autoreleasing *error) {
+        
+        NSString *tempStr = value;
+        
+        NSNumber *tempNum = @(tempStr.integerValue);
+        
+        return tempNum;
+        
+    }];
+
+}
+
 @end
 
 

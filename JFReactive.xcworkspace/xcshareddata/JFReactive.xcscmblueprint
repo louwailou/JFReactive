@@ -4,15 +4,17 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "388D205B2D8DB8E63710165CF9DCF4D65A386124" : 0,
     "E3F1CFC7B66794122E6D31906D72E79A4B1AAB6D" : 0,
-    "E084C86B03F81D63323C9E7510697EA528A758C7" : 0
+    "FCC5E1045BC03811A6A8810C3741E293B65E1441" : 0,
+    "E084C86B03F81D63323C9E7510697EA528A758C7" : 0,
+    "388D205B2D8DB8E63710165CF9DCF4D65A386124" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "76F8BAA2-8EB9-4F74-94B0-07D54BAC76D7",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "388D205B2D8DB8E63710165CF9DCF4D65A386124" : "JFReactive\/",
     "E3F1CFC7B66794122E6D31906D72E79A4B1AAB6D" : "JFReactive\/Mantle\/",
-    "E084C86B03F81D63323C9E7510697EA528A758C7" : "JFReactive\/Mantle\/Carthage\/Checkouts\/xcconfigs\/"
+    "FCC5E1045BC03811A6A8810C3741E293B65E1441" : "..\/..\/Documents\/Xtrace",
+    "E084C86B03F81D63323C9E7510697EA528A758C7" : "JFReactive\/Mantle\/Carthage\/Checkouts\/xcconfigs\/",
+    "388D205B2D8DB8E63710165CF9DCF4D65A386124" : "JFReactive\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "JFReactive",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -32,6 +34,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Mantle\/Mantle.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E3F1CFC7B66794122E6D31906D72E79A4B1AAB6D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/johnno1962\/Xtrace.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FCC5E1045BC03811A6A8810C3741E293B65E1441"
     }
   ]
 }

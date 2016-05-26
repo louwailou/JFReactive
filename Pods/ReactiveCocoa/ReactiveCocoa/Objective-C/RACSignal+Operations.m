@@ -484,6 +484,7 @@ static RACDisposable *subscribeForever (RACSignal *signal, void (^next)(id), voi
 	return [[[RACSignal
 		createSignal:^ RACDisposable * (id<RACSubscriber> subscriber) {
 			for (RACSignal *signal in copiedSignals) {
+                NSLog(@"merge thread = %@",[NSThread currentThread]);
 				[subscriber sendNext:signal];
 			}
 

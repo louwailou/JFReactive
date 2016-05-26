@@ -91,7 +91,6 @@
 
 - (RACSignal *)bind:(RACStreamBindBlock (^)(void))block {
 	NSCParameterAssert(block != NULL);
-
 	/*
 	 * -bind: should:
 	 * 
@@ -104,9 +103,6 @@
 	 * If any signal sends an error at any point, send that to the subscriber.
 	 */
 
-    /*
-    
-     */
 	return [[RACSignal createSignal:^(id<RACSubscriber> subscriber) {
 		RACStreamBindBlock bindingBlock = block();
 
@@ -156,7 +152,7 @@
 		@autoreleasepool {
 			RACSerialDisposable *selfDisposable = [[RACSerialDisposable alloc] init];
 			[compoundDisposable addDisposable:selfDisposable];
-
+// self是 调用bind方法的signalA [self bind:] ，x 即为signalA 中创建时发送的值
 			RACDisposable *bindingDisposable = [self subscribeNext:^(id x) {
 				// Manually check disposal to handle synchronous errors.
 				if (compoundDisposable.disposed) return;
@@ -187,10 +183,11 @@
 	}] setNameWithFormat:@"[%@] -bind:", self.name];
 }
 
+#warning 信号A 完成结束后，信号B再订阅同一个subscriber
 - (RACSignal *)concat:(RACSignal *)signal {
 	return [[RACSignal createSignal:^(id<RACSubscriber> subscriber) {
 		RACCompoundDisposable *compoundDisposable = [[RACCompoundDisposable alloc] init];
-
+// self 为signalA ,当signalA 订阅完成发送完1 ，signal再订阅subscriber,让subscriber发送2
 		RACDisposable *sourceDisposable = [self subscribeNext:^(id x) {
 			[subscriber sendNext:x];
 		} error:^(NSError *error) {
@@ -285,7 +282,7 @@
 	NSCParameterAssert(nextBlock != NULL);
 	
 	RACSubscriber *o = [RACSubscriber subscriberWithNext:nextBlock error:NULL completed:NULL];
-    NSLog(@"create subscribers = %@",o);
+    NSLog(@"  = %@",o);
 	return [self subscribe:o];
 }
 

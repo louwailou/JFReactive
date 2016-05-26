@@ -60,4 +60,6 @@
 @property (nonatomic,copy) NSString * country;
 
 @property (nonatomic,strong) SysModel *sys;
+
+@property (nonatomic,strong) NSArray *datas;
 @end

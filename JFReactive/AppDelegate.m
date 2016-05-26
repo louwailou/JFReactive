@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Xtrace.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  
+    // trace your entire app's classes or those of an embedded framework
+    
+   // [Xtrace traceClassPattern:@"^UI" excluding:nil]; // trace all of UIkit
     // Override point for customization after application launch.
     return YES;
 }

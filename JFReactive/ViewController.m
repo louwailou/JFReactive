@@ -10,6 +10,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACReturnSignal.h>
 #import "JFModel.h"
+#import <ReactiveCocoa/NSObject+RACKVOWrapper.h>
 #import "AFHTTPRequestOperationManager.h"
 //#import "RACSignal.h"
 //#import "RACDisposable.h"
@@ -29,24 +30,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.model = [[JFModel alloc] init];
     
+    // [self subscribeSelector];
 //    UIImageView * aview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
 //    [aview setImage:[UIImage imageNamed:@"2"]];
   
+    [self rac_observeKeyPath:@"model.name" options:NSKeyValueObservingOptionNew observer:nil block:^(id value, NSDictionary *change, BOOL causedByDealloc, BOOL affectedOnlyLastComponent) {
+        NSLog(@"dic = %@",change);
+        NSLog(@"rac_observeKeyPath监听到值改变了");
+        
+    }];
+    //也可以将值改变转换为一个信号 然后订阅这个信号
+    [[self rac_valuesForKeyPath:@"model.name" observer:nil] subscribeNext:^(id x) {
+        NSLog(@"rac_valuesForKeyPath监听到值改变了  %@ ",x );
+    }];
+    
     UIButton * aview = [UIButton buttonWithType:UIButtonTypeCustom];
     [aview setBackgroundColor:[UIColor redColor]];
     [aview setBackgroundImage:[UIImage imageNamed:@"2"] forState:UIControlStateNormal];
     [aview setFrame:CGRectMake(0, 0, 100, 100)];
     [self.view addSubview:aview];
-   
+    aview.layer.anchorPoint = CGPointMake(0, 0);
     [aview setTransform:CGAffineTransformMakeScale(1, -1)];
-    aview.transform = CGAffineTransformTranslate(aview.transform, 0, -100);
+   // aview.transform = CGAffineTransformTranslate(aview.transform, 0, -100);
     NSLog(@"frame = %@",NSStringFromCGRect(aview.frame));
     NSLog(@"bound = %@",NSStringFromCGRect(aview.bounds));
     NSLog(@"position =%@",NSStringFromCGPoint(aview.layer.position));
     NSLog(@"anchorPoint =%@",NSStringFromCGPoint(aview.layer.anchorPoint));
     
-    
+    /**
+     2016-01-17 14:03:35.953 JFReactive[65598:8234328] frame = {{0, 100}, {100, 100}}
+     
+     2016-01-17 14:03:35.953 JFReactive[65598:8234328] bound = {{0, 0}, {100, 100}}
+     
+     2016-01-17 14:03:35.954 JFReactive[65598:8234328] position ={50, 50}
+     
+     2016-01-17 14:03:35.954 JFReactive[65598:8234328] anchorPoint ={0.5, 0.5}
+     */
 //    
 //    CALayer * layer = [CALayer layer];
 //    [layer setFrame:CGRectMake(0, 0, 100, 100)];
@@ -103,8 +124,7 @@
     [btn setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:btn];
     
-      self.model = [[JFModel alloc] init];
-   
+    self.model.name = @"sun";
    
    
 //    [self.textField.rac_textSignal subscribeNext:^(id x) {
@@ -624,22 +644,32 @@
      block - A block returning a RACStreamBindBlock. This block will be invoked each time the bound stream is re-evaluated. This block must not be nil or return nil.
      Returns a new stream which represents the combined result of all lazy applications of `block`
      */
-    [[_textField.rac_textSignal bind:^RACStreamBindBlock{
+    
+    RACSignal *request1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        // 发送请求1
+        [subscriber sendNext:@"发送请求1"];
+        
+        //[subscriber sendError:nil];
+        return nil;
+    }];
+   RACSignal * signalC = [request1 bind:^RACStreamBindBlock{
         
         return ^RACStream *(id value, BOOL *stop){
             
             //当信号有新的值发出，就会来调用这个block。
+            // 这里可以对原有subscriber send发送的值进行封装
             NSLog(@"%d",*stop);
             if ([value isEqualToString:@"fff"]) {
                 *stop = YES;
             }
-            return [RACReturnSignal return:[NSString stringWithFormat:@"value:%@",value]];
+            // 该返回的signal 在bind方法中进行addSignal，然后调用signalC 的sendNext:
+            return [RACSignal return:[NSString stringWithFormat:@"value:%@",value]];// 原值返回
         };
         
-    }] subscribeNext:^(id x) {
-        
+    }] ;
+    [signalC subscribeNext:^(id x) {
         NSLog(@"输出XXX %@",x);///当stop = yes 后不再输出
-        
     }];
     /*
      2016-01-04 18:35:54.731 JFReactive[33880:4304232] revoke streamBindBlock
@@ -766,7 +796,14 @@
         
         return nil;
     }];
-    
+    /**
+     Printing description of signalA: <RACDynamicSignal: 0x7fba8b695180> name:
+     Printing description of signalB:<RACDynamicSignal: 0x7fba8b439390> name:
+     Printing description of concatSignal:
+     <RACDynamicSignal: 0x7fba8d950b20> name:
+
+     
+     */
     // 把signalA拼接到signalB后，signalA发送完成，signalB才会被激活。
     RACSignal *concatSignal = [signalA concat:signalB];
     
@@ -817,28 +854,24 @@
 // 4.只要有一个信号被发出就会被监听。
 - (void)merge{
     RACSignal *signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        
-        //[subscriber sendNext:@1];
-        [subscriber sendError:nil];// 如果是error 则不会有任何输出，signalB 也不会执行输出
-        
+        [subscriber sendNext:@1];
+       // [subscriber sendError:nil];// 如果是error 则不会有任何输出，signalB 也不会执行输出
         return nil;
     }];
     
     RACSignal *signalB = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        
         [subscriber sendNext:@"dddd"];
-        
         return nil;
     }];
-    
+     NSLog(@" before subscriber ");
     // 合并信号,任何一个信号发送数据，都能监听到.
     RACSignal *mergeSignal = [signalA merge:signalB];
     
     [mergeSignal subscribeNext:^(id x) {
-        
-        NSLog(@"%@",x);
+        NSLog(@" subscriber %@",x);
         
     }];
+     NSLog(@" after subscriber ");
     //2015-12-27 14:07:01.923 JFReactive[91948:3179215] 1
     //2015-12-27 14:07:01.923 JFReactive[91948:3179215] dddd
 }
@@ -1796,9 +1829,16 @@
 }
 #pragma mark 订阅一个selector ,当selector发生后，会自动发送sendNext:   mapReplace替换原信号的值
 -(void)subscribeSelector{
-    RACSignal *presented = [[self rac_signalForSelector:@selector(shareAction:)] mapReplace:@YES];
+    RACSignal *presented = [self rac_signalForSelector:@selector(shareAction:)] ;
     [presented subscribeNext:^(id x) {
-        NSLog(@"dd %@",x);
+        NSLog(@"subscriberSelector %@",x);
+        /* 
+         button对象
+         
+         2016-05-23 17:14:19.259 JFReactive[17519:244512] subscriberSelector <RACTuple: 0x7fc9f84c5270> (
+         "<UIButton: 0x7fc9f8554c20; frame = (93 330; 151 30); opaque = NO; autoresize = RM+BM; layer = <CALayer: 0x7fc9f8554fd0>>"
+         )
+         */
     }];
 }
 
@@ -1810,7 +1850,10 @@
 }
 - (IBAction)shareAction:(id)sender {
    // [self distinctUntilChanged];
-   [self doNext];
+     NSLog(@" before share %@",@"");
+   [self bind];
+   
+    [self.navigationController setHidesBarsOnTap:YES];
     //  [self asychronize];
 }
 -(void)viewWillAppear:(BOOL)animated{

@@ -843,11 +843,13 @@
     //2015-12-27 14:07:01.923 JFReactive[91948:3179215] dddd
 }
 #pragma mark zipWith`:把两个信号压缩成一个信号，只有当两个信号同时发出信号内容时，并且把两个信号的内容合并成一个元组，才会触发压缩流的next事件。 当且仅当两个均发送信号才 会触发
+// 你2我1，你4我3，你5，等你6哦
 - (void)zipSignal{
     RACSignal *signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
         [subscriber sendNext:@1];
-        
+        [subscriber sendNext:@3];
+       
         
         return nil;
     }];
@@ -855,7 +857,8 @@
     RACSignal *signalB = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
         [subscriber sendNext:@2];
-        
+        [subscriber sendNext:@4];
+       
         return nil;
     }];
     
@@ -871,9 +874,13 @@
     
     /*
      
-     <RACTuple: 0x7fdffa519bf0> (
+     2016-05-29 23:23:39.856 JFReactive[14024:212146] <RACTuple: 0x7fb98a465a20> (
      1,
      2
+     )
+     2016-05-29 23:23:39.856 JFReactive[14024:212146] <RACTuple: 0x7fb98a51a9d0> (
+     3,
+     4
      )
      */
 }
@@ -900,7 +907,7 @@
         [subscriber sendCompleted];
     }];
 
-#pragma mark   combineLatest需要每个signal至少都有过一次sendNext-->触发过一次
+#pragma mark   combineLatest需要每个signal至少都有过一次sendNext-->触发过一次 , 可以和reduce 结合使用
     RACSignal *combineSignal = [signalA combineLatestWith:signalB];
     
     [combineSignal subscribeNext:^(id x) {
@@ -1305,6 +1312,7 @@
      2015-12-27 15:55:31.117 JFReactive[99545:3229476] subscriber sendcompleted
      */
 }
+#pragma mark retry 成功之前可能需要数百次失败
 -(void)retry{
    __block int flag = 0;
     
@@ -1340,7 +1348,28 @@
      2015-12-27 16:51:11.255 JFReactive[99908:3250727] only 1 and 2 will be print: 2
      */
 }
+# pragma mark throttle 不好意思，这里一秒钟只能通过一个人。
+- (void)throttle2{
+    [[[RACSignal createSignal:^RACDisposable *(id subscriber) {
+        [subscriber sendNext:@"旅客A"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@"旅客B"];
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@"旅客C"];
+            [subscriber sendNext:@"旅客D"];
+            [subscriber sendNext:@"旅客E"];
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@"旅客F"];
+        });
+        return nil;
+    }] throttle:1] subscribeNext:^(id x) {
+        NSLog(@"%@通过了",x);
+    }];
+}
 #pragma mark 节流  如果上个next 在规定的interval 内没有返回，这时下一个next 已发送，就会放弃上个next
+
 - (void)throttle{
     
     /*
@@ -1553,9 +1582,7 @@
     // -flattenMap: will execute its block whenever the signal sends a value, and
     // returns a new RACSignal that merges all of the signals returned from the block
     // into a single signal.
-    [[[[self
-        loginSignal]
-       flattenMap:^(NSString *user) {
+    [[  [ [self loginSignal]flattenMap:^(NSString *user) {
            // Return a signal that loads cached messages for the user.
            NSLog(@"user == %@",user);
            return [self loadCachedMessagesForUser:user];
@@ -1780,7 +1807,7 @@
 }
 - (IBAction)shareAction:(id)sender {
    // [self distinctUntilChanged];
-   [self coldSignalSubscribeSubject];
+   [self zipSignal];
     //  [self asychronize];
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -1805,6 +1832,98 @@
 -(IBAction)changeField:(id)sender{
    
 
+}
+
+-(void)delay{
+    // 在timeout 内没有收到next 就报错
+    [[[RACSignal createSignal:^RACDisposable *(id outersubscriber) {
+       
+        [[[RACSignal createSignal:^RACDisposable *(id subscriber) {
+            NSLog(@"我快到了");
+            [subscriber sendNext:@"100"];
+            [subscriber sendCompleted];
+            return nil;
+        }] delay:3*4] subscribeNext:^(id x) {
+            NSLog(@"xx= %@",x);
+            //[subscriber sendError:nil];
+            [outersubscriber sendNext:@"我到了"];// outerSubscriber 在12s 后发送next
+        }];
+        
+        
+        return nil;
+    }] timeout:3*3 onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
+         NSLog(@"等了你一个小时了，你终于来了  = %@",x);
+    } error:^(NSError *error) {
+         NSLog(@"等了你一个小时了，你还没来，我走了");
+    }];
+    
+    
+    /*
+     2016-05-29 22:18:55.679 JFReactive[13122:186357] 我快到了
+     2016-05-29 22:19:05.483 JFReactive[13122:186357] 等了你一个小时了，你还没来，我走了
+     2016-05-29 22:19:08.452 JFReactive[13122:186357] xx= 100
+     */
+    
+    
+}
+
+
+- (void)flatten{
+  
+    [[[[RACSignal createSignal:^RACDisposable *(id subscriber) {
+        NSLog(@"打蛋液");
+        [subscriber sendNext:@"蛋液"];
+        [subscriber sendCompleted];
+        return nil;
+    }] flattenMap:^RACStream *(NSString* value) {
+        return [RACSignal createSignal:^RACDisposable *(id subscriber) {
+            NSLog(@"把%@倒进锅里面煎",value);
+            [subscriber sendNext:@"煎蛋"];
+            [subscriber sendCompleted];
+            return nil;
+        }];
+    }] flattenMap:^RACStream *(NSString* value) {
+        return [RACSignal createSignal:^RACDisposable *(id subscriber) {
+            NSLog(@"把%@装到盘里", value);
+            [subscriber sendNext:@"上菜"];
+            [subscriber sendCompleted];
+            return nil;
+        }];
+    }] subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+}
+
+#pragma mark 一次拍摄，多次观看
+- (void)replay{
+    RACSignal *replaySignal = [[RACSignal createSignal:^RACDisposable *(id subscriber) {
+        NSLog(@"大导演拍了一部电影《我的男票是程序员》");
+        [subscriber sendNext:@"《我的男票是程序员》"];
+        return nil;
+    }] replay];
+    [replaySignal subscribeNext:^(id x) {
+        NSLog(@"小明看了%@", x);
+    }];
+    [replaySignal subscribeNext:^(id x) {
+        NSLog(@"小红也看了%@", x);
+    }];
+}
+# pragma mark takeuntile 直到世界的尽头才能把我们分开
+- (void)takeUntile{
+    [[[RACSignal createSignal:^RACDisposable *(id subscriber) {
+        [[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
+            [subscriber sendNext:@"直到世界的尽头才能把我们分开"];
+        }];
+        return nil;
+    }] takeUntil:[RACSignal createSignal:^RACDisposable *(id subscriber) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"世界的尽头到了");
+            [subscriber sendNext:@"世界的尽头到了"];
+        });
+        return nil;
+    }]] subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
 }
 @end
 

@@ -45,7 +45,7 @@
     NSLog(@"bound = %@",NSStringFromCGRect(aview.bounds));
     NSLog(@"position =%@",NSStringFromCGPoint(aview.layer.position));
     NSLog(@"anchorPoint =%@",NSStringFromCGPoint(aview.layer.anchorPoint));
-    
+    //[self simulateLogin];
     
 //    
 //    CALayer * layer = [CALayer layer];
@@ -580,9 +580,9 @@
     // connect.signal subscribeNext 仅仅是生成新的subscriber 添加到subscribers数组中
    [connect connect];// 如果先连接 不会发送subscribeNext中的信息，仅仅打印出 发送请求
     /*
-     2016-01-04 18:15:07.287 JFReactive[33616:4293575] 发送请求
-     2016-01-04 18:15:07.287 JFReactive[33616:4293575] 订阅者一信号
-     2016-01-04 18:15:07.287 JFReactive[33616:4293575] 订阅者二信号
+     2016-05-30 22:51:44.795 JFReactive[41562:698595] 发送请求
+     2016-05-30 22:51:44.795 JFReactive[41562:698595] 订阅者一信号 200
+     2016-05-30 22:51:44.795 JFReactive[41562:698595] 订阅者二信号 200
      */
 
 }
@@ -1807,7 +1807,7 @@
 }
 - (IBAction)shareAction:(id)sender {
    // [self distinctUntilChanged];
-   [self zipSignal];
+   [self takeUntile];
     //  [self asychronize];
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -1856,8 +1856,7 @@
     } error:^(NSError *error) {
          NSLog(@"等了你一个小时了，你还没来，我走了");
     }];
-    
-    
+
     /*
      2016-05-29 22:18:55.679 JFReactive[13122:186357] 我快到了
      2016-05-29 22:19:05.483 JFReactive[13122:186357] 等了你一个小时了，你还没来，我走了
@@ -1913,16 +1912,18 @@
     [[[RACSignal createSignal:^RACDisposable *(id subscriber) {
         [[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
             [subscriber sendNext:@"直到世界的尽头才能把我们分开"];
+            // [subscriber sendCompleted];//该行代码不能注掉，不然只执行一次
         }];
         return nil;
     }] takeUntil:[RACSignal createSignal:^RACDisposable *(id subscriber) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            NSLog(@"世界的尽头到了");
+            NSLog(@"世界的尽头z在哪里？？");
             [subscriber sendNext:@"世界的尽头到了"];
+            [subscriber sendCompleted];
         });
         return nil;
     }]] subscribeNext:^(id x) {
-        NSLog(@"%@", x);
+        NSLog(@"zhendaole  %@", x);
     }];
 }
 @end

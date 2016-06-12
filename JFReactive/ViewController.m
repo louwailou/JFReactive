@@ -1582,7 +1582,7 @@
     // -flattenMap: will execute its block whenever the signal sends a value, and
     // returns a new RACSignal that merges all of the signals returned from the block
     // into a single signal.
-    [[  [ [self loginSignal]flattenMap:^(NSString *user) {
+    [[  [ [self loginSignal]flattenMap:^(NSArray *user) {
            // Return a signal that loads cached messages for the user.
            NSLog(@"user == %@",user);
            return [self loadCachedMessagesForUser:user];
@@ -1807,7 +1807,7 @@
 }
 - (IBAction)shareAction:(id)sender {
    // [self distinctUntilChanged];
-   [self takeUntile];
+   [self asychronize];
     //  [self asychronize];
 }
 -(void)viewWillAppear:(BOOL)animated{

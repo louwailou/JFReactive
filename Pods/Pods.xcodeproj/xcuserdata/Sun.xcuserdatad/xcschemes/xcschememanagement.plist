@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54545C4E56859D96BB9E0F8BB29571FD</key>
+		<key>5BC9A356447DC40539C4D84AAC979418</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9136DAB5F25A06D008E588783EF17EF8</key>
+		<key>6372157C1775F3EC165A5B428E5CFC3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C26F73A246906EA9848439928B69D2E4</key>
+		<key>909D321EF1BF46992EB274B232EAF5ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9A83F63385AA43314397B8DD375464B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

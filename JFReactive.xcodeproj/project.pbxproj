@@ -18,6 +18,16 @@
 		A43D2DE01C1A7EB2009CF246 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43D2DDE1C1A7EB2009CF246 /* LaunchScreen.storyboard */; };
 		A43D2DEB1C1A7EB2009CF246 /* JFReactiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D2DEA1C1A7EB2009CF246 /* JFReactiveTests.m */; };
 		A43D2DF61C1A7EB2009CF246 /* JFReactiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D2DF51C1A7EB2009CF246 /* JFReactiveUITests.m */; };
+		A4A1A1481D0D4F4600D87DB3 /* JFFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A1A13E1D0D4F4600D87DB3 /* JFFindViewController.m */; };
+		A4A1A14A1D0D4F4600D87DB3 /* JFFindFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A1A1411D0D4F4600D87DB3 /* JFFindFlowLayout.m */; };
+		A4A1A14B1D0D4F4600D87DB3 /* JFFindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A1A1431D0D4F4600D87DB3 /* JFFindCell.m */; };
+		A4A1A14C1D0D4F4600D87DB3 /* JFFindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A1A1441D0D4F4600D87DB3 /* JFFindCell.xib */; };
+		A4A1A14D1D0D4F4600D87DB3 /* JFFindHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A1A1461D0D4F4600D87DB3 /* JFFindHeaderView.m */; };
+		A4A1A14E1D0D4F4600D87DB3 /* JFFindHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A1A1471D0D4F4600D87DB3 /* JFFindHeaderView.xib */; };
+		A4A1A1521D0D577900D87DB3 /* JFFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A1A1501D0D577900D87DB3 /* JFFooterView.m */; };
+		A4A1A1531D0D577900D87DB3 /* JFFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A1A1511D0D577900D87DB3 /* JFFooterView.xib */; };
+		A4A1A1571D0D5A6500D87DB3 /* JFFindHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A1A1551D0D5A6500D87DB3 /* JFFindHeaderCell.m */; };
+		A4A1A1581D0D5A6500D87DB3 /* JFFindHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A1A1561D0D5A6500D87DB3 /* JFFindHeaderCell.xib */; };
 		A4F754001C87009500A1666A /* JFTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F753FF1C87009500A1666A /* JFTableController.m */; };
 		A4F754031C87017C00A1666A /* JFBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754021C87017C00A1666A /* JFBaseCell.m */; };
 		A4F754071C8701EA00A1666A /* JFBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754061C8701EA00A1666A /* JFBaseModel.m */; };
@@ -99,6 +109,22 @@
 		A43D2DF11C1A7EB2009CF246 /* JFReactiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFReactiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43D2DF51C1A7EB2009CF246 /* JFReactiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFReactiveUITests.m; sourceTree = "<group>"; };
 		A43D2DF71C1A7EB2009CF246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4A1A13D1D0D4F4600D87DB3 /* JFFindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFindViewController.h; sourceTree = "<group>"; };
+		A4A1A13E1D0D4F4600D87DB3 /* JFFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFindViewController.m; sourceTree = "<group>"; };
+		A4A1A1401D0D4F4600D87DB3 /* JFFindFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFindFlowLayout.h; sourceTree = "<group>"; };
+		A4A1A1411D0D4F4600D87DB3 /* JFFindFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFindFlowLayout.m; sourceTree = "<group>"; };
+		A4A1A1421D0D4F4600D87DB3 /* JFFindCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFindCell.h; sourceTree = "<group>"; };
+		A4A1A1431D0D4F4600D87DB3 /* JFFindCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFindCell.m; sourceTree = "<group>"; };
+		A4A1A1441D0D4F4600D87DB3 /* JFFindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFFindCell.xib; sourceTree = "<group>"; };
+		A4A1A1451D0D4F4600D87DB3 /* JFFindHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFindHeaderView.h; sourceTree = "<group>"; };
+		A4A1A1461D0D4F4600D87DB3 /* JFFindHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFindHeaderView.m; sourceTree = "<group>"; };
+		A4A1A1471D0D4F4600D87DB3 /* JFFindHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFFindHeaderView.xib; sourceTree = "<group>"; };
+		A4A1A14F1D0D577900D87DB3 /* JFFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFooterView.h; sourceTree = "<group>"; };
+		A4A1A1501D0D577900D87DB3 /* JFFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFooterView.m; sourceTree = "<group>"; };
+		A4A1A1511D0D577900D87DB3 /* JFFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFFooterView.xib; sourceTree = "<group>"; };
+		A4A1A1541D0D5A6500D87DB3 /* JFFindHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFindHeaderCell.h; sourceTree = "<group>"; };
+		A4A1A1551D0D5A6500D87DB3 /* JFFindHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFindHeaderCell.m; sourceTree = "<group>"; };
+		A4A1A1561D0D5A6500D87DB3 /* JFFindHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFFindHeaderCell.xib; sourceTree = "<group>"; };
 		A4F753FE1C87009500A1666A /* JFTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFTableController.h; sourceTree = "<group>"; };
 		A4F753FF1C87009500A1666A /* JFTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFTableController.m; sourceTree = "<group>"; };
 		A4F754011C87017C00A1666A /* JFBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFBaseCell.h; sourceTree = "<group>"; };
@@ -232,6 +258,7 @@
 		A43D2DCF1C1A7EB2009CF246 /* JFReactive */ = {
 			isa = PBXGroup;
 			children = (
+				A4A1A13C1D0D4F3D00D87DB3 /* CollectionT */,
 				A4F754361C87DF1100A1666A /* Helper */,
 				A4F754191C87197E00A1666A /* images */,
 				A4F7540D1C87141600A1666A /* CircularCollection */,
@@ -278,6 +305,29 @@
 				A43D2DF71C1A7EB2009CF246 /* Info.plist */,
 			);
 			path = JFReactiveUITests;
+			sourceTree = "<group>";
+		};
+		A4A1A13C1D0D4F3D00D87DB3 /* CollectionT */ = {
+			isa = PBXGroup;
+			children = (
+				A4A1A13D1D0D4F4600D87DB3 /* JFFindViewController.h */,
+				A4A1A13E1D0D4F4600D87DB3 /* JFFindViewController.m */,
+				A4A1A1401D0D4F4600D87DB3 /* JFFindFlowLayout.h */,
+				A4A1A1411D0D4F4600D87DB3 /* JFFindFlowLayout.m */,
+				A4A1A1421D0D4F4600D87DB3 /* JFFindCell.h */,
+				A4A1A1431D0D4F4600D87DB3 /* JFFindCell.m */,
+				A4A1A1441D0D4F4600D87DB3 /* JFFindCell.xib */,
+				A4A1A1451D0D4F4600D87DB3 /* JFFindHeaderView.h */,
+				A4A1A1461D0D4F4600D87DB3 /* JFFindHeaderView.m */,
+				A4A1A1471D0D4F4600D87DB3 /* JFFindHeaderView.xib */,
+				A4A1A14F1D0D577900D87DB3 /* JFFooterView.h */,
+				A4A1A1501D0D577900D87DB3 /* JFFooterView.m */,
+				A4A1A1511D0D577900D87DB3 /* JFFooterView.xib */,
+				A4A1A1541D0D5A6500D87DB3 /* JFFindHeaderCell.h */,
+				A4A1A1551D0D5A6500D87DB3 /* JFFindHeaderCell.m */,
+				A4A1A1561D0D5A6500D87DB3 /* JFFindHeaderCell.xib */,
+			);
+			path = CollectionT;
 			sourceTree = "<group>";
 		};
 		A4F754041C8701D000A1666A /* Model */ = {
@@ -523,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F754331C8719A100A1666A /* 12@2x.png in Resources */,
+				A4A1A1581D0D5A6500D87DB3 /* JFFindHeaderCell.xib in Resources */,
 				A4F7542A1C8719A100A1666A /* 3@2x.png in Resources */,
 				A4F7542E1C8719A100A1666A /* 7@2x.png in Resources */,
 				A4F754341C8719A100A1666A /* 13@2x.png in Resources */,
@@ -530,14 +581,17 @@
 				A4F754301C8719A100A1666A /* 9@2x.png in Resources */,
 				A43D2DE01C1A7EB2009CF246 /* LaunchScreen.storyboard in Resources */,
 				A4F754321C8719A100A1666A /* 11@2x.png in Resources */,
+				A4A1A14E1D0D4F4600D87DB3 /* JFFindHeaderView.xib in Resources */,
 				A4F7542C1C8719A100A1666A /* 5@2x.png in Resources */,
 				A4F754291C8719A100A1666A /* 2@2x.png in Resources */,
 				A43D2DDD1C1A7EB2009CF246 /* Assets.xcassets in Resources */,
+				A4A1A14C1D0D4F4600D87DB3 /* JFFindCell.xib in Resources */,
 				A4F7542D1C8719A100A1666A /* 6@2x.png in Resources */,
 				A4F7542F1C8719A100A1666A /* 8@2x.png in Resources */,
 				A43D2DDB1C1A7EB2009CF246 /* Main.storyboard in Resources */,
 				A4F754171C87147500A1666A /* CircularCollectionViewCell.xib in Resources */,
 				A4F754351C8719A100A1666A /* 14@2x.png in Resources */,
+				A4A1A1531D0D577900D87DB3 /* JFFooterView.xib in Resources */,
 				A4F754281C8719A100A1666A /* 1@2x.png in Resources */,
 				A4F754311C8719A100A1666A /* 10@2x.png in Resources */,
 			);
@@ -616,9 +670,11 @@
 				A4F754181C87147500A1666A /* CollectionViewController.swift in Sources */,
 				A43D2DD81C1A7EB2009CF246 /* ViewController.m in Sources */,
 				A43D2DD51C1A7EB2009CF246 /* AppDelegate.m in Sources */,
+				A4A1A14B1D0D4F4600D87DB3 /* JFFindCell.m in Sources */,
 				A4FC66BF1C8EE87000611273 /* NormalDismissAnimation.m in Sources */,
 				A4F754481C87DF8C00A1666A /* SCPrimerCollectionViewCell.m in Sources */,
 				A4F754591C88597D00A1666A /* JFPresentController.m in Sources */,
+				A4A1A1481D0D4F4600D87DB3 /* JFFindViewController.m in Sources */,
 				A4F754141C87147500A1666A /* CircularCollectionViewCell.swift in Sources */,
 				A4F754511C87E03F00A1666A /* StickCollectionViewFlowLayout.m in Sources */,
 				A4F7544A1C87DF8C00A1666A /* SCPrimerViewController.m in Sources */,
@@ -626,11 +682,15 @@
 				A4F754001C87009500A1666A /* JFTableController.m in Sources */,
 				A42CB4D91C2ED6B2004E8641 /* JFModel.m in Sources */,
 				A4F754071C8701EA00A1666A /* JFBaseModel.m in Sources */,
+				A4A1A1521D0D577900D87DB3 /* JFFooterView.m in Sources */,
 				A4F754031C87017C00A1666A /* JFBaseCell.m in Sources */,
 				A4F754151C87147500A1666A /* CircularCollectionViewLayoutAttributes.swift in Sources */,
+				A4A1A1571D0D5A6500D87DB3 /* JFFindHeaderCell.m in Sources */,
 				A43D2DD21C1A7EB2009CF246 /* main.m in Sources */,
 				A4F754391C87DF1B00A1666A /* UIColor+Hex.m in Sources */,
+				A4A1A14D1D0D4F4600D87DB3 /* JFFindHeaderView.m in Sources */,
 				A4FC66C41C8EEB6B00611273 /* ScaleTranViewController.m in Sources */,
+				A4A1A14A1D0D4F4600D87DB3 /* JFFindFlowLayout.m in Sources */,
 				A4F754491C87DF8C00A1666A /* SCCornerViewController.m in Sources */,
 				A4FC66CA1C8EEBA200611273 /* PingInvertTransition.m in Sources */,
 				A4F754561C88594200A1666A /* JFTransitionController.m in Sources */,

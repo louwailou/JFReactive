@@ -17,24 +17,28 @@ public enum Result<T, Error: ErrorType>: ResultType, CustomStringConvertible, Cu
 		self = .Failure(error)
 	}
 
-	/// Constructs a result from an Optional, failing with `Error` if `nil`
+	/// Constructs a result from an Optional, failing with `Error` if `nil`.
 	public init(_ value: T?, @autoclosure failWith: () -> Error) {
 		self = value.map(Result.Success) ?? .Failure(failWith())
 	}
 
-	/// Constructs a result from a function that uses `throw`, failing with `Error` if throws
+	/// Constructs a result from a function that uses `throw`, failing with `Error` if throws.
 	public init(@autoclosure _ f: () throws -> T) {
+		self.init(attempt: f)
+	}
+
+	/// Constructs a result from a function that uses `throw`, failing with `Error` if throws.
+	public init(@noescape attempt f: () throws -> T) {
 		do {
 			self = .Success(try f())
 		} catch {
 			self = .Failure(error as! Error)
 		}
 	}
-	
 
 	// MARK: Deconstruction
 
-	/// Returns the value from `Success` Results or `throw`s the error
+	/// Returns the value from `Success` Results or `throw`s the error.
 	public func dematerialize() throws -> T {
 		switch self {
 		case let .Success(value):
@@ -146,7 +150,7 @@ public func ?? <T, Error> (left: Result<T, Error>, @autoclosure right: () -> Res
 
 // MARK: - Derive result from failable closure
 
-public func materialize<T>(f: () throws -> T) -> Result<T, NSError> {
+public func materialize<T>(@noescape f: () throws -> T) -> Result<T, NSError> {
 	return materialize(try f())
 }
 
@@ -200,5 +204,23 @@ public func >>- <T, U, Error> (result: Result<T, Error>, @noescape transform: T 
 	return result.flatMap(transform)
 }
 
+
+// MARK: - ErrorTypeConvertible conformance
+
+/// Make NSError conform to ErrorTypeConvertible
+extension NSError: ErrorTypeConvertible {
+	public static func errorFromErrorType(error: ErrorType) -> NSError {
+		return error as NSError
+	}
+}
+
+// MARK: -
+
+/// An “error” that is impossible to construct.
+///
+/// This can be used to describe `Result`s where failures will never
+/// be generated. For example, `Result<Int, NoError>` describes a result that
+/// contains an `Int`eger and is guaranteed never to be a `Failure`.
+public enum NoError: ErrorType { }
 
 import Foundation

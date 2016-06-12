@@ -1,48 +1,51 @@
 PODS:
-  - AFNetworking (2.6.2):
-    - AFNetworking/NSURLConnection (= 2.6.2)
-    - AFNetworking/NSURLSession (= 2.6.2)
-    - AFNetworking/Reachability (= 2.6.2)
-    - AFNetworking/Security (= 2.6.2)
-    - AFNetworking/Serialization (= 2.6.2)
-    - AFNetworking/UIKit (= 2.6.2)
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
   - AFNetworking+SingleBlock (0.0.1):
     - AFNetworking (~> 2.0)
-  - AFNetworking/NSURLConnection (2.6.2):
+  - AFNetworking/NSURLConnection (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.2):
+  - AFNetworking/NSURLSession (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.2)
-  - AFNetworking/Security (2.6.2)
-  - AFNetworking/Serialization (2.6.2)
-  - AFNetworking/UIKit (2.6.2):
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - ReactiveCocoa (4.0.4-alpha-1):
-    - ReactiveCocoa/UI (= 4.0.4-alpha-1)
-    - Result (~> 0.6-beta.1)
-  - ReactiveCocoa/Core (4.0.4-alpha-1):
+  - Masonry (1.0.1)
+  - ReactiveCocoa (4.0.4-alpha-4):
+    - ReactiveCocoa/UI (= 4.0.4-alpha-4)
+    - Result (~> 1.0)
+  - ReactiveCocoa/Core (4.0.4-alpha-4):
     - ReactiveCocoa/no-arc
-    - Result (~> 0.6-beta.1)
-  - ReactiveCocoa/no-arc (4.0.4-alpha-1):
-    - Result (~> 0.6-beta.1)
-  - ReactiveCocoa/UI (4.0.4-alpha-1):
+    - Result (~> 1.0)
+  - ReactiveCocoa/no-arc (4.0.4-alpha-4):
+    - Result (~> 1.0)
+  - ReactiveCocoa/UI (4.0.4-alpha-4):
     - ReactiveCocoa/Core
-    - Result (~> 0.6-beta.1)
-  - Result (0.6.0-beta.6)
+    - Result (~> 1.0)
+  - Result (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking+SingleBlock (~> 0.0.1)
+  - Masonry (~> 1.0.0)
   - ReactiveCocoa (~> 4.0.4-alpha-1)
 
 SPEC CHECKSUMS:
-  AFNetworking: 7f317038a9710cabfa43ec56396b307b45df72ab
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   AFNetworking+SingleBlock: e736a3faeb61df7ec272c505ec4aa5de73e2b3ae
-  ReactiveCocoa: 618a2fc13d4ed80e380aa6fa56547cef43c7341d
-  Result: dc390d0b58f9ec43fcd536f1ebdd130803cc6cbc
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  ReactiveCocoa: e459ea92099447802df20c4735e31e8139b06094
+  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
 
 COCOAPODS: 0.39.0

@@ -1,4 +1,4 @@
 use_frameworks!
 pod 'ReactiveCocoa', '~> 4.0.4-alpha-1'
 pod 'AFNetworking+SingleBlock', '~> 0.0.1'
-
+pod 'Masonry', '~> 1.0.0'

@@ -107,10 +107,11 @@
    
    
    
-//    [self.textField.rac_textSignal subscribeNext:^(id x) {
-//        NSLog(@"%@",x);
-//    }];
-    
+    [self.textField.rac_textSignal subscribeNext:^(id x) {
+        NSLog(@"tttttt %@",x);
+    }];
+    //
+    //[self.textField setText:@"12345667"];
 //    [RACObserve(self.textField, text) subscribeNext:^(id x) {
 //        
 //        NSLog(@"%@",x);// 订阅多次也是触发一次，与上述相比 无副作用，但是需要外部触发，自身没办法触发,即 在其他地方调用 self.textfield.text = @"ddddd"
@@ -442,7 +443,7 @@
     }];
     
     // 强引用命令，不要被销毁，否则接收不到数据
-    _command = command;
+    self.command = command;
     
     // 3.订阅RACCommand中的信号
     //RACCommand有个执行信号源executionSignals，这个是signal of signals(信号的信号),意思是信号发出的数据是信号，不是普通的类型。
@@ -499,13 +500,13 @@
      2015-12-26 18:48:23.730 JFReactive[61623:2932153] singnal's next  请求数据
      2015-12-26 18:48:23.730 JFReactive[61623:2932153] switchToLast subnext: 请求数据
      2015-12-26 18:48:23.731 JFReactive[61623:2932153] excuting xx = 0
-     2015-12-26 18:48:23.731 JFReactive[61623:2932153] 执行完成
+     2015-12-26 18:48:23.731 JFReactracive[61623:2932153] 执行完成
      2015-12-26 18:48:23.731 JFReactive[61623:2932153] excuting next :0
 
      */
 }
 
-#pragma mark RACMulticastConnection 解决signal中每订阅subscribeNext 就触发一次信号内部subscriber的发送问题
+#pragma mark RACMulraticastConnection 解决signal中每订阅subscribeNext 就触发一次信号内部subscriber的发送问题
 -(void)multicast{
     // // 需求：假设在一个信号中发送请求，每次订阅一次都会发送请求，这样就会导致多次请求---- 发送请求调用多次。
     // 解决：使用RACMulticastConnection就能解决.
@@ -1807,13 +1808,14 @@
 }
 - (IBAction)shareAction:(id)sender {
    // [self distinctUntilChanged];
-   [self asychronize];
+   //[self commandCombineSubject];
+    self.textField.text = @"100";
     //  [self asychronize];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     NSLog(@"view will appear");
-//    [[[self.shareBtn
+//    [[[self.sharetimer
 //       rac_signalForControlEvents:UIControlEventTouchUpInside]
 //      map:^id(id x){//改为flattenMap
 //          NSLog(@"xxx = %@",x);// button 对象
@@ -1925,6 +1927,19 @@
     }]] subscribeNext:^(id x) {
         NSLog(@"zhendaole  %@", x);
     }];
+}
+- (void)commandCombineSubject{
+    RACSubject * subject = [RACSubject subject];
+    
+    RACCommand * command = [[RACCommand alloc] initWithEnabled:subject signalBlock:^RACSignal *(id input) {
+        return [RACSignal return:@"100"];
+    }];
+    [[command.executionSignals switchToLatest]subscribeNext:^(id x) {
+        NSLog(@"x = %@",x);
+    }];
+    
+    [command execute:nil];
+    [subject sendNext:@ NO];
 }
 @end
 

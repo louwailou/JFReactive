@@ -10,6 +10,7 @@
 		1267374637EF8F7242610F9D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5BDB4FD82850319A6B7E80 /* Pods.framework */; };
 		A42CB4D61C2A8FCC004E8641 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A42CB4D51C2A8FCC004E8641 /* NullSafe.m */; };
 		A42CB4D91C2ED6B2004E8641 /* JFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A42CB4D81C2ED6B2004E8641 /* JFModel.m */; };
+		A43816E61D0E4ED80018DCAA /* JFFindLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A43816E51D0E4ED80018DCAA /* JFFindLayoutAttributes.m */; };
 		A43D2DD21C1A7EB2009CF246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D2DD11C1A7EB2009CF246 /* main.m */; };
 		A43D2DD51C1A7EB2009CF246 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D2DD41C1A7EB2009CF246 /* AppDelegate.m */; };
 		A43D2DD81C1A7EB2009CF246 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D2DD71C1A7EB2009CF246 /* ViewController.m */; };
@@ -28,6 +29,11 @@
 		A4A1A1531D0D577900D87DB3 /* JFFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A1A1511D0D577900D87DB3 /* JFFooterView.xib */; };
 		A4A1A1571D0D5A6500D87DB3 /* JFFindHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A1A1551D0D5A6500D87DB3 /* JFFindHeaderCell.m */; };
 		A4A1A1581D0D5A6500D87DB3 /* JFFindHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A1A1561D0D5A6500D87DB3 /* JFFindHeaderCell.xib */; };
+		A4C4E0471D5D63910075D00C /* AutoLayout_ScrollviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C4E0461D5D63910075D00C /* AutoLayout_ScrollviewVC.m */; };
+		A4C4E04A1D5D640D0075D00C /* ScrollVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C4E0491D5D640D0075D00C /* ScrollVC1.m */; };
+		A4C4E0511D5D68EE0075D00C /* Example2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C4E04C1D5D68EE0075D00C /* Example2Controller.m */; };
+		A4C4E0521D5D68EE0075D00C /* Example3Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C4E04E1D5D68EE0075D00C /* Example3Controller.m */; };
+		A4C4E0531D5D68EE0075D00C /* Example4Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C4E0501D5D68EE0075D00C /* Example4Controller.m */; };
 		A4F754001C87009500A1666A /* JFTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F753FF1C87009500A1666A /* JFTableController.m */; };
 		A4F754031C87017C00A1666A /* JFBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754021C87017C00A1666A /* JFBaseCell.m */; };
 		A4F754071C8701EA00A1666A /* JFBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F754061C8701EA00A1666A /* JFBaseModel.m */; };
@@ -93,6 +99,8 @@
 		A42CB4D51C2A8FCC004E8641 /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
 		A42CB4D71C2ED6B2004E8641 /* JFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFModel.h; sourceTree = "<group>"; };
 		A42CB4D81C2ED6B2004E8641 /* JFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFModel.m; sourceTree = "<group>"; };
+		A43816E41D0E4ED80018DCAA /* JFFindLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFindLayoutAttributes.h; sourceTree = "<group>"; };
+		A43816E51D0E4ED80018DCAA /* JFFindLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFindLayoutAttributes.m; sourceTree = "<group>"; };
 		A43D2DCD1C1A7EB2009CF246 /* JFReactive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFReactive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43D2DD11C1A7EB2009CF246 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A43D2DD31C1A7EB2009CF246 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +133,16 @@
 		A4A1A1541D0D5A6500D87DB3 /* JFFindHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFindHeaderCell.h; sourceTree = "<group>"; };
 		A4A1A1551D0D5A6500D87DB3 /* JFFindHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFindHeaderCell.m; sourceTree = "<group>"; };
 		A4A1A1561D0D5A6500D87DB3 /* JFFindHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFFindHeaderCell.xib; sourceTree = "<group>"; };
+		A4C4E0451D5D63910075D00C /* AutoLayout_ScrollviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayout_ScrollviewVC.h; sourceTree = "<group>"; };
+		A4C4E0461D5D63910075D00C /* AutoLayout_ScrollviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayout_ScrollviewVC.m; sourceTree = "<group>"; };
+		A4C4E0481D5D640D0075D00C /* ScrollVC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollVC1.h; sourceTree = "<group>"; };
+		A4C4E0491D5D640D0075D00C /* ScrollVC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollVC1.m; sourceTree = "<group>"; };
+		A4C4E04B1D5D68EE0075D00C /* Example2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example2Controller.h; sourceTree = "<group>"; };
+		A4C4E04C1D5D68EE0075D00C /* Example2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example2Controller.m; sourceTree = "<group>"; };
+		A4C4E04D1D5D68EE0075D00C /* Example3Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example3Controller.h; sourceTree = "<group>"; };
+		A4C4E04E1D5D68EE0075D00C /* Example3Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example3Controller.m; sourceTree = "<group>"; };
+		A4C4E04F1D5D68EE0075D00C /* Example4Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example4Controller.h; sourceTree = "<group>"; };
+		A4C4E0501D5D68EE0075D00C /* Example4Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example4Controller.m; sourceTree = "<group>"; };
 		A4F753FE1C87009500A1666A /* JFTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFTableController.h; sourceTree = "<group>"; };
 		A4F753FF1C87009500A1666A /* JFTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFTableController.m; sourceTree = "<group>"; };
 		A4F754011C87017C00A1666A /* JFBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFBaseCell.h; sourceTree = "<group>"; };
@@ -258,6 +276,7 @@
 		A43D2DCF1C1A7EB2009CF246 /* JFReactive */ = {
 			isa = PBXGroup;
 			children = (
+				A4C4E0441D5D636D0075D00C /* ScrollView_autoLayout */,
 				A4A1A13C1D0D4F3D00D87DB3 /* CollectionT */,
 				A4F754361C87DF1100A1666A /* Helper */,
 				A4F754191C87197E00A1666A /* images */,
@@ -326,8 +345,27 @@
 				A4A1A1541D0D5A6500D87DB3 /* JFFindHeaderCell.h */,
 				A4A1A1551D0D5A6500D87DB3 /* JFFindHeaderCell.m */,
 				A4A1A1561D0D5A6500D87DB3 /* JFFindHeaderCell.xib */,
+				A43816E41D0E4ED80018DCAA /* JFFindLayoutAttributes.h */,
+				A43816E51D0E4ED80018DCAA /* JFFindLayoutAttributes.m */,
 			);
 			path = CollectionT;
+			sourceTree = "<group>";
+		};
+		A4C4E0441D5D636D0075D00C /* ScrollView_autoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A4C4E0451D5D63910075D00C /* AutoLayout_ScrollviewVC.h */,
+				A4C4E0461D5D63910075D00C /* AutoLayout_ScrollviewVC.m */,
+				A4C4E0481D5D640D0075D00C /* ScrollVC1.h */,
+				A4C4E0491D5D640D0075D00C /* ScrollVC1.m */,
+				A4C4E04B1D5D68EE0075D00C /* Example2Controller.h */,
+				A4C4E04C1D5D68EE0075D00C /* Example2Controller.m */,
+				A4C4E04D1D5D68EE0075D00C /* Example3Controller.h */,
+				A4C4E04E1D5D68EE0075D00C /* Example3Controller.m */,
+				A4C4E04F1D5D68EE0075D00C /* Example4Controller.h */,
+				A4C4E0501D5D68EE0075D00C /* Example4Controller.m */,
+			);
+			path = ScrollView_autoLayout;
 			sourceTree = "<group>";
 		};
 		A4F754041C8701D000A1666A /* Model */ = {
@@ -667,9 +705,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4FC66BE1C8EE87000611273 /* BouncePresentAnimation.m in Sources */,
+				A4C4E0511D5D68EE0075D00C /* Example2Controller.m in Sources */,
 				A4F754181C87147500A1666A /* CollectionViewController.swift in Sources */,
 				A43D2DD81C1A7EB2009CF246 /* ViewController.m in Sources */,
 				A43D2DD51C1A7EB2009CF246 /* AppDelegate.m in Sources */,
+				A43816E61D0E4ED80018DCAA /* JFFindLayoutAttributes.m in Sources */,
 				A4A1A14B1D0D4F4600D87DB3 /* JFFindCell.m in Sources */,
 				A4FC66BF1C8EE87000611273 /* NormalDismissAnimation.m in Sources */,
 				A4F754481C87DF8C00A1666A /* SCPrimerCollectionViewCell.m in Sources */,
@@ -680,6 +720,7 @@
 				A4F7544A1C87DF8C00A1666A /* SCPrimerViewController.m in Sources */,
 				A4F754161C87147500A1666A /* CircularCollectionViewLayout.swift in Sources */,
 				A4F754001C87009500A1666A /* JFTableController.m in Sources */,
+				A4C4E0521D5D68EE0075D00C /* Example3Controller.m in Sources */,
 				A42CB4D91C2ED6B2004E8641 /* JFModel.m in Sources */,
 				A4F754071C8701EA00A1666A /* JFBaseModel.m in Sources */,
 				A4A1A1521D0D577900D87DB3 /* JFFooterView.m in Sources */,
@@ -690,12 +731,15 @@
 				A4F754391C87DF1B00A1666A /* UIColor+Hex.m in Sources */,
 				A4A1A14D1D0D4F4600D87DB3 /* JFFindHeaderView.m in Sources */,
 				A4FC66C41C8EEB6B00611273 /* ScaleTranViewController.m in Sources */,
+				A4C4E0471D5D63910075D00C /* AutoLayout_ScrollviewVC.m in Sources */,
+				A4C4E04A1D5D640D0075D00C /* ScrollVC1.m in Sources */,
 				A4A1A14A1D0D4F4600D87DB3 /* JFFindFlowLayout.m in Sources */,
 				A4F754491C87DF8C00A1666A /* SCCornerViewController.m in Sources */,
 				A4FC66CA1C8EEBA200611273 /* PingInvertTransition.m in Sources */,
 				A4F754561C88594200A1666A /* JFTransitionController.m in Sources */,
 				A4F7544B1C87DF8C00A1666A /* SCWelcomeViewController.m in Sources */,
 				A4F7540B1C8702AF00A1666A /* JFGraphicContrller.m in Sources */,
+				A4C4E0531D5D68EE0075D00C /* Example4Controller.m in Sources */,
 				A4F7544E1C87DF9F00A1666A /* SCCustomizableButton.m in Sources */,
 				A4FC66C91C8EEBA200611273 /* PingTransition.m in Sources */,
 				A4FC66CD1C8EEC0C00611273 /* ScaleTOneController.m in Sources */,

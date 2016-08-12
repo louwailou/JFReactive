@@ -44,10 +44,12 @@
     [self.view addSubview:btn];
 }
 - (void)show{
+    NSLog(@"%@",self.navigationController.viewControllers);
      [self.transitionController wireToViewController:self.presentedVC];
-    [self presentViewController:self.presentedVC animated:YES completion:^{
-        
-    }];
+    [self.navigationController pushViewController:self.presentedVC animated:YES];
+//    [self presentViewController:self.presentedVC animated:YES completion:^{
+//        
+//    }];
 }
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed;
 {

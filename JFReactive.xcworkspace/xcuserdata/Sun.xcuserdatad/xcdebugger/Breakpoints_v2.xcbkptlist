@@ -97,6 +97,38 @@
             endingLineNumber = "86"
             landmarkName = "-flatten"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RACStream(Operations) flatten]"
+                  moduleName = "ReactiveCocoa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACStream.m"
+                  timestampString = "492662632.973002"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "78">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__32-[RACStream(Operations) flatten]_block_invoke"
+                  moduleName = "ReactiveCocoa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACStream.m"
+                  timestampString = "492662632.973178"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "65">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -138,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JFReactive/ViewController.m"
-            timestampString = "486357055.189003"
+            timestampString = "492151244.045011"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1957"
-            endingLineNumber = "1957">
+            startingLineNumber = "1972"
+            endingLineNumber = "1972">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -152,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JFReactive/ViewController.m"
-            timestampString = "486357055.189003"
+            timestampString = "492151244.045011"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1976"
-            endingLineNumber = "1976">
+            startingLineNumber = "1991"
+            endingLineNumber = "1991">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -166,59 +198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JFReactive/ViewController.m"
-            timestampString = "485708658.136998"
+            timestampString = "492151244.045011"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "662"
-            endingLineNumber = "662"
-            landmarkName = "-map"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JFReactive/ViewController.m"
-            timestampString = "485708658.136998"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "656"
-            endingLineNumber = "656"
-            landmarkName = "-bind"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JFReactive/ViewController.m"
-            timestampString = "485708658.136998"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "658"
-            endingLineNumber = "658"
-            landmarkName = "-bind"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JFReactive/ViewController.m"
-            timestampString = "486290721.348504"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1493"
-            endingLineNumber = "1493"
+            startingLineNumber = "1494"
+            endingLineNumber = "1494"
             landmarkName = "-simulateLogin"
             landmarkType = "5">
             <Locations>
@@ -230,11 +214,11 @@
                   moduleName = "JFReactive"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/JFReactive/ViewController.m"
-                  timestampString = "487418310.330322"
+                  timestampString = "492662632.976332"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1493"
-                  endingLineNumber = "1493"
+                  startingLineNumber = "1494"
+                  endingLineNumber = "1494"
                   offsetFromSymbolStart = "48">
                </Location>
                <Location
@@ -245,11 +229,11 @@
                   moduleName = "JFReactive"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/JFReactive/ViewController.m"
-                  timestampString = "487418310.330451"
+                  timestampString = "492662632.976455"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1494"
-                  endingLineNumber = "1494"
+                  startingLineNumber = "1495"
+                  endingLineNumber = "1495"
                   offsetFromSymbolStart = "51">
                </Location>
             </Locations>
@@ -262,11 +246,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JFReactive/ViewController.m"
-            timestampString = "486290725.940557"
+            timestampString = "492151244.045011"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1503"
-            endingLineNumber = "1503"
+            startingLineNumber = "1504"
+            endingLineNumber = "1504"
             landmarkName = "-simulateLogin"
             landmarkType = "5">
             <Locations>
@@ -278,11 +262,11 @@
                   moduleName = "JFReactive"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/JFReactive/ViewController.m"
-                  timestampString = "487418310.331389"
+                  timestampString = "492662632.977238"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1503"
-                  endingLineNumber = "1503"
+                  startingLineNumber = "1504"
+                  endingLineNumber = "1504"
                   offsetFromSymbolStart = "51">
                </Location>
                <Location
@@ -293,14 +277,30 @@
                   moduleName = "JFReactive"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/JFReactive/ViewController.m"
-                  timestampString = "487418310.331513"
+                  timestampString = "492662632.977392"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1504"
-                  endingLineNumber = "1504"
+                  startingLineNumber = "1505"
+                  endingLineNumber = "1505"
                   offsetFromSymbolStart = "51">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JFReactive/ViewController.m"
+            timestampString = "492151234.065023"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

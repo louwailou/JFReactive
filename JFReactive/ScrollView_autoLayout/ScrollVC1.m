@@ -41,6 +41,7 @@
         make.edges.equalTo(scrollView);
         make.width.equalTo(scrollView);// 为何还要设置width height ???
         // svrollview 的contentsize 是依赖于containerView 的大小
+        //UIScrollView依靠与其subviews之间的约束来确定ContentSize的大小
         make.height.equalTo(scrollView).multipliedBy(1);
     }];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

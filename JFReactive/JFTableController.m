@@ -10,6 +10,7 @@
 #import "JFBaseModel.h"
 #import "JFBaseCell.h"
 #import "JFReactive-swift.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 @implementation JFTableController
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -27,6 +28,15 @@
         [self.listArray addObject:model];
     }
     [self.tableView reloadData];
+    
+    NSArray * arr = [NSArray arrayWithObjects:@"22.44",@"42.33", nil];
+  
+    NSArray *resultArray = [arr valueForKeyPath:@"doubleValue.intValue"];
+    NSLog(@"%@", resultArray);
+   // NSLog(@"count = %@", [valueForKey:@"@count"]);
+    
+    
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -47,6 +57,7 @@
     }
   
     [self.navigationController pushViewController:vc animated:YES];
+    
     
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -104,20 +104,28 @@
     [self.view addSubview:btn];
     
       self.model = [[JFModel alloc] init];
+    
+    [RACObserve(self.model, age) subscribeNext:^(id x) {
+        NSLog(@"age age age age == %@",x);
+    }];
    
-   
+    [RACObserve(self.textField, text) subscribeNext:^(id x){
+        NSLog(@"aaaaaa %@",x);
+    }];
    
     [self.textField.rac_textSignal subscribeNext:^(id x) {
         NSLog(@"tttttt %@",x);
     }];
     //
-    //[self.textField setText:@"12345667"];
+    [self.textField setText:@"12345667"];
 //    [RACObserve(self.textField, text) subscribeNext:^(id x) {
 //        
-//        NSLog(@"%@",x);// 订阅多次也是触发一次，与上述相比 无副作用，但是需要外部触发，自身没办法触发,即 在其他地方调用 self.textfield.text = @"ddddd"
+//        NSLog(@"%@",x);// 订阅多次也是触发一次，与上述相比 无副作用，但是需要外部触发，自身没办法触发,即 在其他地方调用
 //    }];
 //    
-  
+   self.textField.text = @"ddddd";
+    
+    
     RACSignal * signal = [RACObserve(self, model.name) map:^id(id value) {
         NSLog(@"value =%@",value);
         return value ? @YES : @NO;

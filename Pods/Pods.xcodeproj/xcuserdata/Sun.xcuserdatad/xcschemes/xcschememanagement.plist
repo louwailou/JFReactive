@@ -19,7 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-JFReactive.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,15 +29,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Result.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>336D41C3E194E60FEDB57F1973873389</key>
+		<key>25A340E9009CE72E9DDA26A8627ECE5D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,22 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5BC9A356447DC40539C4D84AAC979418</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6372157C1775F3EC165A5B428E5CFC3A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>909D321EF1BF46992EB274B232EAF5ED</key>
+		<key>7AEBDEA3FD4A65353B832CAB33727D79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A9A83F63385AA43314397B8DD375464B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6F1E6D4977495312516D2D3C307F65F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

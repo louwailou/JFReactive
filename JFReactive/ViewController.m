@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import <ReactiveCocoa/RACReturnSignal.h>
+#import <AFNetworking/AFNetworking.h>
 #import "JFModel.h"
-#import "AFHTTPRequestOperationManager.h"
+#import <ReactiveCocoa/RACReturnSignal.h>
 //#import "RACSignal.h"
 //#import "RACDisposable.h"
 //#import "RACSubscriber.h"
@@ -144,7 +144,7 @@
 }
 
 - (void)subScirbe{
-    /*
+    
     RACSignal * signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSLog(@"0000");
        [subscriber sendNext:@1];// 如果 注释掉subscribeNext就不会发送
@@ -162,7 +162,8 @@
             
         }];
     }];
-    
+   
+    /*
     
     // 3.订阅信号,才会激活信号.
     [signal subscribeNext:^(id x) {
@@ -178,8 +179,11 @@
     
     */
 //    
-//    
+//
+  
     RACSubject *subject = [RACSubject subject];
+    [signal subscribe:subject];
+    
     
     // 2.订阅信号
     [subject subscribeNext:^(id x) {
@@ -1423,7 +1427,7 @@
         [subscriber sendCompleted];
         
         return nil;
-    }]delay:1]repeat]take:10] subscribeNext:^(id x) {
+    }]delay:1]repeat]take:2] subscribeNext:^(id x) {
         
         NSLog(@"x = %@",x);
     } completed:^{
@@ -1695,14 +1699,17 @@
      */
 }
 -(void)testSubject{
+    // 2s 后 signal 被订阅，开始发送数据。1.5s 后发送A ,3s后发送B
     RACSignal *coldSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        NSLog(@"Cold signal be subscribed.");
+        NSLog(@"Cold signal be subscribed.after");
         [[RACScheduler mainThreadScheduler] afterDelay:1.5 schedule:^{
             [subscriber sendNext:@"A"];
+             NSLog(@"send A");
         }];
         
         [[RACScheduler mainThreadScheduler] afterDelay:3 schedule:^{
             [subscriber sendNext:@"B"];
+            NSLog(@"send B");
         }];
         
         [[RACScheduler mainThreadScheduler] afterDelay:5 schedule:^{
@@ -1716,7 +1723,9 @@
     NSLog(@"Subject created.");
     
     [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
+         NSLog(@"Cold signal be subscribed. before");
         [coldSignal subscribe:subject];
+        
     }];
     
     [subject subscribeNext:^(id x) {
@@ -1728,7 +1737,7 @@
             NSLog(@"Subscriber 2 recieve value:%@.", x);
         }];
     }];
-     
+    
 }
 
 #pragma mark 冷信号被订阅 就会变成热信号 其余的工作让subject 来干
@@ -1818,6 +1827,8 @@
    // [self distinctUntilChanged];
    //[self commandCombineSubject];
     self.textField.text = @"100";
+    
+    [self testSubject];
     //  [self asychronize];
 }
 -(void)viewWillAppear:(BOOL)animated{

@@ -1,0 +1,1874 @@
+BCSymbolMap Version: 2.0
+-[BouncePresentAnimation transitionDuration:]
+-[BouncePresentAnimation animateTransition:]
+___44-[BouncePresentAnimation animateTransition:]_block_invoke
+___copy_helper_block_
+___destroy_helper_block_
+___44-[BouncePresentAnimation animateTransition:]_block_invoke.18
+___copy_helper_block_.21
+___destroy_helper_block_.22
+___block_descriptor_tmp
+___block_descriptor_tmp.24
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_UIViewControllerAnimatedTransitioning
+l_OBJC_LABEL_PROTOCOL_$_UIViewControllerAnimatedTransitioning
+_OBJC_METACLASS_$_BouncePresentAnimation
+_OBJC_CLASS_$_BouncePresentAnimation
+Apple LLVM version 8.0.0 (clang-800.0.38)
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/BouncePresentAnimation.m
+/Users/Sun/Desktop/RAC/JFReactive
+__destroy_helper_block_
+__copy_helper_block_
+__44-[BouncePresentAnimation animateTransition:]_block_invoke.18
+__44-[BouncePresentAnimation animateTransition:]_block_invoke
+-[Example2Controller viewDidLoad]
+___33-[Example2Controller viewDidLoad]_block_invoke
+___33-[Example2Controller viewDidLoad]_block_invoke.33
+___copy_helper_block_.36
+___destroy_helper_block_.37
+___33-[Example2Controller viewDidLoad]_block_invoke.49
+___copy_helper_block_.50
+___destroy_helper_block_.51
+-[Example2Controller actionSwitch]
+-[Example2Controller didReceiveMemoryWarning]
+-[Example2Controller scrollView]
+-[Example2Controller setScrollView:]
+-[Example2Controller .cxx_destruct]
+_OBJC_CLASS_$_Example2Controller
+___block_descriptor_tmp.38
+___block_descriptor_tmp.52
+_OBJC_IVAR_$_Example2Controller._scrollView
+_OBJC_METACLASS_$_Example2Controller
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/ScrollView_autoLayout/Example2Controller.m
+__33-[Example2Controller viewDidLoad]_block_invoke.49
+__33-[Example2Controller viewDidLoad]_block_invoke.33
+__33-[Example2Controller viewDidLoad]_block_invoke
+-[RACViewController viewDidLoad]
+___32-[RACViewController viewDidLoad]_block_invoke
+___32-[RACViewController viewDidLoad]_block_invoke_2
+___32-[RACViewController viewDidLoad]_block_invoke_3
+___32-[RACViewController viewDidLoad]_block_invoke_4
+___32-[RACViewController viewDidLoad]_block_invoke_5
+-[RACViewController subScirbe]
+___30-[RACViewController subScirbe]_block_invoke
+___30-[RACViewController subScirbe]_block_invoke_2
+-[RACViewController subjectImpDelegate]
+-[RACViewController Subject]
+___28-[RACViewController Subject]_block_invoke
+___28-[RACViewController Subject]_block_invoke_2
+-[RACViewController sequence]
+___29-[RACViewController sequence]_block_invoke
+-[RACViewController comomand]
+___29-[RACViewController comomand]_block_invoke
+___29-[RACViewController comomand]_block_invoke_2
+___29-[RACViewController comomand]_block_invoke_3
+___29-[RACViewController comomand]_block_invoke_4
+___29-[RACViewController comomand]_block_invoke_5
+___29-[RACViewController comomand]_block_invoke_6
+___29-[RACViewController comomand]_block_invoke_7
+-[RACViewController multicast]
+___30-[RACViewController multicast]_block_invoke
+___30-[RACViewController multicast]_block_invoke_2
+___30-[RACViewController multicast]_block_invoke_3
+-[RACViewController multiSignalWithSelector]
+___44-[RACViewController multiSignalWithSelector]_block_invoke
+___44-[RACViewController multiSignalWithSelector]_block_invoke_2
+___44-[RACViewController multiSignalWithSelector]_block_invoke_3
+-[RACViewController updateUIWithR1:r2:]
+-[RACViewController bind]
+___25-[RACViewController bind]_block_invoke
+___25-[RACViewController bind]_block_invoke_2
+___25-[RACViewController bind]_block_invoke_3
+-[RACViewController map]
+___24-[RACViewController map]_block_invoke
+___24-[RACViewController map]_block_invoke_2
+-[RACViewController signalOfSignal]
+___35-[RACViewController signalOfSignal]_block_invoke
+___35-[RACViewController signalOfSignal]_block_invoke_2
+-[RACViewController concat]
+___27-[RACViewController concat]_block_invoke
+___27-[RACViewController concat]_block_invoke_2
+___27-[RACViewController concat]_block_invoke_3
+-[RACViewController then]
+___25-[RACViewController then]_block_invoke
+___25-[RACViewController then]_block_invoke_2
+___25-[RACViewController then]_block_invoke_3
+___25-[RACViewController then]_block_invoke_4
+-[RACViewController merge]
+___26-[RACViewController merge]_block_invoke
+___26-[RACViewController merge]_block_invoke_2
+___26-[RACViewController merge]_block_invoke_3
+-[RACViewController zipSignal]
+___30-[RACViewController zipSignal]_block_invoke
+___30-[RACViewController zipSignal]_block_invoke_2
+___30-[RACViewController zipSignal]_block_invoke_3
+-[RACViewController combinLast]
+___31-[RACViewController combinLast]_block_invoke
+___31-[RACViewController combinLast]_block_invoke_2
+___31-[RACViewController combinLast]_block_invoke_3
+___31-[RACViewController combinLast]_block_invoke_4
+-[RACViewController reduce]
+___27-[RACViewController reduce]_block_invoke
+___27-[RACViewController reduce]_block_invoke_2
+___27-[RACViewController reduce]_block_invoke_3
+___27-[RACViewController reduce]_block_invoke_4
+-[RACViewController filterSignal]
+___33-[RACViewController filterSignal]_block_invoke
+-[RACViewController ignore]
+___27-[RACViewController ignore]_block_invoke
+-[RACViewController distinctUntilChanged]
+___41-[RACViewController distinctUntilChanged]_block_invoke
+-[RACViewController takeSignal]
+___31-[RACViewController takeSignal]_block_invoke
+-[RACViewController takeLastSignal]
+___35-[RACViewController takeLastSignal]_block_invoke
+-[RACViewController doNext]
+___27-[RACViewController doNext]_block_invoke
+___27-[RACViewController doNext]_block_invoke_2
+___27-[RACViewController doNext]_block_invoke_3
+___27-[RACViewController doNext]_block_invoke_4
+-[RACViewController signalTime]
+-[RACViewController kvo]
+-[RACViewController takes]
+-[RACViewController btnAvliableWhenImgOK]
+___41-[RACViewController btnAvliableWhenImgOK]_block_invoke
+___41-[RACViewController btnAvliableWhenImgOK]_block_invoke_2
+___41-[RACViewController btnAvliableWhenImgOK]_block_invoke_3
+-[RACViewController tapGesture]
+___31-[RACViewController tapGesture]_block_invoke
+___copy_helper_block_.477
+___destroy_helper_block_.478
+-[RACViewController interval]
+___29-[RACViewController interval]_block_invoke
+___29-[RACViewController interval]_block_invoke_2
+___copy_helper_block_.484
+___destroy_helper_block_.485
+___29-[RACViewController interval]_block_invoke.487
+___copy_helper_block_.492
+___destroy_helper_block_.493
+___29-[RACViewController interval]_block_invoke.495
+___29-[RACViewController interval]_block_invoke_2.500
+-[RACViewController racSelector]
+___32-[RACViewController racSelector]_block_invoke
+___32-[RACViewController racSelector]_block_invoke_2
+-[RACViewController requestTwice]
+___33-[RACViewController requestTwice]_block_invoke
+___33-[RACViewController requestTwice]_block_invoke_2
+___copy_helper_block_.591
+___destroy_helper_block_.592
+___33-[RACViewController requestTwice]_block_invoke.595
+___copy_helper_block_.598
+___destroy_helper_block_.599
+___33-[RACViewController requestTwice]_block_invoke.610
+___33-[RACViewController requestTwice]_block_invoke_2.615
+___33-[RACViewController requestTwice]_block_invoke_3
+___copy_helper_block_.618
+___destroy_helper_block_.619
+___copy_helper_block_.623
+___destroy_helper_block_.624
+___33-[RACViewController requestTwice]_block_invoke.629
+___copy_helper_block_.639
+___destroy_helper_block_.640
+___33-[RACViewController requestTwice]_block_invoke.642
+-[RACViewController retry]
+___26-[RACViewController retry]_block_invoke
+___copy_helper_block_.652
+___destroy_helper_block_.653
+___26-[RACViewController retry]_block_invoke.657
+-[RACViewController takeT]
+___26-[RACViewController takeT]_block_invoke
+___26-[RACViewController takeT]_block_invoke_2
+-[RACViewController throttle2]
+___30-[RACViewController throttle2]_block_invoke
+___30-[RACViewController throttle2]_block_invoke_2
+___copy_helper_block_.674
+___destroy_helper_block_.675
+___30-[RACViewController throttle2]_block_invoke.677
+___copy_helper_block_.684
+___destroy_helper_block_.685
+___30-[RACViewController throttle2]_block_invoke.687
+___copy_helper_block_.690
+___destroy_helper_block_.691
+___30-[RACViewController throttle2]_block_invoke.698
+-[RACViewController throttle]
+___29-[RACViewController throttle]_block_invoke
+___29-[RACViewController throttle]_block_invoke_2
+___29-[RACViewController throttle]_block_invoke_3
+___copy_helper_block_.710
+___destroy_helper_block_.711
+___29-[RACViewController throttle]_block_invoke.715
+-[RACViewController repeat]
+___27-[RACViewController repeat]_block_invoke
+___27-[RACViewController repeat]_block_invoke_2
+___27-[RACViewController repeat]_block_invoke_3
+-[RACViewController biding]
+___27-[RACViewController biding]_block_invoke
+___27-[RACViewController biding]_block_invoke_2
+-[RACViewController simulateLogin]
+___34-[RACViewController simulateLogin]_block_invoke
+___34-[RACViewController simulateLogin]_block_invoke_2
+___34-[RACViewController simulateLogin]_block_invoke_3
+___34-[RACViewController simulateLogin]_block_invoke_4
+___34-[RACViewController simulateLogin]_block_invoke_5
+-[RACViewController subcribeCompleted]
+___38-[RACViewController subcribeCompleted]_block_invoke
+___38-[RACViewController subcribeCompleted]_block_invoke_2
+___38-[RACViewController subcribeCompleted]_block_invoke_3
+-[RACViewController loginSignal]
+___32-[RACViewController loginSignal]_block_invoke
+-[RACViewController loadCachedMessagesForUser:]
+___47-[RACViewController loadCachedMessagesForUser:]_block_invoke
+-[RACViewController fetchMessagesAfterMessage:]
+___47-[RACViewController fetchMessagesAfterMessage:]_block_invoke
+-[RACViewController asychronize]
+___32-[RACViewController asychronize]_block_invoke
+___copy_helper_block_.790
+___destroy_helper_block_.791
+___32-[RACViewController asychronize]_block_invoke.794
+___copy_helper_block_.801
+___destroy_helper_block_.802
+___32-[RACViewController asychronize]_block_invoke.804
+___32-[RACViewController asychronize]_block_invoke_2
+-[RACViewController racBinding]
+-[RACViewController loginThen]
+___30-[RACViewController loginThen]_block_invoke
+___copy_helper_block_.818
+___destroy_helper_block_.819
+___30-[RACViewController loginThen]_block_invoke.821
+___copy_helper_block_.822
+___destroy_helper_block_.823
+___30-[RACViewController loginThen]_block_invoke.825
+___30-[RACViewController loginThen]_block_invoke_2
+-[RACViewController testSubscriber]
+___35-[RACViewController testSubscriber]_block_invoke
+-[RACViewController testSubject]
+___32-[RACViewController testSubject]_block_invoke
+___32-[RACViewController testSubject]_block_invoke_2
+___copy_helper_block_.849
+___destroy_helper_block_.850
+___32-[RACViewController testSubject]_block_invoke.854
+___copy_helper_block_.857
+___destroy_helper_block_.858
+___32-[RACViewController testSubject]_block_invoke.860
+___copy_helper_block_.861
+___destroy_helper_block_.862
+___32-[RACViewController testSubject]_block_invoke.868
+___copy_helper_block_.869
+___destroy_helper_block_.870
+___32-[RACViewController testSubject]_block_invoke.872
+___32-[RACViewController testSubject]_block_invoke_2.877
+___32-[RACViewController testSubject]_block_invoke_3
+___copy_helper_block_.882
+___destroy_helper_block_.883
+-[RACViewController coldSignalSubscribeSubject]
+___47-[RACViewController coldSignalSubscribeSubject]_block_invoke
+___47-[RACViewController coldSignalSubscribeSubject]_block_invoke_2
+___copy_helper_block_.885
+___destroy_helper_block_.886
+___47-[RACViewController coldSignalSubscribeSubject]_block_invoke.888
+___copy_helper_block_.889
+___destroy_helper_block_.890
+___47-[RACViewController coldSignalSubscribeSubject]_block_invoke.892
+___copy_helper_block_.893
+___destroy_helper_block_.894
+___47-[RACViewController coldSignalSubscribeSubject]_block_invoke.898
+___copy_helper_block_.901
+___destroy_helper_block_.902
+___47-[RACViewController coldSignalSubscribeSubject]_block_invoke.904
+___47-[RACViewController coldSignalSubscribeSubject]_block_invoke_2.907
+___47-[RACViewController coldSignalSubscribeSubject]_block_invoke_3
+___copy_helper_block_.910
+___destroy_helper_block_.911
+-[RACViewController RACMicro]
+___29-[RACViewController RACMicro]_block_invoke
+___29-[RACViewController RACMicro]_block_invoke_2
+-[RACViewController subscribeSelector]
+___38-[RACViewController subscribeSelector]_block_invoke
+-[RACViewController subScribeSingle]
+-[RACViewController shareAction:]
+-[RACViewController viewWillAppear:]
+-[RACViewController getText]
+-[RACViewController changeField:]
+-[RACViewController delay]
+___26-[RACViewController delay]_block_invoke
+___26-[RACViewController delay]_block_invoke_2
+___26-[RACViewController delay]_block_invoke_3
+___copy_helper_block_.954
+___destroy_helper_block_.955
+___26-[RACViewController delay]_block_invoke.961
+___26-[RACViewController delay]_block_invoke_2.966
+-[RACViewController flatten]
+___28-[RACViewController flatten]_block_invoke
+___28-[RACViewController flatten]_block_invoke_2
+___28-[RACViewController flatten]_block_invoke_3
+___copy_helper_block_.983
+___destroy_helper_block_.984
+___28-[RACViewController flatten]_block_invoke.989
+___28-[RACViewController flatten]_block_invoke_2.990
+___copy_helper_block_.995
+___destroy_helper_block_.996
+___28-[RACViewController flatten]_block_invoke.1000
+-[RACViewController replay]
+___27-[RACViewController replay]_block_invoke
+___27-[RACViewController replay]_block_invoke_2
+___27-[RACViewController replay]_block_invoke_3
+-[RACViewController takeUntile]
+___31-[RACViewController takeUntile]_block_invoke
+___31-[RACViewController takeUntile]_block_invoke_2
+___copy_helper_block_.1021
+___destroy_helper_block_.1022
+___31-[RACViewController takeUntile]_block_invoke.1026
+___31-[RACViewController takeUntile]_block_invoke_2.1027
+___copy_helper_block_.1032
+___destroy_helper_block_.1033
+___31-[RACViewController takeUntile]_block_invoke.1039
+-[RACViewController commandCombineSubject]
+___42-[RACViewController commandCombineSubject]_block_invoke
+___42-[RACViewController commandCombineSubject]_block_invoke_2
+-[RACViewController shareBtn]
+-[RACViewController setShareBtn:]
+-[RACViewController command]
+-[RACViewController setCommand:]
+-[RACViewController loginCommand]
+-[RACViewController setLoginCommand:]
+-[RACViewController textField]
+-[RACViewController setTextField:]
+-[RACViewController labelForName]
+-[RACViewController setLabelForName:]
+-[RACViewController model]
+-[RACViewController setModel:]
+-[RACViewController imageView]
+-[RACViewController setImageView:]
+-[RACViewController signal]
+-[RACViewController setSignal:]
+-[RACViewController otherField]
+-[RACViewController setOtherField:]
+-[RACViewController .cxx_destruct]
+_OBJC_CLASS_$_RACViewController
+_OBJC_CLASS_$_JFModel
+___block_literal_global
+___block_descriptor_tmp.74
+___block_literal_global.75
+___block_descriptor_tmp.80
+___block_literal_global.81
+___block_descriptor_tmp.95
+___block_literal_global.96
+___block_descriptor_tmp.101
+___block_literal_global.102
+___block_descriptor_tmp.108
+___block_literal_global.109
+___block_descriptor_tmp.112
+___block_literal_global.113
+___block_descriptor_tmp.125
+___block_literal_global.126
+___block_descriptor_tmp.129
+___block_literal_global.130
+___block_descriptor_tmp.171
+___block_literal_global.172
+___block_descriptor_tmp.191
+___block_literal_global.192
+___block_descriptor_tmp.198
+___block_literal_global.199
+___block_descriptor_tmp.210
+___block_literal_global.211
+___block_descriptor_tmp.212
+___block_literal_global.213
+___block_descriptor_tmp.218
+___block_literal_global.219
+___block_descriptor_tmp.232
+___block_literal_global.233
+___block_descriptor_tmp.236
+___block_literal_global.237
+___block_descriptor_tmp.244
+___block_literal_global.245
+___block_descriptor_tmp.250
+___block_literal_global.251
+___block_descriptor_tmp.254
+___block_literal_global.255
+___block_descriptor_tmp.260
+___block_literal_global.261
+___block_descriptor_tmp.265
+___block_descriptor_tmp.266
+___block_literal_global.267
+_OBJC_IVAR_$_RACViewController._textField
+___block_descriptor_tmp.288
+___block_literal_global.289
+___block_descriptor_tmp.291
+___block_literal_global.292
+___block_descriptor_tmp.297
+___block_literal_global.298
+___block_descriptor_tmp.302
+___block_literal_global.303
+___block_descriptor_tmp.308
+___block_literal_global.309
+___block_descriptor_tmp.316
+___block_literal_global.317
+___block_descriptor_tmp.320
+___block_literal_global.321
+___block_descriptor_tmp.322
+___block_literal_global.323
+___block_descriptor_tmp.324
+___block_literal_global.325
+___block_descriptor_tmp.328
+___block_literal_global.329
+___block_descriptor_tmp.332
+___block_literal_global.333
+___block_descriptor_tmp.334
+___block_literal_global.335
+___block_descriptor_tmp.337
+___block_literal_global.338
+___block_descriptor_tmp.341
+___block_literal_global.342
+___block_descriptor_tmp.345
+___block_literal_global.346
+___block_descriptor_tmp.349
+___block_literal_global.350
+___block_descriptor_tmp.353
+___block_literal_global.354
+___block_descriptor_tmp.355
+___block_literal_global.356
+___block_descriptor_tmp.357
+___block_literal_global.358
+___block_descriptor_tmp.361
+___block_literal_global.362
+___block_descriptor_tmp.363
+___block_literal_global.364
+___block_descriptor_tmp.365
+___block_literal_global.366
+___block_descriptor_tmp.375
+___block_literal_global.376
+___block_descriptor_tmp.383
+___block_literal_global.384
+___block_descriptor_tmp.385
+___block_literal_global.386
+___block_descriptor_tmp.387
+___block_literal_global.388
+___block_descriptor_tmp.390
+___block_literal_global.391
+___block_descriptor_tmp.394
+___block_literal_global.395
+___block_descriptor_tmp.399
+___block_literal_global.400
+___block_descriptor_tmp.409
+___block_literal_global.410
+___block_descriptor_tmp.413
+___block_literal_global.414
+___block_descriptor_tmp.417
+___block_literal_global.418
+___block_descriptor_tmp.421
+___block_literal_global.422
+___block_descriptor_tmp.429
+___block_literal_global.430
+___block_descriptor_tmp.433
+___block_literal_global.434
+___block_descriptor_tmp.439
+___block_literal_global.440
+___block_descriptor_tmp.443
+___block_literal_global.444
+___block_descriptor_tmp.450
+___block_literal_global.451
+___block_descriptor_tmp.454
+___block_literal_global.455
+___block_descriptor_tmp.460
+___block_literal_global.461
+___block_descriptor_tmp.479
+___block_descriptor_tmp.486
+___block_descriptor_tmp.490
+___block_literal_global.491
+___block_descriptor_tmp.494
+___block_descriptor_tmp.498
+___block_literal_global.499
+___block_descriptor_tmp.503
+___block_literal_global.504
+l_OBJC_PROTOCOL_$_UIScrollViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIScrollViewDelegate
+l_OBJC_PROTOCOL_REFERENCE_$_UIScrollViewDelegate
+___block_descriptor_tmp.575
+___block_literal_global.576
+___block_descriptor_tmp.578
+___block_literal_global.579
+__block_invoke.isFirstTime
+___block_descriptor_tmp.594
+___block_descriptor_tmp.601
+___block_descriptor_tmp.604
+___block_literal_global.605
+___block_descriptor_tmp.620
+___block_descriptor_tmp.621
+___block_literal_global.622
+___block_descriptor_tmp.626
+___block_descriptor_tmp.641
+___block_descriptor_tmp.643
+___block_literal_global.644
+___block_descriptor_tmp.654
+___block_descriptor_tmp.660
+___block_literal_global.661
+___block_descriptor_tmp.664
+___block_literal_global.665
+___block_descriptor_tmp.668
+___block_literal_global.669
+___block_descriptor_tmp.676
+___block_descriptor_tmp.686
+___block_descriptor_tmp.692
+___block_descriptor_tmp.694
+___block_literal_global.695
+___block_descriptor_tmp.701
+___block_literal_global.702
+___block_descriptor_tmp.706
+___block_literal_global.707
+___block_descriptor_tmp.712
+___block_descriptor_tmp.713
+___block_literal_global.714
+___block_descriptor_tmp.718
+___block_literal_global.719
+___block_descriptor_tmp.722
+___block_literal_global.723
+___block_descriptor_tmp.728
+___block_literal_global.729
+___block_descriptor_tmp.732
+___block_literal_global.733
+___block_descriptor_tmp.737
+___block_literal_global.738
+___block_descriptor_tmp.739
+___block_literal_global.740
+___block_descriptor_tmp.743
+___block_literal_global.744
+___block_descriptor_tmp.745
+___block_literal_global.746
+___block_descriptor_tmp.753
+___block_literal_global.754
+___block_descriptor_tmp.757
+___block_literal_global.758
+___block_descriptor_tmp.762
+___block_literal_global.763
+___block_descriptor_tmp.764
+___block_literal_global.765
+___block_descriptor_tmp.768
+___block_literal_global.769
+___block_descriptor_tmp.772
+___block_literal_global.773
+___block_descriptor_tmp.776
+___block_literal_global.777
+___block_descriptor_tmp.780
+___block_literal_global.781
+___block_descriptor_tmp.782
+___block_literal_global.783
+___block_descriptor_tmp.793
+___block_descriptor_tmp.803
+___block_descriptor_tmp.808
+___block_literal_global.809
+___block_descriptor_tmp.812
+___block_literal_global.813
+___block_descriptor_tmp.820
+___block_descriptor_tmp.824
+___block_descriptor_tmp.829
+___block_literal_global.830
+___block_descriptor_tmp.831
+___block_literal_global.832
+___block_descriptor_tmp.839
+___block_literal_global.840
+___block_descriptor_tmp.851
+___block_descriptor_tmp.859
+___block_descriptor_tmp.863
+___block_descriptor_tmp.864
+___block_literal_global.865
+___block_descriptor_tmp.871
+___block_descriptor_tmp.875
+___block_literal_global.876
+___block_descriptor_tmp.880
+___block_literal_global.881
+___block_descriptor_tmp.884
+___block_descriptor_tmp.887
+___block_descriptor_tmp.891
+___block_descriptor_tmp.895
+___block_descriptor_tmp.896
+___block_literal_global.897
+___block_descriptor_tmp.903
+___block_descriptor_tmp.905
+___block_literal_global.906
+___block_descriptor_tmp.908
+___block_literal_global.909
+___block_descriptor_tmp.912
+___block_descriptor_tmp.913
+___block_literal_global.914
+___block_descriptor_tmp.915
+___block_literal_global.916
+___block_descriptor_tmp.928
+___block_literal_global.929
+___block_descriptor_tmp.948
+___block_literal_global.949
+___block_descriptor_tmp.956
+___block_descriptor_tmp.957
+___block_literal_global.958
+___block_descriptor_tmp.964
+___block_literal_global.965
+___block_descriptor_tmp.969
+___block_literal_global.970
+___block_descriptor_tmp.977
+___block_literal_global.978
+___block_descriptor_tmp.985
+___block_descriptor_tmp.987
+___block_literal_global.988
+___block_descriptor_tmp.997
+___block_descriptor_tmp.998
+___block_literal_global.999
+___block_descriptor_tmp.1001
+___block_literal_global.1002
+___block_descriptor_tmp.1007
+___block_literal_global.1008
+___block_descriptor_tmp.1013
+___block_literal_global.1014
+___block_descriptor_tmp.1017
+___block_literal_global.1018
+___block_descriptor_tmp.1023
+___block_descriptor_tmp.1024
+___block_literal_global.1025
+___block_descriptor_tmp.1034
+___block_descriptor_tmp.1035
+___block_literal_global.1036
+___block_descriptor_tmp.1042
+___block_literal_global.1043
+___block_descriptor_tmp.1044
+___block_literal_global.1045
+___block_descriptor_tmp.1046
+___block_literal_global.1047
+_OBJC_IVAR_$_RACViewController._shareBtn
+_OBJC_IVAR_$_RACViewController._command
+_OBJC_IVAR_$_RACViewController._loginCommand
+_OBJC_IVAR_$_RACViewController._labelForName
+_OBJC_IVAR_$_RACViewController._model
+_OBJC_IVAR_$_RACViewController._imageView
+_OBJC_IVAR_$_RACViewController._signal
+_OBJC_IVAR_$_RACViewController._otherField
+_OBJC_METACLASS_$_RACViewController
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/ViewController.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/ViewController.h
+__42-[RACViewController commandCombineSubject]_block_invoke_2
+__42-[RACViewController commandCombineSubject]_block_invoke
+__31-[RACViewController takeUntile]_block_invoke.1039
+__31-[RACViewController takeUntile]_block_invoke_2.1027
+__31-[RACViewController takeUntile]_block_invoke.1026
+__31-[RACViewController takeUntile]_block_invoke_2
+__31-[RACViewController takeUntile]_block_invoke
+__27-[RACViewController replay]_block_invoke_3
+__27-[RACViewController replay]_block_invoke_2
+__27-[RACViewController replay]_block_invoke
+__28-[RACViewController flatten]_block_invoke.1000
+__28-[RACViewController flatten]_block_invoke_2.990
+__28-[RACViewController flatten]_block_invoke.989
+__28-[RACViewController flatten]_block_invoke_3
+__28-[RACViewController flatten]_block_invoke_2
+__28-[RACViewController flatten]_block_invoke
+__26-[RACViewController delay]_block_invoke_2.966
+__26-[RACViewController delay]_block_invoke.961
+__26-[RACViewController delay]_block_invoke_3
+__26-[RACViewController delay]_block_invoke_2
+__26-[RACViewController delay]_block_invoke
+__38-[RACViewController subscribeSelector]_block_invoke
+__29-[RACViewController RACMicro]_block_invoke_2
+__29-[RACViewController RACMicro]_block_invoke
+__47-[RACViewController coldSignalSubscribeSubject]_block_invoke_3
+__47-[RACViewController coldSignalSubscribeSubject]_block_invoke_2.907
+__47-[RACViewController coldSignalSubscribeSubject]_block_invoke.904
+__47-[RACViewController coldSignalSubscribeSubject]_block_invoke.898
+__47-[RACViewController coldSignalSubscribeSubject]_block_invoke.892
+__47-[RACViewController coldSignalSubscribeSubject]_block_invoke.888
+__47-[RACViewController coldSignalSubscribeSubject]_block_invoke_2
+__47-[RACViewController coldSignalSubscribeSubject]_block_invoke
+__32-[RACViewController testSubject]_block_invoke_3
+__32-[RACViewController testSubject]_block_invoke_2.877
+__32-[RACViewController testSubject]_block_invoke.872
+__32-[RACViewController testSubject]_block_invoke.868
+__32-[RACViewController testSubject]_block_invoke.860
+__32-[RACViewController testSubject]_block_invoke.854
+__32-[RACViewController testSubject]_block_invoke_2
+__32-[RACViewController testSubject]_block_invoke
+__35-[RACViewController testSubscriber]_block_invoke
+__30-[RACViewController loginThen]_block_invoke_2
+__30-[RACViewController loginThen]_block_invoke.825
+__30-[RACViewController loginThen]_block_invoke.821
+__30-[RACViewController loginThen]_block_invoke
+__32-[RACViewController asychronize]_block_invoke_2
+__32-[RACViewController asychronize]_block_invoke.804
+__32-[RACViewController asychronize]_block_invoke.794
+__32-[RACViewController asychronize]_block_invoke
+__47-[RACViewController fetchMessagesAfterMessage:]_block_invoke
+__47-[RACViewController loadCachedMessagesForUser:]_block_invoke
+__32-[RACViewController loginSignal]_block_invoke
+__38-[RACViewController subcribeCompleted]_block_invoke_3
+__38-[RACViewController subcribeCompleted]_block_invoke_2
+__38-[RACViewController subcribeCompleted]_block_invoke
+__34-[RACViewController simulateLogin]_block_invoke_5
+__34-[RACViewController simulateLogin]_block_invoke_4
+__34-[RACViewController simulateLogin]_block_invoke_3
+__34-[RACViewController simulateLogin]_block_invoke_2
+__34-[RACViewController simulateLogin]_block_invoke
+__27-[RACViewController biding]_block_invoke_2
+__27-[RACViewController biding]_block_invoke
+__27-[RACViewController repeat]_block_invoke_3
+__27-[RACViewController repeat]_block_invoke_2
+__27-[RACViewController repeat]_block_invoke
+__29-[RACViewController throttle]_block_invoke.715
+__29-[RACViewController throttle]_block_invoke_3
+__29-[RACViewController throttle]_block_invoke_2
+__29-[RACViewController throttle]_block_invoke
+__30-[RACViewController throttle2]_block_invoke.698
+__30-[RACViewController throttle2]_block_invoke.687
+__30-[RACViewController throttle2]_block_invoke.677
+__30-[RACViewController throttle2]_block_invoke_2
+__30-[RACViewController throttle2]_block_invoke
+__26-[RACViewController takeT]_block_invoke_2
+__26-[RACViewController takeT]_block_invoke
+__26-[RACViewController retry]_block_invoke.657
+__26-[RACViewController retry]_block_invoke
+__33-[RACViewController requestTwice]_block_invoke.642
+__33-[RACViewController requestTwice]_block_invoke.629
+__33-[RACViewController requestTwice]_block_invoke_3
+__33-[RACViewController requestTwice]_block_invoke_2.615
+__33-[RACViewController requestTwice]_block_invoke.610
+__33-[RACViewController requestTwice]_block_invoke.595
+__33-[RACViewController requestTwice]_block_invoke_2
+__33-[RACViewController requestTwice]_block_invoke
+__32-[RACViewController racSelector]_block_invoke_2
+__32-[RACViewController racSelector]_block_invoke
+__29-[RACViewController interval]_block_invoke_2.500
+__29-[RACViewController interval]_block_invoke.495
+__29-[RACViewController interval]_block_invoke.487
+__29-[RACViewController interval]_block_invoke_2
+__29-[RACViewController interval]_block_invoke
+__31-[RACViewController tapGesture]_block_invoke
+__41-[RACViewController btnAvliableWhenImgOK]_block_invoke_3
+__41-[RACViewController btnAvliableWhenImgOK]_block_invoke_2
+__41-[RACViewController btnAvliableWhenImgOK]_block_invoke
+__27-[RACViewController doNext]_block_invoke_4
+__27-[RACViewController doNext]_block_invoke_3
+__27-[RACViewController doNext]_block_invoke_2
+__27-[RACViewController doNext]_block_invoke
+__35-[RACViewController takeLastSignal]_block_invoke
+__31-[RACViewController takeSignal]_block_invoke
+__41-[RACViewController distinctUntilChanged]_block_invoke
+__27-[RACViewController ignore]_block_invoke
+__33-[RACViewController filterSignal]_block_invoke
+__27-[RACViewController reduce]_block_invoke_4
+__27-[RACViewController reduce]_block_invoke_3
+__27-[RACViewController reduce]_block_invoke_2
+__27-[RACViewController reduce]_block_invoke
+__31-[RACViewController combinLast]_block_invoke_4
+__31-[RACViewController combinLast]_block_invoke_3
+__31-[RACViewController combinLast]_block_invoke_2
+__31-[RACViewController combinLast]_block_invoke
+__30-[RACViewController zipSignal]_block_invoke_3
+__30-[RACViewController zipSignal]_block_invoke_2
+__30-[RACViewController zipSignal]_block_invoke
+__26-[RACViewController merge]_block_invoke_3
+__26-[RACViewController merge]_block_invoke_2
+__26-[RACViewController merge]_block_invoke
+__25-[RACViewController then]_block_invoke_4
+__25-[RACViewController then]_block_invoke_3
+__25-[RACViewController then]_block_invoke_2
+__25-[RACViewController then]_block_invoke
+__27-[RACViewController concat]_block_invoke_3
+__27-[RACViewController concat]_block_invoke_2
+__27-[RACViewController concat]_block_invoke
+__35-[RACViewController signalOfSignal]_block_invoke_2
+__35-[RACViewController signalOfSignal]_block_invoke
+__24-[RACViewController map]_block_invoke_2
+__24-[RACViewController map]_block_invoke
+__25-[RACViewController bind]_block_invoke_3
+__25-[RACViewController bind]_block_invoke_2
+__25-[RACViewController bind]_block_invoke
+__44-[RACViewController multiSignalWithSelector]_block_invoke_3
+__44-[RACViewController multiSignalWithSelector]_block_invoke_2
+__44-[RACViewController multiSignalWithSelector]_block_invoke
+__30-[RACViewController multicast]_block_invoke_3
+__30-[RACViewController multicast]_block_invoke_2
+__30-[RACViewController multicast]_block_invoke
+__29-[RACViewController comomand]_block_invoke_7
+__29-[RACViewController comomand]_block_invoke_6
+__29-[RACViewController comomand]_block_invoke_5
+__29-[RACViewController comomand]_block_invoke_4
+__29-[RACViewController comomand]_block_invoke_3
+__29-[RACViewController comomand]_block_invoke_2
+__29-[RACViewController comomand]_block_invoke
+__29-[RACViewController sequence]_block_invoke
+__28-[RACViewController Subject]_block_invoke_2
+__28-[RACViewController Subject]_block_invoke
+__30-[RACViewController subScirbe]_block_invoke_2
+__30-[RACViewController subScirbe]_block_invoke
+__32-[RACViewController viewDidLoad]_block_invoke_5
+__32-[RACViewController viewDidLoad]_block_invoke_4
+__32-[RACViewController viewDidLoad]_block_invoke_3
+__32-[RACViewController viewDidLoad]_block_invoke_2
+__32-[RACViewController viewDidLoad]_block_invoke
+-[AppDelegate application:didFinishLaunchingWithOptions:]
+-[AppDelegate applicationWillResignActive:]
+-[AppDelegate applicationDidEnterBackground:]
+-[AppDelegate applicationWillEnterForeground:]
+-[AppDelegate applicationDidBecomeActive:]
+-[AppDelegate applicationWillTerminate:]
+-[AppDelegate window]
+-[AppDelegate setWindow:]
+-[AppDelegate .cxx_destruct]
+_OBJC_IVAR_$_AppDelegate._window
+l_OBJC_PROTOCOL_$_UIApplicationDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIApplicationDelegate
+_OBJC_METACLASS_$_AppDelegate
+_OBJC_CLASS_$_AppDelegate
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/AppDelegate.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/AppDelegate.h
+_OBJC_METACLASS_$_JFFindLayoutAttributes
+_OBJC_CLASS_$_JFFindLayoutAttributes
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/CollectionT/JFFindLayoutAttributes.m
+-[JFFindCell awakeFromNib]
+_OBJC_CLASS_$_JFFindCell
+_OBJC_METACLASS_$_JFFindCell
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/CollectionT/JFFindCell.m
+-[NormalDismissAnimation transitionDuration:]
+-[NormalDismissAnimation animateTransition:]
+___44-[NormalDismissAnimation animateTransition:]_block_invoke
+___44-[NormalDismissAnimation animateTransition:]_block_invoke.20
+___copy_helper_block_.25
+___destroy_helper_block_.26
+___block_descriptor_tmp.28
+_OBJC_METACLASS_$_NormalDismissAnimation
+_OBJC_CLASS_$_NormalDismissAnimation
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/NormalDismissAnimation.m
+__44-[NormalDismissAnimation animateTransition:]_block_invoke.20
+__44-[NormalDismissAnimation animateTransition:]_block_invoke
+-[SCPrimerCollectionViewCell setLesson:]
+-[SCPrimerCollectionViewCell lesson]
+-[SCPrimerCollectionViewCell lessonLabel]
+-[SCPrimerCollectionViewCell setLessonLabel:]
+-[SCPrimerCollectionViewCell .cxx_destruct]
+_OBJC_IVAR_$_SCPrimerCollectionViewCell._lesson
+_OBJC_IVAR_$_SCPrimerCollectionViewCell._lessonLabel
+_OBJC_METACLASS_$_SCPrimerCollectionViewCell
+_OBJC_CLASS_$_SCPrimerCollectionViewCell
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/PrimerCollectionController/Cells/SCPrimerCollectionViewCell.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/PrimerCollectionController/Cells/SCPrimerCollectionViewCell.h
+-[JFPresentController viewDidLoad]
+-[JFPresentController show]
+_OBJC_CLASS_$_JFPresentController
+_OBJC_CLASS_$_JFTableController
+_OBJC_METACLASS_$_JFPresentController
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/JFPresentController.m
+-[JFFindViewController viewDidLoad]
+___35-[JFFindViewController viewDidLoad]_block_invoke
+-[JFFindViewController dataList]
+-[JFFindViewController didReceiveMemoryWarning]
+-[JFFindViewController numberOfSectionsInCollectionView:]
+-[JFFindViewController collectionView:numberOfItemsInSection:]
+-[JFFindViewController collectionView:cellForItemAtIndexPath:]
+-[JFFindViewController collectionView:viewForSupplementaryElementOfKind:atIndexPath:]
+-[JFFindViewController collectionView:layout:sizeForItemAtIndexPath:]
+-[JFFindViewController collectionView:layout:referenceSizeForHeaderInSection:]
+-[JFFindViewController collectionView:layout:minimumLineSpacingForSectionAtIndex:]
+-[JFFindViewController collectionView:layout:minimumInteritemSpacingForSectionAtIndex:]
+-[JFFindViewController collectionView:layout:insetForSectionAtIndex:]
+-[JFFindViewController myCollectionView]
+-[JFFindViewController setMyCollectionView:]
+-[JFFindViewController setDataList:]
+-[JFFindViewController itemWidth]
+-[JFFindViewController setItemWidth:]
+-[JFFindViewController itemHeight]
+-[JFFindViewController setItemHeight:]
+-[JFFindViewController .cxx_destruct]
+_OBJC_CLASS_$_JFFindViewController
+_OBJC_IVAR_$_JFFindViewController._dataList
+_OBJC_IVAR_$_JFFindViewController._myCollectionView
+_OBJC_IVAR_$_JFFindViewController._itemWidth
+_OBJC_IVAR_$_JFFindViewController._itemHeight
+l_OBJC_PROTOCOL_$_UICollectionViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UICollectionViewDelegate
+l_OBJC_PROTOCOL_$_UICollectionViewDataSource
+l_OBJC_LABEL_PROTOCOL_$_UICollectionViewDataSource
+l_OBJC_PROTOCOL_$_UICollectionViewDelegateFlowLayout
+l_OBJC_LABEL_PROTOCOL_$_UICollectionViewDelegateFlowLayout
+_OBJC_METACLASS_$_JFFindViewController
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/CollectionT/JFFindViewController.m
+__35-[JFFindViewController viewDidLoad]_block_invoke
+-[StickCollectionViewFlowLayout layoutAttributesForElementsInRect:]
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___67-[StickCollectionViewFlowLayout layoutAttributesForElementsInRect:]_block_invoke
+-[StickCollectionViewFlowLayout updateCellAttributes:withSectionHeader:]
+-[StickCollectionViewFlowLayout shouldInvalidateLayoutForBoundsChange:]
+-[StickCollectionViewFlowLayout firstItemTransform]
+-[StickCollectionViewFlowLayout setFirstItemTransform:]
+_OBJC_CLASS_$_StickCollectionViewFlowLayout
+_OBJC_IVAR_$_StickCollectionViewFlowLayout._firstItemTransform
+_OBJC_METACLASS_$_StickCollectionViewFlowLayout
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/PrimerCollectionController/Cells/StickCollectionViewFlowLayout.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/PrimerCollectionController/Cells/StickCollectionViewFlowLayout.h
+__67-[StickCollectionViewFlowLayout layoutAttributesForElementsInRect:]_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
+-[SCPrimerViewController viewDidLoad]
+-[SCPrimerViewController numberOfSectionsInCollectionView:]
+-[SCPrimerViewController collectionView:numberOfItemsInSection:]
+-[SCPrimerViewController collectionView:cellForItemAtIndexPath:]
+-[SCPrimerViewController collectionView:layout:sizeForItemAtIndexPath:]
+-[SCPrimerViewController collectionView:layout:minimumLineSpacingForSectionAtIndex:]
+-[SCPrimerViewController actionClose:]
+-[SCPrimerViewController collectionView]
+-[SCPrimerViewController setCollectionView:]
+-[SCPrimerViewController lessonsArray]
+-[SCPrimerViewController setLessonsArray:]
+-[SCPrimerViewController .cxx_destruct]
+_OBJC_CLASS_$_SCPrimerViewController
+_OBJC_IVAR_$_SCPrimerViewController._collectionView
+_OBJC_IVAR_$_SCPrimerViewController._lessonsArray
+_OBJC_METACLASS_$_SCPrimerViewController
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/PrimerCollectionController/SCPrimerViewController.m
+-[JFTableController viewDidLoad]
+-[JFTableController tableView:numberOfRowsInSection:]
+-[JFTableController tableView:heightForRowAtIndexPath:]
+-[JFTableController tableView:didSelectRowAtIndexPath:]
+-[JFTableController tableView:cellForRowAtIndexPath:]
+-[JFTableController listArray]
+-[JFTableController setListArray:]
+-[JFTableController .cxx_destruct]
+_OBJC_CLASS_$_JFBaseModel
+_OBJC_CLASS_$_JFBaseCell
+_OBJC_IVAR_$_JFTableController._listArray
+_OBJC_METACLASS_$_JFTableController
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/JFTableController.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/JFTableController.h
+-[Example3Controller viewDidLoad]
+___33-[Example3Controller viewDidLoad]_block_invoke
+___33-[Example3Controller viewDidLoad]_block_invoke.35
+___copy_helper_block_.59
+___destroy_helper_block_.60
+___33-[Example3Controller viewDidLoad]_block_invoke.62
+___copy_helper_block_.63
+___destroy_helper_block_.64
+___33-[Example3Controller viewDidLoad]_block_invoke.74
+___copy_helper_block_.75
+___destroy_helper_block_.76
+-[Example3Controller actionSwitch]
+-[Example3Controller didReceiveMemoryWarning]
+-[Example3Controller scrollView]
+-[Example3Controller setScrollView:]
+-[Example3Controller .cxx_destruct]
+_OBJC_CLASS_$_Example3Controller
+___block_descriptor_tmp.61
+___block_descriptor_tmp.65
+___block_descriptor_tmp.77
+_OBJC_IVAR_$_Example3Controller._scrollView
+_OBJC_METACLASS_$_Example3Controller
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/ScrollView_autoLayout/Example3Controller.m
+__33-[Example3Controller viewDidLoad]_block_invoke.74
+__33-[Example3Controller viewDidLoad]_block_invoke.62
+__33-[Example3Controller viewDidLoad]_block_invoke.35
+__33-[Example3Controller viewDidLoad]_block_invoke
+-[JFModel age]
+___14-[JFModel age]_block_invoke
+-[JFModel name]
+-[JFModel setName:]
+-[JFModel setAge:]
+-[JFModel .cxx_destruct]
+_OBJC_IVAR_$_JFModel._age
+_OBJC_IVAR_$_JFModel._name
+_OBJC_METACLASS_$_JFModel
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/JFModel.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/JFModel.h
+__14-[JFModel age]_block_invoke
+-[JFBaseModel name]
+-[JFBaseModel setName:]
+-[JFBaseModel vcDescription]
+-[JFBaseModel setVcDescription:]
+-[JFBaseModel fromStory]
+-[JFBaseModel setFromStory:]
+-[JFBaseModel .cxx_destruct]
+_OBJC_IVAR_$_JFBaseModel._name
+_OBJC_IVAR_$_JFBaseModel._vcDescription
+_OBJC_IVAR_$_JFBaseModel._fromStory
+_OBJC_METACLASS_$_JFBaseModel
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/JFBaseModel.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/JFBaseModel.h
+-[JFFooterView awakeFromNib]
+_OBJC_CLASS_$_JFFooterView
+_OBJC_METACLASS_$_JFFooterView
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/CollectionT/JFFooterView.m
+-[JFBaseCell initWithStyle:reuseIdentifier:]
+-[JFBaseCell name]
+-[JFBaseCell setName:]
+-[JFBaseCell .cxx_destruct]
+_OBJC_IVAR_$_JFBaseCell._name
+_OBJC_METACLASS_$_JFBaseCell
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/JFBaseCell.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/JFBaseCell.h
+-[JFFindHeaderCell awakeFromNib]
+_OBJC_CLASS_$_JFFindHeaderCell
+_OBJC_METACLASS_$_JFFindHeaderCell
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/CollectionT/JFFindHeaderCell.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/main.m
+main
++[UIColor(Hex) colorFromHexString:]
++[UIColor(Hex) colorComponentFrom:start:length:]
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/Helper/UIColor+Hex.m
+NSMakeRange
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+-[JFFindHeaderView awakeFromNib]
+_OBJC_CLASS_$_JFFindHeaderView
+_OBJC_METACLASS_$_JFFindHeaderView
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/CollectionT/JFFindHeaderView.m
+-[ScaleTranViewController viewWillAppear:]
+-[ScaleTranViewController viewDidLoad]
+-[ScaleTranViewController didReceiveMemoryWarning]
+-[ScaleTranViewController navigationController:interactionControllerForAnimationController:]
+-[ScaleTranViewController edgePan:]
+-[ScaleTranViewController navigationController:animationControllerForOperation:fromViewController:toViewController:]
+-[ScaleTranViewController popClicked:]
+-[ScaleTranViewController button]
+-[ScaleTranViewController setButton:]
+-[ScaleTranViewController .cxx_destruct]
+_OBJC_CLASS_$_ScaleTranViewController
+_OBJC_IVAR_$_ScaleTranViewController.percentTransition
+_OBJC_CLASS_$_PingInvertTransition
+_OBJC_IVAR_$_ScaleTranViewController._button
+l_OBJC_PROTOCOL_$_UINavigationControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_UINavigationControllerDelegate
+_OBJC_METACLASS_$_ScaleTranViewController
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/ScaleTranViewController.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/ScaleTranViewController.h
+-[AutoLayout_ScrollviewVC viewDidLoad]
+___38-[AutoLayout_ScrollviewVC viewDidLoad]_block_invoke
+___38-[AutoLayout_ScrollviewVC viewDidLoad]_block_invoke.42
+___copy_helper_block_.45
+___destroy_helper_block_.46
+___38-[AutoLayout_ScrollviewVC viewDidLoad]_block_invoke.52
+___copy_helper_block_.53
+___destroy_helper_block_.54
+___38-[AutoLayout_ScrollviewVC viewDidLoad]_block_invoke.60
+___copy_helper_block_.61
+___destroy_helper_block_.62
+-[AutoLayout_ScrollviewVC skipToSV1]
+-[AutoLayout_ScrollviewVC skipToSV2]
+-[AutoLayout_ScrollviewVC skipToSV3]
+-[AutoLayout_ScrollviewVC skipToSV4]
+_OBJC_CLASS_$_AutoLayout_ScrollviewVC
+___block_descriptor_tmp.47
+___block_descriptor_tmp.55
+___block_descriptor_tmp.63
+_OBJC_CLASS_$_ScrollVC1
+_OBJC_CLASS_$_Example4Controller
+_OBJC_METACLASS_$_AutoLayout_ScrollviewVC
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/ScrollView_autoLayout/AutoLayout_ScrollviewVC.m
+__38-[AutoLayout_ScrollviewVC viewDidLoad]_block_invoke.60
+__38-[AutoLayout_ScrollviewVC viewDidLoad]_block_invoke.52
+__38-[AutoLayout_ScrollviewVC viewDidLoad]_block_invoke.42
+__38-[AutoLayout_ScrollviewVC viewDidLoad]_block_invoke
+-[ScrollVC1 viewDidLoad]
+___24-[ScrollVC1 viewDidLoad]_block_invoke
+___24-[ScrollVC1 viewDidLoad]_block_invoke.40
+___copy_helper_block_.49
+___destroy_helper_block_.50
+___24-[ScrollVC1 viewDidLoad]_block_invoke.52
+___copy_helper_block_.55
+___destroy_helper_block_.56
+___24-[ScrollVC1 viewDidLoad]_block_invoke.69
+___copy_helper_block_.70
+___destroy_helper_block_.71
+-[ScrollVC1 actionSwitch]
+-[ScrollVC1 scrollView]
+-[ScrollVC1 setScrollView:]
+-[ScrollVC1 .cxx_destruct]
+___block_descriptor_tmp.51
+___block_descriptor_tmp.58
+___block_descriptor_tmp.72
+_OBJC_IVAR_$_ScrollVC1._scrollView
+_OBJC_METACLASS_$_ScrollVC1
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/ScrollView_autoLayout/ScrollVC1.m
+__24-[ScrollVC1 viewDidLoad]_block_invoke.69
+__24-[ScrollVC1 viewDidLoad]_block_invoke.52
+__24-[ScrollVC1 viewDidLoad]_block_invoke.40
+__24-[ScrollVC1 viewDidLoad]_block_invoke
+-[JFFindFlowLayout prepareLayout]
+-[JFFindFlowLayout collectionViewContentSize]
+-[JFFindFlowLayout layoutAttributesForElementsInRect:]
+-[JFFindFlowLayout layoutAttributesForItemAtIndexPath:]
+-[JFFindFlowLayout layoutAttributesForSupplementaryViewOfKind:atIndexPath:]
+-[JFFindFlowLayout shouldInvalidateLayoutForBoundsChange:]
+-[JFFindFlowLayout resetAttributes:indexPath:]
+-[JFFindFlowLayout resetHeaderAttribute:indexPath:]
+-[JFFindFlowLayout itemHeight]
+-[JFFindFlowLayout setItemHeight:]
+-[JFFindFlowLayout itemWidth]
+-[JFFindFlowLayout setItemWidth:]
+-[JFFindFlowLayout lineSpacing]
+-[JFFindFlowLayout setLineSpacing:]
+-[JFFindFlowLayout baseX]
+-[JFFindFlowLayout setBaseX:]
+-[JFFindFlowLayout baseY]
+-[JFFindFlowLayout setBaseY:]
+-[JFFindFlowLayout lastAttributes]
+-[JFFindFlowLayout setLastAttributes:]
+-[JFFindFlowLayout .cxx_destruct]
+_OBJC_CLASS_$_JFFindFlowLayout
+_OBJC_IVAR_$_JFFindFlowLayout._itemHeight
+_OBJC_IVAR_$_JFFindFlowLayout._itemWidth
+_OBJC_IVAR_$_JFFindFlowLayout._lineSpacing
+_OBJC_IVAR_$_JFFindFlowLayout._baseX
+_OBJC_IVAR_$_JFFindFlowLayout._baseY
+_OBJC_IVAR_$_JFFindFlowLayout._lastAttributes
+_OBJC_METACLASS_$_JFFindFlowLayout
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/CollectionT/JFFindFlowLayout.m
+-[SCCornerViewController viewDidLoad]
+-[SCCornerViewController numberOfSectionsInCollectionView:]
+-[SCCornerViewController collectionView:numberOfItemsInSection:]
+-[SCCornerViewController collectionView:cellForItemAtIndexPath:]
+-[SCCornerViewController collectionView:layout:sizeForItemAtIndexPath:]
+-[SCCornerViewController collectionView:layout:minimumLineSpacingForSectionAtIndex:]
+-[SCCornerViewController actionClose:]
+-[SCCornerViewController collectionView]
+-[SCCornerViewController setCollectionView:]
+-[SCCornerViewController citiesArray]
+-[SCCornerViewController setCitiesArray:]
+-[SCCornerViewController colorsArray]
+-[SCCornerViewController setColorsArray:]
+-[SCCornerViewController .cxx_destruct]
+_OBJC_CLASS_$_SCCornerViewController
+_OBJC_IVAR_$_SCCornerViewController._collectionView
+_OBJC_IVAR_$_SCCornerViewController._citiesArray
+_OBJC_IVAR_$_SCCornerViewController._colorsArray
+_OBJC_METACLASS_$_SCCornerViewController
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/PrimerCollectionController/SCCornerViewController.m
+-[PingInvertTransition transitionDuration:]
+-[PingInvertTransition animateTransition:]
+-[PingInvertTransition animationDidStop:finished:]
+-[PingInvertTransition transitionContext]
+-[PingInvertTransition setTransitionContext:]
+-[PingInvertTransition .cxx_destruct]
+_OBJC_IVAR_$_PingInvertTransition._transitionContext
+_OBJC_METACLASS_$_PingInvertTransition
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/PingInvertTransition.m
+-[JFTransitionController viewDidLoad]
+-[JFTransitionController show]
+-[JFTransitionController animationControllerForDismissedController:]
+-[JFTransitionController animationControllerForPresentedController:presentingController:sourceController:]
+-[JFTransitionController interactionControllerForDismissal:]
+-[JFTransitionController dismissAnimation]
+-[JFTransitionController setDismissAnimation:]
+-[JFTransitionController presentedVC]
+-[JFTransitionController setPresentedVC:]
+-[JFTransitionController presentAnimation]
+-[JFTransitionController setPresentAnimation:]
+-[JFTransitionController transitionController]
+-[JFTransitionController setTransitionController:]
+-[JFTransitionController .cxx_destruct]
+_OBJC_CLASS_$_JFTransitionController
+_OBJC_IVAR_$_JFTransitionController._presentAnimation
+_OBJC_IVAR_$_JFTransitionController._dismissAnimation
+_OBJC_CLASS_$_SwipeUpInteractiveTransition
+_OBJC_IVAR_$_JFTransitionController._transitionController
+_OBJC_IVAR_$_JFTransitionController._presentedVC
+l_OBJC_PROTOCOL_$_UIViewControllerTransitioningDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIViewControllerTransitioningDelegate
+_OBJC_METACLASS_$_JFTransitionController
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/JFTransitionController.m
+-[SCWelcomeViewController viewDidLoad]
+-[SCWelcomeViewController backgroundImageView]
+-[SCWelcomeViewController setBackgroundImageView:]
+-[SCWelcomeViewController .cxx_destruct]
+_OBJC_CLASS_$_SCWelcomeViewController
+_OBJC_IVAR_$_SCWelcomeViewController._backgroundImageView
+_OBJC_METACLASS_$_SCWelcomeViewController
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/PrimerCollectionController/SCWelcomeViewController.m
+-[JFGraphicContrller viewDidLoad]
+-[JFGraphicContrller viewDidAppear:]
+-[JFGraphicContrller btnSolidRectangle_Click:]
+-[JFGraphicContrller btnHollowRectangle_Click:]
+-[JFGraphicContrller btnCircle_Click:]
+-[JFGraphicContrller btnBezierCurve1_Click:]
+-[JFGraphicContrller btnBezierCurve2_Click:]
+-[JFGraphicContrller btnBezierSurface_Click:]
+-[JFGraphicContrller drawMyName:]
+-[JFGraphicContrller btnDuoLaAMeng_Click:]
+-[JFGraphicContrller addBeardFromPoint:toPoint:delay:]
+-[JFGraphicContrller setLayerColor:color:delay:]
+___48-[JFGraphicContrller setLayerColor:color:delay:]_block_invoke
+-[JFGraphicContrller setLayer:path:delay:]
+___42-[JFGraphicContrller setLayer:path:delay:]_block_invoke
+___copy_helper_block_.88
+___destroy_helper_block_.89
+-[JFGraphicContrller showHello]
+-[JFGraphicContrller segmentValueChanged:]
+-[JFGraphicContrller addAnimation:duration:]
+-[JFGraphicContrller addAnimationOneOnLayer:duration:]
+-[JFGraphicContrller addAnimationTwoOnLayer:duration:]
+-[JFGraphicContrller addAnimationThreeOnLayer:duration:]
+-[JFGraphicContrller clearDisplayView]
+-[JFGraphicContrller displayView]
+-[JFGraphicContrller setDisplayView:]
+-[JFGraphicContrller .cxx_destruct]
+_OBJC_CLASS_$_JFGraphicContrller
+_OBJC_IVAR_$_JFGraphicContrller._centerPosition
+___block_descriptor_tmp.90
+_OBJC_IVAR_$_JFGraphicContrller._animationType
+_OBJC_IVAR_$_JFGraphicContrller._displayView
+_OBJC_METACLASS_$_JFGraphicContrller
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/JFGraphicContrller.m
+__42-[JFGraphicContrller setLayer:path:delay:]_block_invoke
+__48-[JFGraphicContrller setLayerColor:color:delay:]_block_invoke
+-[Example4Controller viewDidLoad]
+___33-[Example4Controller viewDidLoad]_block_invoke
+___33-[Example4Controller viewDidLoad]_block_invoke.35
+__MASBoxValue
+___copy_helper_block_.43
+___destroy_helper_block_.44
+___33-[Example4Controller viewDidLoad]_block_invoke.46
+___copy_helper_block_.57
+___destroy_helper_block_.58
+___33-[Example4Controller viewDidLoad]_block_invoke.60
+___copy_helper_block_.65
+___destroy_helper_block_.66
+___33-[Example4Controller viewDidLoad]_block_invoke.68
+___copy_helper_block_.69
+___destroy_helper_block_.70
+___33-[Example4Controller viewDidLoad]_block_invoke.80
+___copy_helper_block_.87
+___destroy_helper_block_.88
+-[Example4Controller actionSwitch]
+-[Example4Controller didReceiveMemoryWarning]
+-[Example4Controller scrollView]
+-[Example4Controller setScrollView:]
+-[Example4Controller .cxx_destruct]
+___block_descriptor_tmp.45
+___block_descriptor_tmp.59
+___block_descriptor_tmp.67
+___block_descriptor_tmp.71
+___block_descriptor_tmp.89
+_OBJC_IVAR_$_Example4Controller._scrollView
+_OBJC_METACLASS_$_Example4Controller
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/ScrollView_autoLayout/Example4Controller.m
+__33-[Example4Controller viewDidLoad]_block_invoke.80
+__33-[Example4Controller viewDidLoad]_block_invoke.68
+__33-[Example4Controller viewDidLoad]_block_invoke.60
+__33-[Example4Controller viewDidLoad]_block_invoke.46
+_MASBoxValue
+/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos/Masonry.framework/Headers/MASUtilities.h
+__33-[Example4Controller viewDidLoad]_block_invoke.35
+__33-[Example4Controller viewDidLoad]_block_invoke
+-[SCCustomizableButton layoutSubviews]
+-[SCCustomizableButton intrinsicContentSize]
+-[SCCustomizableButton cornerRadius]
+-[SCCustomizableButton setCornerRadius:]
+-[SCCustomizableButton borderWidth]
+-[SCCustomizableButton setBorderWidth:]
+-[SCCustomizableButton horizontalPadding]
+-[SCCustomizableButton setHorizontalPadding:]
+-[SCCustomizableButton borderColor]
+-[SCCustomizableButton setBorderColor:]
+-[SCCustomizableButton .cxx_destruct]
+_OBJC_CLASS_$_SCCustomizableButton
+_OBJC_IVAR_$_SCCustomizableButton._cornerRadius
+_OBJC_IVAR_$_SCCustomizableButton._borderWidth
+_OBJC_IVAR_$_SCCustomizableButton._horizontalPadding
+_OBJC_IVAR_$_SCCustomizableButton._borderColor
+_OBJC_METACLASS_$_SCCustomizableButton
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/PrimerCollectionController/Cells/SCCustomizableButton.m
+-[PingTransition transitionDuration:]
+-[PingTransition animateTransition:]
+-[PingTransition animationDidStop:finished:]
+-[PingTransition transitionContext]
+-[PingTransition setTransitionContext:]
+-[PingTransition .cxx_destruct]
+_OBJC_IVAR_$_PingTransition._transitionContext
+_OBJC_METACLASS_$_PingTransition
+_OBJC_CLASS_$_PingTransition
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/PingTransition.m
+-[ScaleTOneController viewWillAppear:]
+-[ScaleTOneController viewDidLoad]
+-[ScaleTOneController didReceiveMemoryWarning]
+-[ScaleTOneController push:]
+-[ScaleTOneController navigationController:animationControllerForOperation:fromViewController:toViewController:]
+-[ScaleTOneController button]
+-[ScaleTOneController setButton:]
+-[ScaleTOneController .cxx_destruct]
+_OBJC_CLASS_$_ScaleTOneController
+_OBJC_IVAR_$_ScaleTOneController._button
+_OBJC_METACLASS_$_ScaleTOneController
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/ScaleTOneController.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/ScaleTOneController.h
+-[SwipeUpInteractiveTransition wireToViewController:]
+-[SwipeUpInteractiveTransition prepareGestureRecognizerInView:]
+-[SwipeUpInteractiveTransition completionSpeed]
+-[SwipeUpInteractiveTransition handleGesture:]
+-[SwipeUpInteractiveTransition interacting]
+-[SwipeUpInteractiveTransition setInteracting:]
+-[SwipeUpInteractiveTransition shouldComplete]
+-[SwipeUpInteractiveTransition setShouldComplete:]
+-[SwipeUpInteractiveTransition presentingVC]
+-[SwipeUpInteractiveTransition setPresentingVC:]
+-[SwipeUpInteractiveTransition .cxx_destruct]
+_OBJC_IVAR_$_SwipeUpInteractiveTransition._interacting
+_OBJC_IVAR_$_SwipeUpInteractiveTransition._shouldComplete
+_OBJC_IVAR_$_SwipeUpInteractiveTransition._presentingVC
+_OBJC_METACLASS_$_SwipeUpInteractiveTransition
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/SwipeUpInteractiveTransition.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/SwipeUpInteractiveTransition.h
+-[SCCornerCollectionViewCell awakeFromNib]
+-[SCCornerCollectionViewCell setCity:]
+-[SCCornerCollectionViewCell setColor:]
+-[SCCornerCollectionViewCell city]
+-[SCCornerCollectionViewCell color]
+-[SCCornerCollectionViewCell cityLabel]
+-[SCCornerCollectionViewCell setCityLabel:]
+-[SCCornerCollectionViewCell backingView]
+-[SCCornerCollectionViewCell setBackingView:]
+-[SCCornerCollectionViewCell .cxx_destruct]
+_OBJC_CLASS_$_SCCornerCollectionViewCell
+_OBJC_IVAR_$_SCCornerCollectionViewCell._city
+_OBJC_IVAR_$_SCCornerCollectionViewCell._color
+_OBJC_IVAR_$_SCCornerCollectionViewCell._cityLabel
+_OBJC_IVAR_$_SCCornerCollectionViewCell._backingView
+_OBJC_METACLASS_$_SCCornerCollectionViewCell
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/PrimerCollectionController/Cells/SCCornerCollectionViewCell.m
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/PrimerCollectionController/Cells/SCCornerCollectionViewCell.h
+-[NSNull(NullSafe) methodSignatureForSelector:]
+-[NSNull(NullSafe) forwardInvocation:]
+_methodSignatureForSelector:.classList
+_methodSignatureForSelector:.signatureCache
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/NullSafe.m
+_globalinit_33_8470EF447C8347FB5EEFFF9DF1DDEF32_func0
+__TF10JFReactiveau15reuseIdentifierSS
+__TToFC10JFReactive24CollectionViewControllerg6imagesGSaSS_
+__TFC10JFReactive24CollectionViewControllerg6imagesGSaSS_
+__TToFC10JFReactive24CollectionViewControllers6imagesGSaSS_
+__TFC10JFReactive24CollectionViewControllers6imagesGSaSS_
+__TFC10JFReactive24CollectionViewController11viewDidLoadfT_T_
+__TMaC10JFReactive24CollectionViewController
+__TToFC10JFReactive24CollectionViewController11viewDidLoadfT_T_
+__TFC10JFReactive24CollectionViewController14collectionViewfTCSo16UICollectionView22numberOfItemsInSectionSi_Si
+__TToFC10JFReactive24CollectionViewController14collectionViewfTCSo16UICollectionView22numberOfItemsInSectionSi_Si
+__TFC10JFReactive24CollectionViewController14collectionViewfTCSo16UICollectionView22cellForItemAtIndexPathCSo11NSIndexPath_CSo20UICollectionViewCell
+__TToFC10JFReactive24CollectionViewController14collectionViewfTCSo16UICollectionView22cellForItemAtIndexPathCSo11NSIndexPath_CSo20UICollectionViewCell
+__TFC10JFReactive24CollectionViewControllerD
+__TToFC10JFReactive24CollectionViewControllerE
+__TFC10JFReactive24CollectionViewControllerm6imagesGSaSS_
+__TFC10JFReactive24CollectionViewControllercfT20collectionViewLayoutCSo22UICollectionViewLayout_S0_
+__TFC10JFReactive24CollectionViewControllerCfT20collectionViewLayoutCSo22UICollectionViewLayout_S0_
+__TToFC10JFReactive24CollectionViewControllercfT20collectionViewLayoutCSo22UICollectionViewLayout_S0_
+__TFC10JFReactive24CollectionViewControllercfT7nibNameGSqSS_6bundleGSqCSo8NSBundle__S0_
+__TFC10JFReactive24CollectionViewControllerCfT7nibNameGSqSS_6bundleGSqCSo8NSBundle__S0_
+__TToFC10JFReactive24CollectionViewControllercfT7nibNameGSqSS_6bundleGSqCSo8NSBundle__S0_
+__TFC10JFReactive24CollectionViewControllerCfT5coderCSo7NSCoder_GSqS0__
+__TFC10JFReactive24CollectionViewControllercfT5coderCSo7NSCoder_GSqS0__
+__TToFC10JFReactive24CollectionViewControllercfT5coderCSo7NSCoder_GSqS0__
+__TTSf4g_g_n___TFC10JFReactive24CollectionViewController14collectionViewfTCSo16UICollectionView22cellForItemAtIndexPathCSo11NSIndexPath_CSo20UICollectionViewCell
+__TTSf4g_n___TFC10JFReactive24CollectionViewControllercfT20collectionViewLayoutCSo22UICollectionViewLayout_S0_
+__TTSf4g_n___TFC10JFReactive24CollectionViewControllercfT5coderCSo7NSCoder_GSqS0__
+__TMaC10JFReactive26CircularCollectionViewCell
+_globalinit_33_8470EF447C8347FB5EEFFF9DF1DDEF32_token0
+__Tv10JFReactive15reuseIdentifierSS
+__TWvdvC10JFReactive24CollectionViewController6imagesGSaSS_
+__TMLGCs23_ContiguousArrayStorageSS_
+_OBJC_METACLASS_$__TtC10JFReactive24CollectionViewController
+__TMnC10JFReactive24CollectionViewController
+__TWoFC10JFReactive24CollectionViewControllerg6imagesGSaSS_
+__TWoFC10JFReactive24CollectionViewControllers6imagesGSaSS_
+__TWoFC10JFReactive24CollectionViewControllerm6imagesGSaSS_
+__TWoFC10JFReactive24CollectionViewController11viewDidLoadfT_T_
+__TWoFC10JFReactive24CollectionViewController14collectionViewfTCSo16UICollectionView22numberOfItemsInSectionSi_Si
+__TWoFC10JFReactive24CollectionViewController14collectionViewfTCSo16UICollectionView22cellForItemAtIndexPathCSo11NSIndexPath_CSo20UICollectionViewCell
+__TWoFC10JFReactive24CollectionViewControllerCfT20collectionViewLayoutCSo22UICollectionViewLayout_S0_
+__TWoFC10JFReactive24CollectionViewControllerCfT7nibNameGSqSS_6bundleGSqCSo8NSBundle__S0_
+__TWoFC10JFReactive24CollectionViewControllerCfT5coderCSo7NSCoder_GSqS0__
+__TMLC10JFReactive24CollectionViewController
+__TMfC10JFReactive24CollectionViewController
+__swift_FORCE_LOAD_$_swiftUIKit_$_JFReactive
+__swift_FORCE_LOAD_$_swiftCoreImage_$_JFReactive
+__swift_FORCE_LOAD_$_swiftDarwin_$_JFReactive
+__swift_FORCE_LOAD_$_swiftCoreGraphics_$_JFReactive
+__swift_FORCE_LOAD_$_swiftDispatch_$_JFReactive
+__swift_FORCE_LOAD_$_swiftObjectiveC_$_JFReactive
+__swift_FORCE_LOAD_$_swiftFoundation_$_JFReactive
+__TMLGSaSS_
+_objc_classes
+__TMC10JFReactive24CollectionViewController
+_OBJC_CLASS_$__TtC10JFReactive24CollectionViewController
+-emit-bc -primary-file /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CollectionViewController.swift /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewCell.swift /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewLayout.swift /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewLayoutAttributes.swift -target arm64-apple-ios8.1 -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk -I /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos -F /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos -g -import-objc-header /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/JFReactive-Bridging-Header.h -module-cache-path /Users/Sun/Library/Developer/Xcode/DerivedData/ModuleCache -D COCOAPODS -serialize-debugging-options -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-generated-files.hmap -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-own-target-headers.hmap -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-project-headers.hmap -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos/include -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/DerivedSources/arm64 -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/DerivedSources -Xcc -DCOCOAPODS=1 -Xcc -working-directory/Users/Sun/Desktop/RAC/JFReactive -emit-module-doc-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CollectionViewController~partial.swiftdoc -O -module-name JFReactive -emit-module-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CollectionViewController~partial.swiftmodule -serialize-diagnostics-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CollectionViewController.dia -emit-dependencies-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CollectionViewController.d -o /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CollectionViewController.bc -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift -private-discriminator _8470EF447C8347FB5EEFFF9DF1DDEF32
+<swift-imported-modules>
+Apple Swift version 2.3 (swiftlang-800.10.12 clang-800.0.38)
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CollectionViewController.swift
+_TMaGSaSS_
+CollectionViewController.swift
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection
+init
+_TMaC10JFReactive24CollectionViewController
+_TTSg5SS___TFs27_allocateUninitializedArrayurFBwTGSax_Bp_
+_TTSg5Vs10_ArrayBody_SS___TFVs20ManagedBufferPointerg15_elementPointerGSpq__
+_TTSg5SS___TFVs22_ContiguousArrayBuffer18_initStorageHeaderfTSi8capacitySi_T_
+_TTSg5Vs10_ArrayBody_SS___TFVs20ManagedBufferPointerg13_valuePointerGSpx_
+_TTSg5Vs10_ArrayBody_SS___TFVs20ManagedBufferPointerg8_addressGSPVs5UInt8_
+_TTSg5Vs10_ArrayBody_SS___TFVs20ManagedBufferPointerCfT21_uncheckedBufferClassPMPs9AnyObject_15minimumCapacitySi_GS_xq__
+_TMaGCs23_ContiguousArrayStorageSS_
+collectionView
+_TTSg5SS___TFSag9subscriptFSix
+_TTSg5SS___TFVs22_ContiguousArrayBuffer20_checkValidSubscriptfSiT_
+images.get
+_TTSg5SS___TFVs22_ContiguousArrayBuffer10getElementfSix
+_TF10JFReactiveau15reuseIdentifierSS
+images.materialize
+deinit
+_TTSg5SS___TFSag5countSi
+_TTSg5SS___TFVs22_ContiguousArrayBufferg5countSi
+viewDidLoad
+images.set
+_TToFC10JFReactive24CollectionViewControllers6imagesGSaSS_
+_TToFC10JFReactive24CollectionViewControllerg6imagesGSaSS_
+globalinit_33_8470EF447C8347FB5EEFFF9DF1DDEF32_func0
+__TToFC10JFReactive26CircularCollectionViewCellg9imageNameSS
+__TFC10JFReactive26CircularCollectionViewCellg9imageNameSS
+__TToFC10JFReactive26CircularCollectionViewCells9imageNameSS
+__TFC10JFReactive26CircularCollectionViewCells9imageNameSS
+__TFC10JFReactive26CircularCollectionViewCellW9imageNameSS
+__TFC10JFReactive26CircularCollectionViewCellm9imageNameSS
+__TFFC10JFReactive26CircularCollectionViewCellm9imageNameSSU_XfTBpRBBRS0_XMTS0__T_
+__TToFC10JFReactive26CircularCollectionViewCellg9imageViewXwGSqCSo11UIImageView_
+__TFC10JFReactive26CircularCollectionViewCellg9imageViewXwGSqCSo11UIImageView_
+__TToFC10JFReactive26CircularCollectionViewCells9imageViewXwGSqCSo11UIImageView_
+__TFC10JFReactive26CircularCollectionViewCells9imageViewXwGSqCSo11UIImageView_
+__TFC10JFReactive26CircularCollectionViewCellCfT5coderCSo7NSCoder_S0_
+__TFC10JFReactive26CircularCollectionViewCellcfT5coderCSo7NSCoder_S0_
+__TToFC10JFReactive26CircularCollectionViewCellcfT5coderCSo7NSCoder_S0_
+__TFC10JFReactive26CircularCollectionViewCell12awakeFromNibfT_T_
+__TToFC10JFReactive26CircularCollectionViewCell12awakeFromNibfT_T_
+__TFC10JFReactive26CircularCollectionViewCell21applyLayoutAttributesfCSo32UICollectionViewLayoutAttributesT_
+__TToFC10JFReactive26CircularCollectionViewCell21applyLayoutAttributesfCSo32UICollectionViewLayoutAttributesT_
+__TFC10JFReactive26CircularCollectionViewCellD
+__TToFC10JFReactive26CircularCollectionViewCellE
+__TFC10JFReactive26CircularCollectionViewCellm9imageViewXwGSqCSo11UIImageView_
+__TFFC10JFReactive26CircularCollectionViewCellm9imageViewXwGSqCSo11UIImageView_U_XfTBpRBBRS0_XMTS0__T_
+__TFC10JFReactive26CircularCollectionViewCellCfT5frameVSC6CGRect_S0_
+__TFC10JFReactive26CircularCollectionViewCellcfT5frameVSC6CGRect_S0_
+__TToFC10JFReactive26CircularCollectionViewCellcfT5frameVSC6CGRect_S0_
+__TTSf4gs_n___TFC10JFReactive26CircularCollectionViewCells9imageNameSS
+__TTSf4g_n___TFC10JFReactive26CircularCollectionViewCellcfT5coderCSo7NSCoder_S0_
+__TTSf4g_n___TFC10JFReactive26CircularCollectionViewCell21applyLayoutAttributesfCSo32UICollectionViewLayoutAttributesT_
+__TTSf4d_d___TFC10JFReactive26CircularCollectionViewCellcfT5frameVSC6CGRect_S0_
+__TMaC10JFReactive38CircularCollectionViewLayoutAttributes
+__TWvdvC10JFReactive26CircularCollectionViewCell9imageNameSS
+__TWvdvC10JFReactive26CircularCollectionViewCell9imageViewXwGSqCSo11UIImageView_
+_OBJC_METACLASS_$__TtC10JFReactive26CircularCollectionViewCell
+__TMnC10JFReactive26CircularCollectionViewCell
+__TWoFC10JFReactive26CircularCollectionViewCellg9imageNameSS
+__TWoFC10JFReactive26CircularCollectionViewCells9imageNameSS
+__TWoFC10JFReactive26CircularCollectionViewCellm9imageNameSS
+__TWoFC10JFReactive26CircularCollectionViewCellg9imageViewXwGSqCSo11UIImageView_
+__TWoFC10JFReactive26CircularCollectionViewCells9imageViewXwGSqCSo11UIImageView_
+__TWoFC10JFReactive26CircularCollectionViewCellm9imageViewXwGSqCSo11UIImageView_
+__TWoFC10JFReactive26CircularCollectionViewCellCfT5coderCSo7NSCoder_S0_
+__TWoFC10JFReactive26CircularCollectionViewCell12awakeFromNibfT_T_
+__TWoFC10JFReactive26CircularCollectionViewCell21applyLayoutAttributesfCSo32UICollectionViewLayoutAttributesT_
+__TMLC10JFReactive26CircularCollectionViewCell
+__TMfC10JFReactive26CircularCollectionViewCell
+__TMLGSqCSo11UIImageView_
+__TMLCSo11UIImageView
+__TMC10JFReactive26CircularCollectionViewCell
+_OBJC_CLASS_$__TtC10JFReactive26CircularCollectionViewCell
+-emit-bc /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CollectionViewController.swift -primary-file /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewCell.swift /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewLayout.swift /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewLayoutAttributes.swift -target arm64-apple-ios8.1 -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk -I /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos -F /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos -g -import-objc-header /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/JFReactive-Bridging-Header.h -module-cache-path /Users/Sun/Library/Developer/Xcode/DerivedData/ModuleCache -D COCOAPODS -serialize-debugging-options -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-generated-files.hmap -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-own-target-headers.hmap -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-project-headers.hmap -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos/include -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/DerivedSources/arm64 -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/DerivedSources -Xcc -DCOCOAPODS=1 -Xcc -working-directory/Users/Sun/Desktop/RAC/JFReactive -emit-module-doc-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewCell~partial.swiftdoc -O -module-name JFReactive -emit-module-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewCell~partial.swiftmodule -serialize-diagnostics-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewCell.dia -emit-dependencies-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewCell.d -o /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewCell.bc -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewCell.swift
+_TMaGSqCSo11UIImageView_
+CircularCollectionViewCell.swift
+_TMaCSo11UIImageView
+_TTSf4s_s___TFFs26_unimplemented_initializerFTVs12StaticString8initNameS_4fileS_4lineSu6columnSu_T_U0_FGSRVs5UInt8_T_
+applyLayoutAttributes
+_TMaC10JFReactive26CircularCollectionViewCell
+imageName.set
+imageName.didset
+imageView.get
+imageView.materialize
+awakeFromNib
+imageView.set
+_TToFC10JFReactive26CircularCollectionViewCells9imageViewXwGSqCSo11UIImageView_
+_TToFC10JFReactive26CircularCollectionViewCellg9imageViewXwGSqCSo11UIImageView_
+imageName.materialize
+_TToFC10JFReactive26CircularCollectionViewCells9imageNameSS
+imageName.get
+_TToFC10JFReactive26CircularCollectionViewCellg9imageNameSS
+__TToFC10JFReactive28CircularCollectionViewLayoutg8itemSizeVSC6CGSize
+__TFC10JFReactive28CircularCollectionViewLayoutg8itemSizeVSC6CGSize
+__TToFC10JFReactive28CircularCollectionViewLayoutg6radiusV12CoreGraphics7CGFloat
+__TFC10JFReactive28CircularCollectionViewLayoutg6radiusV12CoreGraphics7CGFloat
+__TToFC10JFReactive28CircularCollectionViewLayouts6radiusV12CoreGraphics7CGFloat
+__TFC10JFReactive28CircularCollectionViewLayouts6radiusV12CoreGraphics7CGFloat
+__TFC10JFReactive28CircularCollectionViewLayoutW6radiusV12CoreGraphics7CGFloat
+__TFC10JFReactive28CircularCollectionViewLayoutm6radiusV12CoreGraphics7CGFloat
+__TFFC10JFReactive28CircularCollectionViewLayoutm6radiusV12CoreGraphics7CGFloatU_XfTBpRBBRS0_XMTS0__T_
+__TToFC10JFReactive28CircularCollectionViewLayoutg14attributesListGSaCS_38CircularCollectionViewLayoutAttributes_
+__TFC10JFReactive28CircularCollectionViewLayoutg14attributesListGSaCS_38CircularCollectionViewLayoutAttributes_
+__TToFC10JFReactive28CircularCollectionViewLayouts14attributesListGSaCS_38CircularCollectionViewLayoutAttributes_
+__TFC10JFReactive28CircularCollectionViewLayouts14attributesListGSaCS_38CircularCollectionViewLayoutAttributes_
+__TToFC10JFReactive28CircularCollectionViewLayoutg12angleperItemV12CoreGraphics7CGFloat
+__TFC10JFReactive28CircularCollectionViewLayoutg12angleperItemV12CoreGraphics7CGFloat
+__TToFC10JFReactive28CircularCollectionViewLayoutg14angleAtExtremeV12CoreGraphics7CGFloat
+__TFC10JFReactive28CircularCollectionViewLayoutg14angleAtExtremeV12CoreGraphics7CGFloat
+__TToFC10JFReactive28CircularCollectionViewLayoutg5angleV12CoreGraphics7CGFloat
+__TFC10JFReactive28CircularCollectionViewLayoutg5angleV12CoreGraphics7CGFloat
+__TFC10JFReactive28CircularCollectionViewLayout25collectionViewContentSizefT_VSC6CGSize
+__TToFC10JFReactive28CircularCollectionViewLayout25collectionViewContentSizefT_VSC6CGSize
+__TFC10JFReactive28CircularCollectionViewLayout13prepareLayoutfT_T_
+__TMaC10JFReactive28CircularCollectionViewLayout
+__TToFC10JFReactive28CircularCollectionViewLayout13prepareLayoutfT_T_
+__TFC10JFReactive28CircularCollectionViewLayout8getThetafT_T_
+__TToFC10JFReactive28CircularCollectionViewLayout8getThetafT_T_
+__TZFC10JFReactive28CircularCollectionViewLayout21layoutAttributesClassfT_PMPs9AnyObject_
+__TToZFC10JFReactive28CircularCollectionViewLayout21layoutAttributesClassfT_PMPs9AnyObject_
+__TFC10JFReactive28CircularCollectionViewLayout33layoutAttributesForElementsInRectfVSC6CGRectGSqGSaCSo32UICollectionViewLayoutAttributes__
+__TToFC10JFReactive28CircularCollectionViewLayout33layoutAttributesForElementsInRectfVSC6CGRectGSqGSaCSo32UICollectionViewLayoutAttributes__
+__TFC10JFReactive28CircularCollectionViewLayout34layoutAttributesForItemAtIndexPathfCSo11NSIndexPathGSqCSo32UICollectionViewLayoutAttributes_
+__TToFC10JFReactive28CircularCollectionViewLayout34layoutAttributesForItemAtIndexPathfCSo11NSIndexPathGSqCSo32UICollectionViewLayoutAttributes_
+__TFC10JFReactive28CircularCollectionViewLayout37shouldInvalidateLayoutForBoundsChangefVSC6CGRectSb
+__TToFC10JFReactive28CircularCollectionViewLayout37shouldInvalidateLayoutForBoundsChangefVSC6CGRectSb
+__TFC10JFReactive28CircularCollectionViewLayoutD
+__TToFC10JFReactive28CircularCollectionViewLayoutE
+__TFC10JFReactive28CircularCollectionViewLayoutm14attributesListGSaCS_38CircularCollectionViewLayoutAttributes_
+__TFC10JFReactive28CircularCollectionViewLayoutcfT_S0_
+__TFC10JFReactive28CircularCollectionViewLayoutCfT_S0_
+__TToFC10JFReactive28CircularCollectionViewLayoutcfT_S0_
+__TFC10JFReactive28CircularCollectionViewLayoutCfT5coderCSo7NSCoder_GSqS0__
+__TFC10JFReactive28CircularCollectionViewLayoutcfT5coderCSo7NSCoder_GSqS0__
+__TToFC10JFReactive28CircularCollectionViewLayoutcfT5coderCSo7NSCoder_GSqS0__
+__TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs15ContiguousArray15reserveCapacityfSiT_
+___swift_noop_void_return
+___swift_memcpy16_8
+___swift_noop_self_return
+___swift_memcpy_array16_8
+___swift_memmove_array16_8
+__TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs12_ArrayBuffer13_asCocoaArrayfT_Ps16_NSArrayCoreType_
+__TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFSa15_checkSubscriptfTSi20wasNativeTypeCheckedSb_Vs16_DependenceToken
+__TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs15ContiguousArray16_copyToNewBufferfSiT_
+__TTSg5GVs22_ContiguousArrayBufferC10JFReactive38CircularCollectionViewLayoutAttributes_GS_S1__s16_ArrayBufferTypes_S1__GVs17IndexingGeneratorGS_S1___GS3_GS_S1___s13GeneratorTypes_S1__SiSis16ForwardIndexTypes_SiSis18_SignedIntegerTypes_SiSis33_BuiltinIntegerLiteralConvertibles_Si_GVs12_SliceBufferS1__GS8_S1__s14CollectionTypes_GS3_GS8_S1___GS3_GS8_S1___S4_s_S1__SiSiS5_s_SiSiS6_s_SiSiS7_s_Si_GS8_S1__GS8_S1__s9IndexablesGS8_S1__s12SequenceTypes_GS3_GS8_S1___GS3_GS8_S1___S4_s_S1__SiSiS5_s_SiSiS6_s_SiSiS7_s_Si_GS8_S1___S1__S1__S1____TFs31_forceCreateUniqueMutableBufferuRxs16_ArrayBufferTyperFTRx17countForNewBufferSi14minNewCapacitySi_GVs22_ContiguousArrayBufferwx7Element_
+__TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs12_ArrayBuffer19_getElementSlowPathfSiPs9AnyObject_
+__TTSg5GVs22_ContiguousArrayBufferC10JFReactive38CircularCollectionViewLayoutAttributes_GS_S1__s16_ArrayBufferTypes_S1__GVs17IndexingGeneratorGS_S1___GS3_GS_S1___s13GeneratorTypes_S1__SiSis16ForwardIndexTypes_SiSis18_SignedIntegerTypes_SiSis33_BuiltinIntegerLiteralConvertibles_Si_GVs12_SliceBufferS1__GS8_S1__s14CollectionTypes_GS3_GS8_S1___GS3_GS8_S1___S4_s_S1__SiSiS5_s_SiSiS6_s_SiSiS7_s_Si_GS8_S1__GS8_S1__s9IndexablesGS8_S1__s12SequenceTypes_GS3_GS8_S1___GS3_GS8_S1___S4_s_S1__SiSiS5_s_SiSiS6_s_SiSiS7_s_Si_GS8_S1___S1__S1__S1____TFs35_forceCreateUniqueMutableBufferImpluRxs16_ArrayBufferTyperFTRx14countForBufferSi14minNewCapacitySi16requiredCapacitySi_GVs22_ContiguousArrayBufferwx7Element_
+__TTSf4n_n_n_n_d___TTSg5GVs22_ContiguousArrayBufferC10JFReactive38CircularCollectionViewLayoutAttributes_GS_S1__s16_ArrayBufferTypes_GVs14_IgnorePointerS1__GS3_S1__s20_PointerFunctionTypes_S1__GVs17IndexingGeneratorGS_S1___GS5_GS_S1___s13GeneratorTypes_S1__GVs12_SliceBufferS1__GS7_S1__s14CollectionTypes_GS5_GS7_S1___GS5_GS7_S1___S6_s_S1__SiSis16ForwardIndexTypes_SiSis18_SignedIntegerTypes_SiSis33_BuiltinIntegerLiteralConvertibles_Si_GS7_S1__GS7_S1__s9IndexablesGS7_S1__s12SequenceTypes_GS5_GS7_S1___GS5_GS7_S1___S6_s_S1__SiSiS9_s_SiSiS10_s_SiSiS11_s_Si_GS7_S1___S1__S1__S1____TFs22_arrayOutOfPlaceUpdateu0_Rxs16_ArrayBufferType_s20_PointerFunctionTypewx5IndexzSiwx7Elementzw_7ElementWxS1_8Distance_zSiWxS1_19_DisabledRangeIndex_zSiWxS1_S4_18IntegerLiteralType_zSirFTRxRGSqGVs22_ContiguousArrayBufferwxS2___SiSiq__T_
+__TTSf4g___TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes_CSo32UICollectionViewLayoutAttributes___TFs15_arrayForceCastu0_rFGSax_GSaq__
+__TWvdvC10JFReactive28CircularCollectionViewLayout8itemSizeVSC6CGSize
+__TWvdvC10JFReactive28CircularCollectionViewLayout6radiusV12CoreGraphics7CGFloat
+__TWvdvC10JFReactive28CircularCollectionViewLayout14attributesListGSaCS_38CircularCollectionViewLayoutAttributes_
+__TMLCSo32UICollectionViewLayoutAttributes
+l_OBJC_LABEL_PROTOCOL_$__TtPs9AnyObject_
+l_OBJC_PROTOCOL_REFERENCE_$__TtPs9AnyObject_
+_OBJC_METACLASS_$__TtC10JFReactive28CircularCollectionViewLayout
+__TMnC10JFReactive28CircularCollectionViewLayout
+__TWoFC10JFReactive28CircularCollectionViewLayoutg6radiusV12CoreGraphics7CGFloat
+__TWoFC10JFReactive28CircularCollectionViewLayouts6radiusV12CoreGraphics7CGFloat
+__TWoFC10JFReactive28CircularCollectionViewLayoutm6radiusV12CoreGraphics7CGFloat
+__TWoFC10JFReactive28CircularCollectionViewLayoutg14attributesListGSaCS_38CircularCollectionViewLayoutAttributes_
+__TWoFC10JFReactive28CircularCollectionViewLayouts14attributesListGSaCS_38CircularCollectionViewLayoutAttributes_
+__TWoFC10JFReactive28CircularCollectionViewLayoutm14attributesListGSaCS_38CircularCollectionViewLayoutAttributes_
+__TWoFC10JFReactive28CircularCollectionViewLayoutg12angleperItemV12CoreGraphics7CGFloat
+__TWoFC10JFReactive28CircularCollectionViewLayoutg14angleAtExtremeV12CoreGraphics7CGFloat
+__TWoFC10JFReactive28CircularCollectionViewLayoutg5angleV12CoreGraphics7CGFloat
+__TWoFC10JFReactive28CircularCollectionViewLayout25collectionViewContentSizefT_VSC6CGSize
+__TWoFC10JFReactive28CircularCollectionViewLayout13prepareLayoutfT_T_
+__TWoFC10JFReactive28CircularCollectionViewLayout8getThetafT_T_
+__TWoZFC10JFReactive28CircularCollectionViewLayout21layoutAttributesClassfT_PMPs9AnyObject_
+__TWoFC10JFReactive28CircularCollectionViewLayout33layoutAttributesForElementsInRectfVSC6CGRectGSqGSaCSo32UICollectionViewLayoutAttributes__
+__TWoFC10JFReactive28CircularCollectionViewLayout34layoutAttributesForItemAtIndexPathfCSo11NSIndexPathGSqCSo32UICollectionViewLayoutAttributes_
+__TWoFC10JFReactive28CircularCollectionViewLayout37shouldInvalidateLayoutForBoundsChangefVSC6CGRectSb
+__TWoFC10JFReactive28CircularCollectionViewLayoutCfT_S0_
+__TWoFC10JFReactive28CircularCollectionViewLayoutCfT5coderCSo7NSCoder_GSqS0__
+__TMLC10JFReactive28CircularCollectionViewLayout
+__TMfC10JFReactive28CircularCollectionViewLayout
+__TWVVSC6CGSize
+__TMnVSC6CGSize
+__TMVSC6CGSize
+__TMLGSaC10JFReactive38CircularCollectionViewLayoutAttributes_
+__TMLGCs23_ContiguousArrayStorageC10JFReactive38CircularCollectionViewLayoutAttributes_
+__TMC10JFReactive28CircularCollectionViewLayout
+_OBJC_CLASS_$__TtC10JFReactive28CircularCollectionViewLayout
+-emit-bc /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CollectionViewController.swift /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewCell.swift -primary-file /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewLayout.swift /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewLayoutAttributes.swift -target arm64-apple-ios8.1 -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk -I /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos -F /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos -g -import-objc-header /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/JFReactive-Bridging-Header.h -module-cache-path /Users/Sun/Library/Developer/Xcode/DerivedData/ModuleCache -D COCOAPODS -serialize-debugging-options -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-generated-files.hmap -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-own-target-headers.hmap -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-project-headers.hmap -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos/include -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/DerivedSources/arm64 -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/DerivedSources -Xcc -DCOCOAPODS=1 -Xcc -working-directory/Users/Sun/Desktop/RAC/JFReactive -emit-module-doc-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewLayout~partial.swiftdoc -O -module-name JFReactive -emit-module-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewLayout~partial.swiftmodule -serialize-diagnostics-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewLayout.dia -emit-dependencies-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewLayout.d -o /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewLayout.bc -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewLayout.swift
+_TMaGSaC10JFReactive38CircularCollectionViewLayoutAttributes_
+CircularCollectionViewLayout.swift
+_TTSf4g___TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes_CSo32UICollectionViewLayoutAttributes___TFs15_arrayForceCastu0_rFGSax_GSaq__
+_TTSg5CSo32UICollectionViewLayoutAttributes___TFVs12_ArrayBufferCfT7nsArrayPs16_NSArrayCoreType__GS_x_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes_CSo32UICollectionViewLayoutAttributes___TFVs22_ContiguousArrayBuffer24storesOnlyElementsOfTypeurfMqd__Sb
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs22_ContiguousArrayBufferg8_storageCs27_ContiguousArrayStorageBase
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes_CSo32UICollectionViewLayoutAttributes___TFVs12_ArrayBuffer39downcastToBufferWithDeferredTypeCheckOfurfMqd__GS_qd___
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs12_ArrayBufferg7_nativeGVs22_ContiguousArrayBufferx_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs12_ArrayBuffer19requestNativeBufferfT_GSqGVs22_ContiguousArrayBufferx__
+_TTSf4n_n_n_n_d___TTSg5GVs22_ContiguousArrayBufferC10JFReactive38CircularCollectionViewLayoutAttributes_GS_S1__s16_ArrayBufferTypes_GVs14_IgnorePointerS1__GS3_S1__s20_PointerFunctionTypes_S1__GVs17IndexingGeneratorGS_S1___GS5_GS_S1___s13GeneratorTypes_S1__GVs12_SliceBufferS1__GS7_S1__s14CollectionTypes_GS5_GS7_S1___GS5_GS7_S1___S6_s_S1__SiSis16ForwardIndexTypes_SiSis18_SignedIntegerTypes_SiSis33_BuiltinIntegerLiteralConvertibles_Si_GS7_S1__GS7_S1__s9IndexablesGS7_S1__s12SequenceTypes_GS5_GS7_S1___GS5_GS7_S1___S6_s_S1__SiSiS9_s_SiSiS10_s_SiSiS11_s_Si_GS7_S1___S1__S1__S1____TFs22_arrayOutOfPlaceUpdateu0_Rxs16_ArrayBufferType_s20_PointerFunctionTypewx5IndexzSiwx7Elementzw_7ElementWxS1_8Distance_zSiWxS1_19_DisabledRangeIndex_zSiWxS1_S4_18IntegerLiteralType_zSirFTRxRGSqGVs22_ContiguousArrayBufferwxS2___SiSiq__T_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TTWurGVs22_ContiguousArrayBufferx_s16_ArrayBufferTypesFS0_18_uninitializedCopyfTGVs5RangeSi_6targetGSpwx7Element__GSpwxS2__
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs22_ContiguousArrayBuffer18_uninitializedCopyfTGVs5RangeSi_6targetGSpx__GSpx_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs22_ContiguousArrayBuffers5countSi
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFSp7destroyfSiT_
+_TTSg5Vs10_ArrayBody_C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs20ManagedBufferPointerg15_elementPointerGSpq__
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs22_ContiguousArrayBufferg5countSi
+_TTSg5Vs10_ArrayBody_C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs20ManagedBufferPointerg13_valuePointerGSpx_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFSp18moveInitializeFromfTGSpx_5countSi_T_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TTWurGVs22_ContiguousArrayBufferx_s16_ArrayBufferTypesFS0_g19firstElementAddressGSpwx7Element_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TTWurGVs22_ContiguousArrayBufferx_s16_ArrayBufferTypesFS0_33requestUniqueMutableBackingBufferfSiGSqGS_wx7Element__
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs22_ContiguousArrayBuffer33requestUniqueMutableBackingBufferfSiGSqGS_x__
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs22_ContiguousArrayBufferg8capacitySi
+_TTSg5Vs10_ArrayBody_C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs20ManagedBufferPointer20holdsUniqueReferencefT_Sb
+_TTSg5Vs10_ArrayBody_C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs20ManagedBufferPointerg8_addressGSPVs5UInt8_
+_TTSg5GVs22_ContiguousArrayBufferC10JFReactive38CircularCollectionViewLayoutAttributes_GS_S1__s16_ArrayBufferTypes_S1__GVs17IndexingGeneratorGS_S1___GS3_GS_S1___s13GeneratorTypes_S1__SiSis16ForwardIndexTypes_SiSis18_SignedIntegerTypes_SiSis33_BuiltinIntegerLiteralConvertibles_Si_GVs12_SliceBufferS1__GS8_S1__s14CollectionTypes_GS3_GS8_S1___GS3_GS8_S1___S4_s_S1__SiSiS5_s_SiSiS6_s_SiSiS7_s_Si_GS8_S1__GS8_S1__s9IndexablesGS8_S1__s12SequenceTypes_GS3_GS8_S1___GS3_GS8_S1___S4_s_S1__SiSiS5_s_SiSiS6_s_SiSiS7_s_Si_GS8_S1___S1__S1__S1____TFs35_forceCreateUniqueMutableBufferImpluRxs16_ArrayBufferTyperFTRx14countForBufferSi14minNewCapacitySi16requiredCapacitySi_GVs22_ContiguousArrayBufferwx7Element_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs22_ContiguousArrayBuffer18_initStorageHeaderfTSi8capacitySi_T_
+_TTSg5Vs10_ArrayBody_C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs20ManagedBufferPointerCfT21_uncheckedBufferClassPMPs9AnyObject_15minimumCapacitySi_GS_xq__
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs22_ContiguousArrayBufferCfT5countSi15minimumCapacitySi_GS_x_
+_TTSg5Vs10_ArrayBody_C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs20ManagedBufferPointerg21allocatedElementCountSi
+_TTSg5Vs10_ArrayBody_C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs20ManagedBufferPointerg19_allocatedByteCountSi
+_TMaGCs23_ContiguousArrayStorageC10JFReactive38CircularCollectionViewLayoutAttributes_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs22_ContiguousArrayBufferCfT_GS_x_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs12_ArrayBuffer19_getElementSlowPathfSiPs9AnyObject_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs22_ContiguousArrayBuffer20_checkValidSubscriptfSiT_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs12_ArrayBufferg10_nonNativePs16_NSArrayCoreType_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs12_ArrayBufferg9_isNativeSb
+_TTSg5GVs22_ContiguousArrayBufferC10JFReactive38CircularCollectionViewLayoutAttributes_GS_S1__s16_ArrayBufferTypes_S1__GVs17IndexingGeneratorGS_S1___GS3_GS_S1___s13GeneratorTypes_S1__SiSis16ForwardIndexTypes_SiSis18_SignedIntegerTypes_SiSis33_BuiltinIntegerLiteralConvertibles_Si_GVs12_SliceBufferS1__GS8_S1__s14CollectionTypes_GS3_GS8_S1___GS3_GS8_S1___S4_s_S1__SiSiS5_s_SiSiS6_s_SiSiS7_s_Si_GS8_S1__GS8_S1__s9IndexablesGS8_S1__s12SequenceTypes_GS3_GS8_S1___GS3_GS8_S1___S4_s_S1__SiSiS5_s_SiSiS6_s_SiSiS7_s_Si_GS8_S1___S1__S1__S1____TFs31_forceCreateUniqueMutableBufferuRxs16_ArrayBufferTyperFTRx17countForNewBufferSi14minNewCapacitySi_GVs22_ContiguousArrayBufferwx7Element_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs15ContiguousArray16_copyToNewBufferfSiT_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFSa15_checkSubscriptfTSi20wasNativeTypeCheckedSb_Vs16_DependenceToken
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs12_ArrayBuffer37_checkInoutAndNativeTypeCheckedBoundsfTSi20wasNativeTypeCheckedSb_T_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs12_ArrayBufferg20_isNativeTypeCheckedSb
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs12_ArrayBuffer13_asCocoaArrayfT_Ps16_NSArrayCoreType_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs22_ContiguousArrayBuffer13_asCocoaArrayfT_Ps16_NSArrayCoreType_
+__swift_memmove_array16_8
+__swift_memcpy_array16_8
+__swift_noop_self_return
+__swift_memcpy16_8
+__swift_noop_void_return
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs15ContiguousArray15reserveCapacityfSiT_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFSp14initializeFromfTGSpx_5countSi_T_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs15ContiguousArrayg5countSi
+_TMaC10JFReactive28CircularCollectionViewLayout
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs12_ArrayBufferCfT_GS_x_
+attributesList.materialize
+shouldInvalidateLayoutForBoundsChange
+layoutAttributesForItemAtIndexPath
+attributesList.get
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFSag9subscriptFSix
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs12_ArrayBuffer10getElementfTSi20wasNativeTypeCheckedSb_x
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs22_ContiguousArrayBuffer10getElementfSix
+layoutAttributesForElementsInRect
+_TMaCSo32UICollectionViewLayoutAttributes
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes_CSo32UICollectionViewLayoutAttributes___TFs15_arrayForceCastu0_rFGSax_GSaq__
+layoutAttributesClass
+getTheta
+angleperItem.get
+radius.get
+prepareLayout
+_TTSg5GVs5RangeSi_GS_Si_s14CollectionTypes_GVs14RangeGeneratorSi_GS1_Si_s13GeneratorTypes_Si_SiSis16ForwardIndexTypes_SiSis18_SignedIntegerTypes_SiSis33_BuiltinIntegerLiteralConvertibles_Si_GVs5SliceGS_Si__GS6_GS_Si__s9IndexablesGS6_GS_Si__s12SequenceTypes_GVs17IndexingGeneratorGS6_GS_Si___GS9_GS6_GS_Si___S2_s_Si_SiSiS3_s_SiSiS4_s_SiSiS5_s_Si_GS6_GS_Si___Si_Si_C10JFReactive38CircularCollectionViewLayoutAttributes___TFEsPs14CollectionType3mapurfzFzWx9Generator7Element_qd__GSaqd___
+_TTRXFo_dSi_oC10JFReactive38CircularCollectionViewLayoutAttributeszoPs9ErrorType__XFo_iSi_iS0_zoPS1___
+_TFFC10JFReactive28CircularCollectionViewLayout13prepareLayoutFT_T_U_FSiCS_38CircularCollectionViewLayoutAttributes
+angleAtExtreme.get
+angle.get
+collectionViewContentSize
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs15ContiguousArray6appendfxT_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs15ContiguousArray36_reserveCapacityAssumingUniqueBufferfSiT_
+attributesList.set
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFSp10initializefxT_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs15ContiguousArray37_appendElementAssumeUniqueAndCapacityfTSi10newElementx_T_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFVs15ContiguousArray40_makeUniqueAndReserveCapacityIfNotUniquefT_T_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFSaCfGVs12_ArrayBufferx_GSax_
+_TTSg5C10JFReactive38CircularCollectionViewLayoutAttributes___TFs27_allocateUninitializedArrayurFBwTGSax_Bp_
+_TToFC10JFReactive28CircularCollectionViewLayoutg5angleV12CoreGraphics7CGFloat
+_TToFC10JFReactive28CircularCollectionViewLayoutg14angleAtExtremeV12CoreGraphics7CGFloat
+_TToFC10JFReactive28CircularCollectionViewLayoutg12angleperItemV12CoreGraphics7CGFloat
+_TToFC10JFReactive28CircularCollectionViewLayouts14attributesListGSaCS_38CircularCollectionViewLayoutAttributes_
+_TToFC10JFReactive28CircularCollectionViewLayoutg14attributesListGSaCS_38CircularCollectionViewLayoutAttributes_
+radius.materialize
+radius.didset
+radius.set
+_TToFC10JFReactive28CircularCollectionViewLayouts6radiusV12CoreGraphics7CGFloat
+_TToFC10JFReactive28CircularCollectionViewLayoutg6radiusV12CoreGraphics7CGFloat
+itemSize.get
+_TToFC10JFReactive28CircularCollectionViewLayoutg8itemSizeVSC6CGSize
+__TToFC10JFReactive38CircularCollectionViewLayoutAttributesg11anchorPointVSC7CGPoint
+__TFC10JFReactive38CircularCollectionViewLayoutAttributesg11anchorPointVSC7CGPoint
+__TToFC10JFReactive38CircularCollectionViewLayoutAttributess11anchorPointVSC7CGPoint
+__TFC10JFReactive38CircularCollectionViewLayoutAttributess11anchorPointVSC7CGPoint
+__TToFC10JFReactive38CircularCollectionViewLayoutAttributesg5angleV12CoreGraphics7CGFloat
+__TFC10JFReactive38CircularCollectionViewLayoutAttributesg5angleV12CoreGraphics7CGFloat
+__TToFC10JFReactive38CircularCollectionViewLayoutAttributess5angleV12CoreGraphics7CGFloat
+__TFC10JFReactive38CircularCollectionViewLayoutAttributess5angleV12CoreGraphics7CGFloat
+__TFC10JFReactive38CircularCollectionViewLayoutAttributesW5angleV12CoreGraphics7CGFloat
+__TFC10JFReactive38CircularCollectionViewLayoutAttributesm5angleV12CoreGraphics7CGFloat
+__TFFC10JFReactive38CircularCollectionViewLayoutAttributesm5angleV12CoreGraphics7CGFloatU_XfTBpRBBRS0_XMTS0__T_
+__TFC10JFReactive38CircularCollectionViewLayoutAttributes12copyWithZonefV10ObjectiveC6NSZonePs9AnyObject_
+__TToFC10JFReactive38CircularCollectionViewLayoutAttributes12copyWithZonefV10ObjectiveC6NSZonePs9AnyObject_
+__TFC10JFReactive38CircularCollectionViewLayoutAttributesD
+__TFC10JFReactive38CircularCollectionViewLayoutAttributesm11anchorPointVSC7CGPoint
+__TFC10JFReactive38CircularCollectionViewLayoutAttributescfT_S0_
+__TFC10JFReactive38CircularCollectionViewLayoutAttributesCfT_S0_
+__TToFC10JFReactive38CircularCollectionViewLayoutAttributescfT_S0_
+__TTSf4s_n___TFC10JFReactive38CircularCollectionViewLayoutAttributess11anchorPointVSC7CGPoint
+__TWvdvC10JFReactive38CircularCollectionViewLayoutAttributes11anchorPointVSC7CGPoint
+__TWvdvC10JFReactive38CircularCollectionViewLayoutAttributes5angleV12CoreGraphics7CGFloat
+_OBJC_METACLASS_$__TtC10JFReactive38CircularCollectionViewLayoutAttributes
+__TMnC10JFReactive38CircularCollectionViewLayoutAttributes
+__TWoFC10JFReactive38CircularCollectionViewLayoutAttributesg11anchorPointVSC7CGPoint
+__TWoFC10JFReactive38CircularCollectionViewLayoutAttributess11anchorPointVSC7CGPoint
+__TWoFC10JFReactive38CircularCollectionViewLayoutAttributesm11anchorPointVSC7CGPoint
+__TWoFC10JFReactive38CircularCollectionViewLayoutAttributesg5angleV12CoreGraphics7CGFloat
+__TWoFC10JFReactive38CircularCollectionViewLayoutAttributess5angleV12CoreGraphics7CGFloat
+__TWoFC10JFReactive38CircularCollectionViewLayoutAttributesm5angleV12CoreGraphics7CGFloat
+__TWoFC10JFReactive38CircularCollectionViewLayoutAttributes12copyWithZonefV10ObjectiveC6NSZonePs9AnyObject_
+__TWoFC10JFReactive38CircularCollectionViewLayoutAttributesCfT_S0_
+__TMLC10JFReactive38CircularCollectionViewLayoutAttributes
+__TMfC10JFReactive38CircularCollectionViewLayoutAttributes
+__TWVVSC7CGPoint
+__TMnVSC7CGPoint
+__TMVSC7CGPoint
+__TMC10JFReactive38CircularCollectionViewLayoutAttributes
+_OBJC_CLASS_$__TtC10JFReactive38CircularCollectionViewLayoutAttributes
+-emit-bc /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CollectionViewController.swift /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewCell.swift /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewLayout.swift -primary-file /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewLayoutAttributes.swift -target arm64-apple-ios8.1 -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk -I /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos -F /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos -g -import-objc-header /Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/JFReactive-Bridging-Header.h -module-cache-path /Users/Sun/Library/Developer/Xcode/DerivedData/ModuleCache -D COCOAPODS -serialize-debugging-options -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-generated-files.hmap -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-own-target-headers.hmap -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/JFReactive-project-headers.hmap -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/BuildProductsPath/Release-iphoneos/include -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/DerivedSources/arm64 -Xcc -I/Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/DerivedSources -Xcc -DCOCOAPODS=1 -Xcc -working-directory/Users/Sun/Desktop/RAC/JFReactive -emit-module-doc-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewLayoutAttributes~partial.swiftdoc -O -module-name JFReactive -emit-module-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewLayoutAttributes~partial.swiftmodule -serialize-diagnostics-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewLayoutAttributes.dia -emit-dependencies-path /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewLayoutAttributes.d -o /Users/Sun/Library/Developer/Xcode/DerivedData/JFReactive-dbkzdgumsioypngfjirppuimxyzy/Build/Intermediates/ArchiveIntermediates/JFReactive/IntermediateBuildFilesPath/JFReactive.build/Release-iphoneos/JFReactive.build/Objects-normal/arm64/CircularCollectionViewLayoutAttributes.bc -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift
+/Users/Sun/Desktop/RAC/JFReactive/JFReactive/CircularCollection/CircularCollectionViewLayoutAttributes.swift
+CircularCollectionViewLayoutAttributes.swift
+_TMaC10JFReactive38CircularCollectionViewLayoutAttributes
+anchorPoint.materialize
+copyWithZone
+anchorPoint.set
+anchorPoint.get
+angle.didset
+angle.set
+angle.materialize
+_TToFC10JFReactive38CircularCollectionViewLayoutAttributess5angleV12CoreGraphics7CGFloat
+_TToFC10JFReactive38CircularCollectionViewLayoutAttributesg5angleV12CoreGraphics7CGFloat
+_TToFC10JFReactive38CircularCollectionViewLayoutAttributess11anchorPointVSC7CGPoint
+_TToFC10JFReactive38CircularCollectionViewLayoutAttributesg11anchorPointVSC7CGPoint
+__ZL15__ARCLite__loadv
+__ZL58__arclite_NSMutableDictionary__setObject_forKeyedSubscriptP19NSMutableDictionaryP13objc_selectorP11objc_objectS4_
+__ZL22add_image_hook_swiftV1PK11mach_headerl
+__ZL42__arclite_NSUndoManagerProxy_isKindOfClassP11objc_objectP13objc_selectorP10objc_class
+__ZL13replaceMethodP10objc_classP13objc_selectorPFP11objc_objectS4_S2_zEPS6_
+__ZL30__arclite_NSManagedObject_initP11objc_objectP13objc_selector
+__ZL41__arclite_NSManagedObject_allocWithEntityP11objc_objectP13objc_selectorS0_
+__ZL36__arclite_NSManagedObject_allocBatchP11objc_objectP13objc_selectorPS0_S0_j
+__ZL37__arclite_NSKKMS_fastIndexForKnownKeyP11objc_objectP13objc_selectorS0_
+__ZL28__arclite_NSKKMS_indexForKeyP11objc_objectP13objc_selectorS0_
+__ZL29__arclite_NSKKsD_objectForKeyP11objc_objectP13objc_selectorS0_
+__ZL35__arclite_NSKKsD_removeObjectForKeyP11objc_objectP13objc_selectorS0_
+__ZL33__arclite_NSKKsD_setObject_forKeyP11objc_objectP13objc_selectorS0_S0_
+__ZL41__arclite_NSKKsD_addEntriesFromDictionaryP11objc_objectP13objc_selectorP12NSDictionary
+__ZL28__arclite_objc_readClassPairP10objc_classPK15objc_image_info
+__ZL32__arclite_objc_allocateClassPairP10objc_classPKcm
+__ZL32__arclite_object_getIndexedIvarsP11objc_object
+__ZL23__arclite_objc_getClassPKc
+__ZL27__arclite_objc_getMetaClassPKc
+__ZL31__arclite_objc_getRequiredClassPKc
+__ZL26__arclite_objc_lookUpClassPKc
+__ZL26__arclite_objc_getProtocolPKc
+__ZL23__arclite_class_getNameP10objc_class
+__ZL26__arclite_protocol_getNameP8Protocol
+__ZL37__arclite_objc_copyClassNamesForImagePKcPj
+__ZL17transcribeMethodsP10objc_classP15glue_class_ro_t
+__ZL19transcribeProtocolsP10objc_classP15glue_class_ro_t
+__ZL20transcribePropertiesP10objc_classP15glue_class_ro_t
+__ZL14initialize_impP11objc_objectP13objc_selector
+__ZL18allocateMaybeSwiftP18glue_swift_class_tm
+__ZL22copySwiftV1MangledNamePKcb
+__ZL13demangledNamePKcb
+__ZL16scanMangledFieldRPKcS0_S1_Ri
+__ZL30arclite_uninitialized_functionv
+__ZL12cxxConstructP11objc_object
+__ZL20fixStringForCoreDataP11objc_object
+_OBJC_METACLASS_$___ARCLite__
+__ZL24OBJC_CLASS_$___ARCLite__
+__ZL31OBJC_METACLASS_RO_$___ARCLite__
+__non_lazy_classes
+__ZL27OBJC_CLASS_RO_$___ARCLite__
+__ZL11_class_name
+__ZL32OBJC_$_CLASS_METHODS___ARCLite__
+__ZL17_load_method_name
+__ZL17_load_method_type
+l_OBJC_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteKeyedSubscripting__
+__ZL30NSUndoManagerProxy_targetClass
+__ZL29original_NSManagedObject_init
+__ZL40original_NSManagedObject_allocWithEntity
+__ZL35original_NSManagedObject_allocBatch
+__ZL25NSMutableDictionary_class
+__ZL22NSConstantString_class
+__ZL14NSString_class
+__ZL36original_NSKKMS_fastIndexForKnownKey
+__ZL27original_NSKKMS_indexForKey
+__ZL28original_NSKKsD_objectForKey
+__ZL34original_NSKKsD_removeObjectForKey
+__ZL32original_NSKKsD_setObject_forKey
+__ZL40original_NSKKsD_addEntriesFromDictionary
+__ZZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZGVZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZL31original_objc_allocateClassPair
+__ZL31original_object_getIndexedIvars
+__ZL22original_objc_getClass
+__ZL26original_objc_getMetaClass
+__ZL30original_objc_getRequiredClass
+__ZL25original_objc_lookUpClass
+__ZL25original_objc_getProtocol
+__ZL22original_class_getName
+__ZL25original_protocol_getName
+__ZL36original_objc_copyClassNamesForImage
+__ZL12demangleLock
+__ZL9Demangled
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -Wno-trigraphs -fno-exceptions -fno-rtti -mpascal-strings -Os -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -D NDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.Internal.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -miphoneos-version-min=4.3 -g -fno-threadsafe-statics -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -fembed-bitcode -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~835/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-generated-files.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~835/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-own-target-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~835/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-all-target-headers.hmap -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~835/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-project-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~835/Symbols/BuiltProducts/include -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~835/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources/arm64 -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~835/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources -F/Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~835/Symbols/BuiltProducts -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.Internal.sdk/System/Library/PrivateFrameworks -Wall -Wextra -Wno-gcc-compat -fgnu-inline-asm -MMD -MT dependencies -MF /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~835/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/arm64/arclite.d --serialize-diagnostics /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~835/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/arm64/arclite.dia -c /Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-65/source/arclite.mm -o /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~835/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/arm64/arclite.o -mlinker-version=274.1
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-65/source/arclite.mm
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-65
+fixStringForCoreData
+cxxConstruct
+arclite_uninitialized_function
+scanMangledField
+isdigit
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.Internal.sdk/usr/include/ctype.h
+__isctype
+demangledName
+copySwiftV1DemangledName
+copySwiftV1MangledName
+allocateMaybeSwift
+word_align
+isSwift
+initialize_imp
+transcribeProperties
+property_list_nth
+transcribeProtocols
+transcribeMethods
+data
+method_list_nth
+__arclite_objc_copyClassNamesForImage
+__arclite_protocol_getName
+__arclite_class_getName
+__arclite_objc_getProtocol
+__arclite_objc_lookUpClass
+__arclite_objc_getRequiredClass
+__arclite_objc_getMetaClass
+__arclite_objc_getClass
+__arclite_object_getIndexedIvars
+__arclite_objc_allocateClassPair
+metaclass
+__arclite_objc_readClassPair
+transcribeIvars
+ivar_list_nth
+max
+alignment
+ro
+fastFlags
+__arclite_NSKKsD_addEntriesFromDictionary
+__arclite_NSKKsD_setObject_forKey
+__arclite_NSKKsD_removeObjectForKey
+__arclite_NSKKsD_objectForKey
+__arclite_NSKKMS_indexForKey
+__arclite_NSKKMS_fastIndexForKnownKey
+__arclite_NSManagedObject_allocBatch
+__arclite_NSManagedObject_allocWithEntity
+__arclite_NSManagedObject_init
+replaceMethod
+__arclite_NSUndoManagerProxy_isKindOfClass
+add_image_hook_swiftV1
+patch_lazy_pointers
+patch_t<const char **(const char *, unsigned int *)>
+patch_t<const char *(Protocol *)>
+patch_t<const char *(Class)>
+patch_t<Protocol *(const char *)>
+patch_t<Class (const char *)>
+patch_t<void *(id)>
+patch_t<Class (Class, const char *, unsigned long)>
+patch_t<Class (Class, const objc_image_info *)>
+__arclite_NSMutableDictionary__setObject_forKeyedSubscript
+__ARCLite__load
+install_swiftV1
+install_dict_nil_value
+addOrReplaceMethod
+keyedGetter

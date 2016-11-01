@@ -1,4 +1,15 @@
+source "https://github.com/CocoaPods/Specs.git"
+source "http://192.168.45.120/wallet/JiuFuWallet-IOS-Components-spec.git"
+platform :ios, '8.0'
+
+inhibit_all_warnings!
 use_frameworks!
-pod 'ReactiveCocoa', '~> 4.0.4-alpha-1'
-pod 'AFNetworking+SingleBlock', '~> 0.0.1'
-pod 'Masonry', '~> 1.0.0'
+
+target ‘JFReactive’ do
+    pod 'ReactiveCocoa', '~>2.5'
+    pod 'AFNetworking+SingleBlock', '~> 0.0.1'
+    pod 'Masonry', '~> 1.0.0’
+    pod 'AFNetworking','~>2.6.3'
+   
+    
+end

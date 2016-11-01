@@ -97,38 +97,6 @@
             endingLineNumber = "86"
             landmarkName = "-flatten"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[RACStream(Operations) flatten]"
-                  moduleName = "ReactiveCocoa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACStream.m"
-                  timestampString = "493654245.138665"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "78">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32-[RACStream(Operations) flatten]_block_invoke"
-                  moduleName = "ReactiveCocoa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACStream.m"
-                  timestampString = "493654245.138792"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "65">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -170,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JFReactive/ViewController.m"
-            timestampString = "492926452.580436"
+            timestampString = "499675821.615861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1980"
-            endingLineNumber = "1980">
+            startingLineNumber = "1989"
+            endingLineNumber = "1989">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -184,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JFReactive/ViewController.m"
-            timestampString = "492926452.580436"
+            timestampString = "499675821.615861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1999"
-            endingLineNumber = "1999">
+            startingLineNumber = "2008"
+            endingLineNumber = "2008">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -198,14 +166,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JFReactive/ViewController.m"
-            timestampString = "492926452.580436"
+            timestampString = "499674751.157649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1502"
-            endingLineNumber = "1502"
+            startingLineNumber = "1504"
+            endingLineNumber = "1504"
             landmarkName = "-simulateLogin"
-            landmarkType = "5">
+            landmarkType = "7">
             <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RACViewController simulateLogin]"
+                  moduleName = "JFReactive"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/JFReactive/ViewController.m"
+                  timestampString = "499675821.730953"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1504"
+                  endingLineNumber = "1504"
+                  offsetFromSymbolStart = "16">
+               </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
@@ -214,27 +197,12 @@
                   moduleName = "JFReactive"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/JFReactive/ViewController.m"
-                  timestampString = "493654245.143304"
+                  timestampString = "499675821.735686"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1502"
-                  endingLineNumber = "1502"
+                  startingLineNumber = "1506"
+                  endingLineNumber = "1506"
                   offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__34-[RACViewController simulateLogin]_block_invoke_2"
-                  moduleName = "JFReactive"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/JFReactive/ViewController.m"
-                  timestampString = "493654245.14349"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1503"
-                  endingLineNumber = "1503"
-                  offsetFromSymbolStart = "51">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -246,14 +214,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JFReactive/ViewController.m"
-            timestampString = "492926452.580436"
+            timestampString = "499674751.157649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1512"
-            endingLineNumber = "1512"
+            startingLineNumber = "1514"
+            endingLineNumber = "1514"
             landmarkName = "-simulateLogin"
-            landmarkType = "5">
+            landmarkType = "7">
             <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RACViewController simulateLogin]"
+                  moduleName = "JFReactive"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/JFReactive/ViewController.m"
+                  timestampString = "499675821.739413"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1514"
+                  endingLineNumber = "1514"
+                  offsetFromSymbolStart = "125">
+               </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
@@ -262,26 +245,11 @@
                   moduleName = "JFReactive"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/JFReactive/ViewController.m"
-                  timestampString = "493654245.14456"
+                  timestampString = "499675821.741263"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1512"
-                  endingLineNumber = "1512"
-                  offsetFromSymbolStart = "51">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__34-[RACViewController simulateLogin]_block_invoke_4"
-                  moduleName = "JFReactive"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sun/Desktop/RAC/JFReactive/JFReactive/ViewController.m"
-                  timestampString = "493654245.144695"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1513"
-                  endingLineNumber = "1513"
+                  startingLineNumber = "1516"
+                  endingLineNumber = "1516"
                   offsetFromSymbolStart = "51">
                </Location>
             </Locations>

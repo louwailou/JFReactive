@@ -7,7 +7,7 @@
 //
 
 #import "JFModel.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "ReactiveCocoa.h"
 @implementation JFModel
 
 
